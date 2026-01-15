@@ -1,0 +1,357 @@
+---
+title: "Software y herramientas"
+---
+
+## Introducción
+
+Este curso utiliza principalmente **R** y **RStudio** para el análisis estadístico, con **Python** como alternativa opcional. Todas las herramientas son gratuitas y de código abierto.
+
+---
+
+## R y RStudio
+
+### ¿Qué es R?
+
+**R** es un lenguaje de programación y entorno para análisis estadístico y visualización de datos. Es:
+
+- Gratuito y de código abierto
+- Ampliamente usado en estadística y ciencia de datos
+- Tiene miles de paquetes disponibles
+- Excelente para análisis reproducible
+
+### ¿Qué es RStudio?
+
+**RStudio** es un entorno de desarrollo integrado (IDE) que facilita el trabajo con R. Proporciona:
+
+- Editor de código con resaltado de sintaxis
+- Consola interactiva de R
+- Visualizador de gráficos
+- Gestor de paquetes
+- Integración con Quarto para reportes
+
+---
+
+## Instalación de R y RStudio
+
+### Paso 1: Instalar R
+
+**Orden importante:** Primero R, luego RStudio.
+
+#### Windows
+
+1. Ve a [https://cran.r-project.org/bin/windows/base/](https://cran.r-project.org/bin/windows/base/)
+2. Descarga el instalador más reciente (por ejemplo, R-4.4.x)
+3. Ejecuta el instalador
+4. Acepta las opciones predeterminadas
+5. Completa la instalación
+
+#### macOS
+
+1. Ve a [https://cran.r-project.org/bin/macosx/](https://cran.r-project.org/bin/macosx/)
+2. Descarga el archivo .pkg apropiado para tu procesador:
+   - Apple Silicon (M1/M2/M3): R-4.4.x-arm64.pkg
+   - Intel: R-4.4.x-x86_64.pkg
+3. Abre el archivo descargado
+4. Sigue las instrucciones del instalador
+
+#### Linux (Ubuntu/Debian)
+
+```bash
+# Actualizar repositorios
+sudo apt update
+
+# Instalar R
+sudo apt install r-base
+
+# Verificar instalación
+R --version
+```
+
+### Paso 2: Instalar RStudio
+
+1. Ve a [https://posit.co/download/rstudio-desktop/](https://posit.co/download/rstudio-desktop/)
+2. Descarga RStudio Desktop (versión gratuita)
+3. Selecciona el instalador para tu sistema operativo
+4. Ejecuta el instalador
+5. Sigue las instrucciones
+
+### Verificar instalación
+
+1. Abre RStudio
+2. En la consola (panel inferior izquierdo), escribe:
+
+```r
+R.version.string
+```
+
+Deberías ver algo como: "R version 4.4.x (YYYY-MM-DD)"
+
+---
+
+## Paquetes de R necesarios
+
+### Instalar paquetes básicos
+
+En RStudio, ejecuta los siguientes comandos en la consola:
+
+```r
+# Paquetes esenciales
+install.packages("tidyverse")   # Colección de paquetes para ciencia de datos
+install.packages("here")        # Manejo de rutas de archivos
+install.packages("quarto")      # Sistema de publicación científica
+
+# Paquetes para análisis estadístico
+install.packages("car")         # Herramientas de regresión
+install.packages("lmtest")      # Pruebas de modelos lineales
+install.packages("DescTools")   # Herramientas descriptivas
+install.packages("psych")       # Análisis psicométrico y descriptivo
+
+# Paquetes para visualización
+install.packages("ggplot2")     # Gráficos (incluido en tidyverse)
+install.packages("ggpubr")      # Extensión de ggplot2
+install.packages("patchwork")   # Combinar gráficos
+
+# Paquetes para datos
+install.packages("readxl")      # Leer archivos Excel
+install.packages("haven")       # Leer SPSS, Stata, SAS
+
+# Paquetes para reportes
+install.packages("knitr")       # Motor de documentos dinámicos
+install.packages("rmarkdown")   # Markdown con R
+install.packages("gt")          # Tablas elegantes
+install.packages("kableExtra")  # Tablas con formato
+```
+
+### Verificar instalación de paquetes
+
+```r
+# Cargar paquete
+library(tidyverse)
+
+# Si carga sin errores, está instalado correctamente
+```
+
+### Actualizar paquetes
+
+```r
+# Actualizar todos los paquetes instalados
+update.packages(ask = FALSE)
+```
+
+---
+
+## Quarto
+
+### ¿Qué es Quarto?
+
+**Quarto** es un sistema de publicación científica y técnica de código abierto. Permite:
+
+- Crear documentos reproducibles combinando código y texto
+- Renderizar a HTML, PDF, Word, y más
+- Crear presentaciones y sitios web
+- Integración con R, Python, y Julia
+
+### Instalación
+
+**Quarto ya viene incluido con versiones recientes de RStudio** (2022.07 o superior).
+
+Para verificar:
+
+1. En RStudio, File > New File > Quarto Document
+2. Si aparece la opción, Quarto está instalado
+
+Para instalar manualmente:
+
+1. Ve a [https://quarto.org/docs/get-started/](https://quarto.org/docs/get-started/)
+2. Descarga el instalador para tu sistema
+3. Instala siguiendo las instrucciones
+
+### Primer documento Quarto
+
+1. En RStudio: File > New File > Quarto Document
+2. Completa título y autor
+3. Click en "Create"
+4. Click en "Render" (botón arriba del editor)
+
+¡Listo! Has creado tu primer documento.
+
+---
+
+## Python (Opcional)
+
+### ¿Cuándo usar Python?
+
+Python es una alternativa a R para análisis de datos. En este curso:
+
+- **R es recomendado** (más orientado a estadística)
+- Python es opcional (bueno para integración con otros sistemas)
+
+### Instalación de Python
+
+#### Opción 1: Anaconda (Recomendado)
+
+1. Ve a [https://www.anaconda.com/download](https://www.anaconda.com/download)
+2. Descarga Anaconda para tu sistema
+3. Instala siguiendo las instrucciones
+4. Anaconda incluye Python + paquetes científicos
+
+#### Opción 2: Python directo
+
+1. Ve a [https://www.python.org/downloads/](https://www.python.org/downloads/)
+2. Descarga Python 3.10 o superior
+3. Durante instalación, marca "Add Python to PATH"
+
+### Paquetes de Python necesarios
+
+```bash
+# Con pip
+pip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn jupyter
+```
+
+O con Anaconda:
+
+```bash
+# Ya vienen incluidos en Anaconda
+# Para actualizar:
+conda update --all
+```
+
+### IDE para Python
+
+- **Jupyter Notebook:** Incluido con Anaconda
+- **VS Code:** [https://code.visualstudio.com/](https://code.visualstudio.com/)
+- **PyCharm:** [https://www.jetbrains.com/pycharm/](https://www.jetbrains.com/pycharm/)
+- **RStudio:** También soporta Python
+
+---
+
+## Recursos en línea
+
+### Posit Cloud (antes RStudio Cloud)
+
+Si tienes problemas instalando software localmente, puedes usar:
+
+**Posit Cloud:** [https://posit.cloud/](https://posit.cloud/)
+
+- R y RStudio en el navegador
+- Gratis para uso básico
+- No requiere instalación local
+
+### Google Colab (para Python)
+
+**Google Colab:** [https://colab.research.google.com/](https://colab.research.google.com/)
+
+- Python en el navegador
+- Gratis con cuenta de Google
+- Incluye paquetes de ciencia de datos
+
+---
+
+## Solución de problemas
+
+### R/RStudio
+
+**Problema:** "Package not found"
+
+**Solución:**
+```r
+install.packages("nombre_paquete")
+```
+
+**Problema:** Error al cargar paquete
+
+**Solución:**
+```r
+# Reinstalar el paquete
+remove.packages("nombre_paquete")
+install.packages("nombre_paquete")
+```
+
+**Problema:** RStudio no encuentra R
+
+**Solución:**
+- Reinstala R primero, luego RStudio
+- Verifica la ruta en Tools > Global Options > General
+
+### Python
+
+**Problema:** "Module not found"
+
+**Solución:**
+```bash
+pip install nombre_modulo
+```
+
+**Problema:** Conflictos de versiones
+
+**Solución:**
+```bash
+# Usar entorno virtual
+python -m venv mi_entorno
+source mi_entorno/bin/activate  # Linux/Mac
+mi_entorno\Scripts\activate  # Windows
+
+# Luego instalar paquetes
+pip install -r requirements.txt
+```
+
+---
+
+## Cheatsheets (Hojas de referencia)
+
+### R
+
+- [RStudio IDE Cheatsheet](https://posit.co/wp-content/uploads/2022/10/rstudio-ide-1.pdf)
+- [dplyr (manipulación de datos)](https://posit.co/wp-content/uploads/2022/10/data-transformation-1.pdf)
+- [ggplot2 (visualización)](https://posit.co/wp-content/uploads/2022/10/data-visualization-1.pdf)
+- [Quarto](https://rstudio.github.io/cheatsheets/quarto.pdf)
+
+### Python
+
+- [Pandas](https://pandas.pydata.org/Pandas_Cheat_Sheet.pdf)
+- [NumPy](https://numpy.org/doc/stable/user/absolute_beginners.html)
+- [Matplotlib](https://matplotlib.org/cheatsheets/)
+
+---
+
+## Ayuda y soporte
+
+### Dentro de R
+
+```r
+# Ayuda sobre una función
+?mean
+help(mean)
+
+# Buscar ayuda
+??regression
+
+# Ejemplos de uso
+example(lm)
+```
+
+### Recursos en línea
+
+- **Stack Overflow:** [stackoverflow.com](https://stackoverflow.com/) - Preguntas y respuestas
+- **R for Data Science:** [r4ds.hadley.nz](https://r4ds.hadley.nz/) - Libro gratis
+- **Posit Community:** [community.rstudio.com](https://community.rstudio.com/) - Foro oficial
+
+---
+
+::: {.callout-tip}
+## Recomendación
+
+Instala R y RStudio **antes de la primera clase**. Si encuentras problemas, busca ayuda en el foro del curso o en horario de consultas.
+:::
+
+::: {.callout-note}
+## Versiones recomendadas (2026)
+
+- **R:** 4.3.0 o superior
+- **RStudio:** 2023.06 o superior
+- **Python:** 3.10 o superior (si decides usarlo)
+:::
+
+---
+
+*Última actualización: Enero 2026*

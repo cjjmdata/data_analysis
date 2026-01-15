@@ -1,0 +1,210 @@
+---
+title: "Programa del curso"
+---
+
+## Descripción del curso
+
+**MAT2409 - Análisis de datos II** es un curso que introduce a los estudiantes en los fundamentos de la estadística inferencial y el análisis de datos. El curso enfatiza tanto los conceptos teóricos como la aplicación práctica mediante el uso de software estadístico (R y Python).
+
+Los estudiantes aprenderán a:
+
+- Realizar estimaciones de parámetros poblacionales
+- Diseñar y ejecutar pruebas de hipótesis
+- Aplicar análisis de varianza (ANOVA)
+- Analizar datos categóricos
+- Construir e interpretar modelos de regresión
+
+El curso se basa en el análisis de datos reales, permitiendo a los estudiantes desarrollar habilidades prácticas aplicables en investigación, industria y toma de decisiones.
+
+## Información general
+
+- **Código:** MAT2409
+- **Nombre:** Análisis de datos II
+- **Créditos:** 6
+- **Duración:** 16 semanas
+- **Prerrequisitos:** Conocimientos básicos de estadística descriptiva y probabilidad
+
+## Objetivos de aprendizaje
+
+Al finalizar el curso, los estudiantes serán capaces de:
+
+1. **Comprender** los fundamentos de la inferencia estadística y su aplicación en la toma de decisiones
+2. **Estimar** parámetros poblacionales utilizando métodos de estimación puntual y por intervalos
+3. **Diseñar y ejecutar** pruebas de hipótesis apropiadas para diferentes escenarios
+4. **Aplicar** análisis de varianza para comparar múltiples grupos
+5. **Analizar** relaciones entre variables categóricas usando pruebas de chi-cuadrado
+6. **Construir** modelos de regresión lineal simple y múltiple
+7. **Validar e interpretar** modelos estadísticos de manera crítica
+8. **Utilizar** software estadístico (R/Python) para implementar análisis
+9. **Comunicar** resultados estadísticos de manera clara y efectiva
+10. **Evaluar** críticamente estudios y análisis estadísticos
+
+## Contenidos
+
+### Tema 0: Conocimientos previos (repaso)
+- Medidas de tendencia central y dispersión
+- Visualización de datos
+- Introducción a la probabilidad
+- Distribuciones de probabilidad básicas
+
+### Tema 1: Estimación de parámetros
+- 1.1 Estimación puntual
+  - Propiedades de los estimadores
+  - Método de máxima verosimilitud
+- 1.2 Estimación por intervalos
+  - Intervalos de confianza para la media
+  - Intervalos de confianza para proporciones
+- 1.3 Determinación del tamaño de muestra
+- 1.4 Aplicaciones con R
+
+### Tema 2: Pruebas de hipótesis
+- 2.1 Formulación de hipótesis
+  - Hipótesis nula y alternativa
+  - Errores tipo I y tipo II
+  - Nivel de significancia y potencia
+- 2.2 Pruebas de hipótesis para una muestra
+  - Prueba t de Student
+  - Prueba Z
+  - Prueba de proporciones
+- 2.3 Pruebas de hipótesis para dos muestras
+  - Muestras independientes
+  - Muestras pareadas
+
+### Tema 3: Análisis de varianza
+- 3.1 ANOVA unidireccional
+  - Supuestos del modelo
+  - Descomposición de la varianza
+  - Pruebas post-hoc
+- 3.2 ANOVA bidireccional
+  - Diseño factorial
+  - Efectos principales e interacciones
+
+### Tema 4: Análisis de datos categóricos
+- 4.1 Prueba de bondad de ajuste
+  - Prueba chi-cuadrado de ajuste
+- 4.2 Tablas de contingencia
+  - Prueba de independencia
+  - Prueba de homogeneidad
+- 4.3 Medidas de asociación
+
+### Tema 5: Análisis de regresión simple
+- 5.1 Determinación del modelo lineal
+  - Método de mínimos cuadrados
+  - Interpretación de parámetros
+- 5.2 Análisis de validez del modelo
+  - Supuestos del modelo
+  - Análisis de residuos
+  - Coeficiente de determinación (R²)
+- 5.3 Inferencia en regresión
+  - Intervalos de confianza para parámetros
+  - Pruebas de hipótesis
+  - Predicción
+
+### Tema 6: Análisis de regresión múltiple
+- 6.1 Modelo de regresión lineal múltiple
+  - Estimación de parámetros
+  - Interpretación
+- 6.2 Construcción de modelos
+  - Selección de variables
+  - Multicolinealidad
+- 6.3 Validación del modelo
+  - Pruebas de significancia
+  - Diagnóstico de modelos
+
+## Metodología
+
+El curso se estructura en:
+
+- **Clases teóricas (40%):** Presentación de conceptos, teoremas y métodos
+- **Prácticas en computadora (30%):** Implementación de análisis usando R/Python
+- **Ejercicios y tareas (20%):** Resolución de problemas aplicados
+- **Proyectos de análisis (10%):** Análisis completo de datasets reales
+
+### Enfoque pedagógico
+
+- Aprendizaje basado en problemas reales
+- Uso intensivo de software estadístico
+- Énfasis en interpretación y comunicación de resultados
+- Análisis crítico de estudios y reportes estadísticos
+
+## Evaluación
+
+| Componente | Porcentaje | Descripción |
+|------------|------------|-------------|
+| Prácticas | 30% | Ejercicios semanales en R/Python |
+| Tareas | 30% | Asignaciones individuales |
+| Examen parcial | 20% | Evaluación de temas 1-3 |
+| Proyecto final | 20% | Análisis completo de un dataset |
+
+::: {.callout-important}
+Para información más detallada sobre evaluación, consulta la página [Evaluación](evaluacion.qmd).
+:::
+
+## Bibliografía
+
+### Textos principales
+
+1. **Moore, D. S., McCabe, G. P., & Craig, B. A.** (2017). *Introduction to the Practice of Statistics* (9th ed.). W.H. Freeman.
+
+2. **Navidi, W.** (2019). *Statistics for Engineers and Scientists* (5th ed.). McGraw-Hill.
+
+3. **James, G., Witten, D., Hastie, T., & Tibshirani, R.** (2021). *An Introduction to Statistical Learning with Applications in R* (2nd ed.). Springer. [Disponible gratis](https://www.statlearning.com/)
+
+### Recursos en línea (acceso libre)
+
+4. **Diez, D. M., Çetinkaya-Rundel, M., & Barr, C. D.** *OpenIntro Statistics* (4th ed.). [openintro.org](https://www.openintro.org/book/os/)
+
+5. **Ismay, C., & Kim, A. Y.** *Statistical Inference via Data Science: A ModernDive into R and the Tidyverse*. [moderndive.com](https://moderndive.com/)
+
+6. **Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G.** (2023). *R for Data Science* (2nd ed.). O'Reilly. [r4ds.hadley.nz](https://r4ds.hadley.nz/)
+
+### Recursos de R
+
+7. **R Documentation:** [rdocumentation.org](https://www.rdocumentation.org/)
+8. **RStudio Cheatsheets:** [rstudio.com/resources/cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+## Software requerido
+
+- **R** (versión 4.0 o superior): [cran.r-project.org](https://cran.r-project.org/)
+- **RStudio** (última versión): [posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/)
+- **Python** (opcional, versión 3.8+): [python.org](https://www.python.org/)
+
+Ver [Recursos - Software](recursos/software.qmd) para instrucciones detalladas de instalación.
+
+## Carga de trabajo
+
+Se espera que los estudiantes dediquen aproximadamente:
+
+- **3 horas/semana** en clase
+- **4-6 horas/semana** de trabajo independiente (lecturas, prácticas, tareas)
+
+**Total:** ~7-9 horas/semana
+
+## Políticas del curso
+
+### Integridad académica
+
+Se espera que todos los estudiantes mantengan los más altos estándares de integridad académica. El plagio, copia o cualquier forma de deshonestidad académica no será tolerada.
+
+### Colaboración
+
+- Las **prácticas** pueden ser discutidas con compañeros, pero cada estudiante debe escribir su propio código
+- Las **tareas** deben ser completadas de manera individual
+- El **proyecto final** puede ser individual o en parejas (a definir)
+
+### Entregas
+
+- Las asignaciones deben entregarse en la fecha y hora especificadas
+- Se aplicará una penalización por entregas tardías (a definir según política institucional)
+
+## Contacto y soporte
+
+Para consultas sobre el curso:
+
+- **Durante clase:** Preguntas y discusiones
+- **Horario de consulta:** [Por definir]
+- **Correo electrónico:** [Por definir]
+
+---
+
+*Este programa puede sufrir modificaciones durante el curso. Los estudiantes serán notificados de cualquier cambio significativo.*

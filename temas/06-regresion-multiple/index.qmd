@@ -1,0 +1,670 @@
+---
+title: "Tema 6: Análisis de regresión múltiple"
+---
+
+## Introducción
+
+La regresión lineal múltiple extiende la regresión simple para incluir múltiples variables predictoras. Este método permite modelar relaciones más complejas y controlar por variables confusoras, proporcionando una herramienta más realista para el análisis de datos del mundo real.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Formular e interpretar modelos de regresión múltiple
+- Entender el concepto de coeficientes parciales
+- Evaluar la bondad de ajuste usando R² y R² ajustado
+- Realizar selección de variables
+- Detectar y manejar multicolinealidad
+- Incorporar variables categóricas (dummy)
+- Incluir términos de interacción
+- Realizar inferencia sobre el modelo completo y sobre predictores individuales
+- Validar modelos de regresión
+- Implementar regresión múltiple en R/Python
+
+---
+
+## Contenido
+
+### 6.1 Modelo de regresión lineal múltiple
+
+#### Extensión del modelo simple
+
+**Modelo con k predictores**
+$$y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + \epsilon_i$$
+
+donde:
+- y_i: valor observado de la variable respuesta
+- x_ij: valor del predictor j para observación i
+- β₀: intercepto
+- β_j: coeficiente parcial del predictor j
+- ε_i: error aleatorio
+
+**Supuestos**
+- Los mismos que en regresión simple:
+  1. Linealidad
+  2. Independencia de errores
+  3. Normalidad de errores
+  4. Homocedasticidad
+
+#### Interpretación de coeficientes parciales
+
+**Coeficiente βⱼ**
+- Cambio esperado en Y por unidad de cambio en Xⱼ, **manteniendo constantes** las demás variables
+- "Controlando por" o "ajustando por" otras variables
+- Diferente de la interpretación en regresión simple
+
+**Ejemplo**
+- Modelo: Salario = β₀ + β₁(Experiencia) + β₂(Educación)
+- β₁ = 2000: Por cada año adicional de experiencia, el salario aumenta $2000, **manteniendo educación constante**
+
+#### Estimación por mínimos cuadrados
+
+**Objetivo**
+- Minimizar SCR como en regresión simple
+
+**Ecuación ajustada**
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x_1 + \hat{\beta}_2 x_2 + ... + \hat{\beta}_k x_k$$
+
+**Nota**
+- En regresión múltiple, las fórmulas son más complejas
+- Se usa álgebra matricial
+- Software estadístico hace los cálculos
+
+#### Notación matricial (introducción)
+
+**Forma matricial**
+$$\mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\epsilon}$$
+
+**Estimador de mínimos cuadrados**
+$$\hat{\boldsymbol{\beta}} = (\mathbf{X}^T\mathbf{X})^{-1}\mathbf{X}^T\mathbf{y}$$
+
+(No es necesario memorizar, pero es útil saber que existe)
+
+#### R² y R² ajustado
+
+**R² en regresión múltiple**
+$$R^2 = 1 - \frac{SCR}{SCT}$$
+
+**Problema con R²**
+- Siempre aumenta (o no disminuye) al agregar predictores
+- Incluso si el predictor no es útil
+
+**R² ajustado**
+$$R^2_{adj} = 1 - \frac{SCR/(n-k-1)}{SCT/(n-1)}$$
+
+**Ventajas de R² ajustado**
+- Penaliza por agregar predictores no útiles
+- Puede disminuir si agregamos predictores irrelevantes
+- Mejor para comparar modelos con diferente número de predictores
+
+**Interpretación**
+- Similar a R², pero ajustado por número de predictores
+- Usar R² ajustado para comparar modelos
+
+---
+
+### 6.2 Construcción de modelos
+
+#### Selección de variables
+
+**¿Por qué seleccionar?**
+- Parsimonia: modelos simples son preferibles
+- Interpretabilidad
+- Mejor predicción (evitar sobreajuste)
+- Reducir multicolinealidad
+
+**Métodos de selección**
+
+1. **Forward Selection (hacia adelante)**
+   - Comenzar sin predictores
+   - Agregar el predictor que más mejora el modelo
+   - Repetir hasta que ningún predictor mejore significativamente
+
+2. **Backward Elimination (hacia atrás)**
+   - Comenzar con todos los predictores
+   - Eliminar el predictor menos significativo
+   - Repetir hasta que todos sean significativos
+
+3. **Stepwise Selection (paso a paso)**
+   - Combinación de forward y backward
+   - En cada paso, puede agregar o eliminar predictores
+
+**Criterios de selección**
+
+- **AIC (Akaike Information Criterion)**
+  $$AIC = n\log(SCR/n) + 2k$$
+  - Menor AIC es mejor
+  - Penaliza por número de predictores
+
+- **BIC (Bayesian Information Criterion)**
+  $$BIC = n\log(SCR/n) + k\log(n)$$
+  - Menor BIC es mejor
+  - Penalización más fuerte que AIC
+
+- **Cp de Mallows**
+  $$C_p = \frac{SCR}{s^2} - n + 2k$$
+  - Buscar C_p ≈ k
+
+**Advertencias**
+- Selección automática no siempre es óptima
+- Considerar conocimiento del dominio
+- Validar el modelo final
+
+#### Multicolinealidad
+
+**Definición**
+- Alta correlación entre predictores
+- Puede causar problemas en la estimación
+
+**Problemas causados**
+- Coeficientes inestables (alta varianza)
+- Signos inesperados de coeficientes
+- Intervalos de confianza muy amplios
+- Dificultad para determinar efectos individuales
+
+**Detección**
+
+**1. Factor de Inflación de Varianza (VIF)**
+$$VIF_j = \frac{1}{1 - R_j^2}$$
+
+donde R²ⱼ es el R² de regresar Xⱼ sobre las demás X's.
+
+**Regla práctica:**
+- VIF > 5: multicolinealidad moderada
+- VIF > 10: multicolinealidad severa
+
+**2. Matriz de correlación**
+- Correlaciones entre predictores > 0.8-0.9 indican problema
+
+**Soluciones**
+- Eliminar uno de los predictores correlacionados
+- Combinar predictores correlacionados
+- Usar regresión ridge o lasso (métodos avanzados)
+- Aumentar tamaño de muestra
+
+#### Variables dummy (categóricas)
+
+**Codificación**
+- Variable categórica con k categorías → k-1 variables dummy
+- Una categoría es la referencia (baseline)
+
+**Ejemplo: Género**
+```
+Género original: M, F
+Variable dummy: D = 1 si F, 0 si M
+```
+
+**Ejemplo: Región (3 categorías)**
+```
+Región: Norte, Sur, Centro
+D1 = 1 si Sur, 0 en otro caso
+D2 = 1 si Centro, 0 en otro caso
+Referencia: Norte (D1=0, D2=0)
+```
+
+**Interpretación**
+- Coeficiente de dummy: diferencia con respecto a la categoría de referencia
+- Ejemplo: β₁ = 5000 para dummy de género (F=1)
+  - Las mujeres ganan $5000 más que los hombres, en promedio, controlando por otras variables
+
+#### Términos de interacción
+
+**Concepto**
+- El efecto de X₁ sobre Y depende del valor de X₂
+
+**Modelo con interacción**
+$$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2 + \beta_3 (x_1 \times x_2) + \epsilon$$
+
+**Interpretación**
+- β₁: efecto de X₁ cuando X₂ = 0
+- β₂: efecto de X₂ cuando X₁ = 0
+- β₃: cómo cambia el efecto de X₁ según X₂ (y viceversa)
+
+**Ejemplo**
+- Salario = β₀ + β₁(Experiencia) + β₂(Educación) + β₃(Experiencia×Educación)
+- β₃ positivo: el efecto de la experiencia es mayor para personas con más educación
+
+**Visualización**
+- Gráficos de interacción son esenciales
+- Mostrar relación Y vs X₁ para diferentes valores de X₂
+
+#### Términos polinomiales
+
+**Cuándo usar**
+- Relación no lineal entre X e Y
+- Curvaturas en el diagrama de dispersión
+
+**Modelo cuadrático**
+$$y = \beta_0 + \beta_1 x + \beta_2 x^2 + \epsilon$$
+
+**Interpretación**
+- Relación en forma de U o U invertida
+- β₂ > 0: parábola hacia arriba
+- β₂ < 0: parábola hacia abajo
+
+**Advertencia**
+- No extrapolar más allá del rango de datos
+- Términos de orden alto pueden sobreajustar
+
+---
+
+### 6.3 Pruebas de significancia
+
+#### Prueba F global
+
+**Hipótesis**
+- H₀: β₁ = β₂ = ... = βₖ = 0 (ningún predictor es útil)
+- H₁: Al menos un βⱼ ≠ 0
+
+**Estadístico F**
+$$F = \frac{SCReg/k}{SCR/(n-k-1)} = \frac{MSReg}{MSE}$$
+
+**Distribución bajo H₀**
+- F con (k, n-k-1) grados de libertad
+
+**Interpretación**
+- Si rechazamos H₀: el modelo es útil
+- Al menos uno de los predictores está relacionado con Y
+
+#### Pruebas t para coeficientes individuales
+
+**Para cada βⱼ:**
+
+**Hipótesis**
+- H₀: βⱼ = 0 (el predictor Xⱼ no es útil, dado que otros están en el modelo)
+- H₁: βⱼ ≠ 0
+
+**Estadístico t**
+$$t = \frac{\hat{\beta}_j}{SE(\hat{\beta}_j)}$$
+
+**Distribución**
+- t con n-k-1 grados de libertad
+
+**Intervalo de confianza**
+$$\hat{\beta}_j \pm t_{\alpha/2, n-k-1} \times SE(\hat{\beta}_j)$$
+
+#### Pruebas para subconjuntos de variables
+
+**Prueba F parcial**
+- Comparar modelo completo vs modelo reducido
+- H₀: un subconjunto de coeficientes es cero
+
+**Estadístico F**
+$$F = \frac{(SCR_{reducido} - SCR_{completo})/q}{SCR_{completo}/(n-k-1)}$$
+
+donde q es el número de parámetros adicionales en el modelo completo.
+
+#### Comparación de modelos anidados
+
+**Modelos anidados**
+- Modelo reducido es caso especial del modelo completo
+
+**Ejemplo**
+- Completo: Y = β₀ + β₁X₁ + β₂X₂ + β₃X₃
+- Reducido: Y = β₀ + β₁X₁
+
+**Criterio**
+- Usar prueba F parcial
+- O comparar AIC/BIC
+
+#### Validación cruzada
+
+**K-fold cross-validation**
+1. Dividir datos en k partes
+2. Para cada parte:
+   - Entrenar modelo con k-1 partes
+   - Validar con la parte restante
+3. Promediar errores de validación
+
+**Leave-one-out cross-validation**
+- Caso especial con k = n
+
+**Métricas de error**
+- MSE (Mean Squared Error)
+- RMSE (Root Mean Squared Error)
+- MAE (Mean Absolute Error)
+
+#### Validación con datos de prueba
+
+**División train-test**
+- 70-80% entrenamiento
+- 20-30% prueba
+
+**Proceso**
+1. Ajustar modelo con datos de entrenamiento
+2. Predecir en datos de prueba
+3. Calcular error de predicción
+
+**Ventajas**
+- Evaluación realista del desempeño predictivo
+- Detecta sobreajuste
+
+---
+
+## Ejemplos en R
+
+### Regresión múltiple básica
+
+```{r}
+#| eval: false
+
+# Datos de ejemplo (mtcars dataset)
+data(mtcars)
+head(mtcars)
+
+# Modelo: mpg ~ hp + wt + qsec
+modelo <- lm(mpg ~ hp + wt + qsec, data = mtcars)
+summary(modelo)
+
+# Interpretación:
+# - Intercepto: mpg cuando hp=0, wt=0, qsec=0 (no interpretable)
+# - hp: por cada unidad adicional de hp, mpg disminuye (controlando wt y qsec)
+# - wt: por cada 1000 lbs adicionales, mpg disminuye (controlando hp y qsec)
+# - qsec: por cada segundo adicional en 1/4 milla, mpg aumenta
+
+# R² y R² ajustado
+summary(modelo)$r.squared
+summary(modelo)$adj.r.squared
+```
+
+### Multicolinealidad
+
+```{r}
+#| eval: false
+
+library(car)
+
+# Calcular VIF
+vif(modelo)
+
+# VIF > 5-10 indica multicolinealidad
+
+# Matriz de correlación entre predictores
+cor(mtcars[, c("hp", "wt", "qsec")])
+```
+
+### Selección de variables
+
+```{r}
+#| eval: false
+
+# Selección stepwise
+modelo_completo <- lm(mpg ~ ., data = mtcars)
+modelo_step <- step(modelo_completo, direction = "both")
+summary(modelo_step)
+
+# Backward elimination
+modelo_back <- step(modelo_completo, direction = "backward")
+
+# Forward selection
+modelo_nulo <- lm(mpg ~ 1, data = mtcars)
+modelo_forward <- step(modelo_nulo,
+                       scope = list(lower = modelo_nulo, upper = modelo_completo),
+                       direction = "forward")
+```
+
+### Variables dummy
+
+```{r}
+#| eval: false
+
+# Variable categórica: transmisión (am: 0=auto, 1=manual)
+# R crea dummy automáticamente
+modelo_cat <- lm(mpg ~ hp + wt + factor(am), data = mtcars)
+summary(modelo_cat)
+
+# factor(am)1: diferencia entre manual y automática (referencia)
+```
+
+### Interacción
+
+```{r}
+#| eval: false
+
+# Modelo con interacción entre hp y wt
+modelo_int <- lm(mpg ~ hp * wt, data = mtcars)
+summary(modelo_int)
+
+# Equivalente a: mpg ~ hp + wt + hp:wt
+
+# Visualizar interacción
+library(ggplot2)
+ggplot(mtcars, aes(x = hp, y = mpg, color = cut(wt, 3))) +
+  geom_point() +
+  geom_smooth(method = "lm", se = FALSE) +
+  labs(title = "Interacción HP y Peso",
+       color = "Peso") +
+  theme_minimal()
+```
+
+### Validación cruzada
+
+```{r}
+#| eval: false
+
+library(caret)
+
+# K-fold cross-validation (k=10)
+set.seed(123)
+train_control <- trainControl(method = "cv", number = 10)
+
+modelo_cv <- train(mpg ~ hp + wt + qsec,
+                   data = mtcars,
+                   method = "lm",
+                   trControl = train_control)
+
+print(modelo_cv)
+# RMSE: error promedio de validación cruzada
+```
+
+### División train-test
+
+```{r}
+#| eval: false
+
+# Dividir datos 80-20
+set.seed(123)
+indices_train <- sample(1:nrow(mtcars), 0.8 * nrow(mtcars))
+
+train_data <- mtcars[indices_train, ]
+test_data <- mtcars[-indices_train, ]
+
+# Ajustar modelo con datos de entrenamiento
+modelo_train <- lm(mpg ~ hp + wt + qsec, data = train_data)
+
+# Predecir en datos de prueba
+predicciones <- predict(modelo_train, newdata = test_data)
+
+# Calcular RMSE en datos de prueba
+rmse_test <- sqrt(mean((test_data$mpg - predicciones)^2))
+cat("RMSE en prueba:", rmse_test, "\n")
+```
+
+---
+
+## Ejemplos en Python
+
+### Regresión múltiple
+
+```{python}
+#| eval: false
+
+import pandas as pd
+import numpy as np
+import statsmodels.api as sm
+from sklearn.linear_model import LinearRegression
+
+# Cargar datos
+import seaborn as sns
+mtcars = sns.load_dataset('mpg').dropna()
+
+# Seleccionar variables
+X = mtcars[['horsepower', 'weight', 'acceleration']]
+y = mtcars['mpg']
+
+# Modelo con statsmodels (más completo)
+X_const = sm.add_constant(X)
+modelo = sm.OLS(y, X_const).fit()
+print(modelo.summary())
+
+# R² ajustado
+print(f"R² ajustado: {modelo.rsquared_adj}")
+```
+
+### Multicolinealidad
+
+```{python}
+#| eval: false
+
+from statsmodels.stats.outliers_influence import variance_inflation_factor
+
+# Calcular VIF para cada predictor
+vif_data = pd.DataFrame()
+vif_data["Variable"] = X.columns
+vif_data["VIF"] = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]
+print(vif_data)
+
+# Matriz de correlación
+print(X.corr())
+```
+
+### Selección de variables
+
+```{python}
+#| eval: false
+
+# Selección stepwise con mlxtend
+from mlxtend.feature_selection import SequentialFeatureSelector as SFS
+from sklearn.linear_model import LinearRegression
+
+lr = LinearRegression()
+
+# Forward selection
+sfs_forward = SFS(lr,
+                  k_features=3,
+                  forward=True,
+                  floating=False,
+                  scoring='r2',
+                  cv=5)
+
+sfs_forward.fit(X, y)
+print("Mejores características:", sfs_forward.k_feature_names_)
+```
+
+### Validación cruzada
+
+```{python}
+#| eval: false
+
+from sklearn.model_selection import cross_val_score
+from sklearn.linear_model import LinearRegression
+
+lr = LinearRegression()
+
+# K-fold cross-validation
+scores = cross_val_score(lr, X, y, cv=10, scoring='neg_mean_squared_error')
+rmse_scores = np.sqrt(-scores)
+
+print(f"RMSE promedio: {rmse_scores.mean():.2f}")
+print(f"Desv. estándar: {rmse_scores.std():.2f}")
+```
+
+### Train-test split
+
+```{python}
+#| eval: false
+
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import mean_squared_error, r2_score
+
+# División 80-20
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=123)
+
+# Ajustar modelo
+lr = LinearRegression()
+lr.fit(X_train, y_train)
+
+# Predicciones
+y_pred = lr.predict(X_test)
+
+# Métricas
+rmse = np.sqrt(mean_squared_error(y_test, y_pred))
+r2 = r2_score(y_test, y_pred)
+
+print(f"RMSE en prueba: {rmse:.2f}")
+print(f"R² en prueba: {r2:.2f}")
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Interpretación
+
+Un modelo predice el salario (miles de $) basado en años de experiencia y años de educación:
+Salario = 20 + 2.5(Experiencia) + 3.8(Educación)
+
+a) Interpreta cada coeficiente
+b) Predice el salario para alguien con 5 años de experiencia y 16 años de educación
+
+### Ejercicio 2: Multicolinealidad
+
+Si dos predictores tienen correlación de 0.95, ¿qué problemas podría causar esto? ¿Cómo lo resolverías?
+
+### Ejercicio 3: Variables dummy
+
+Tienes una variable "Región" con valores: Norte, Sur, Este, Oeste.
+a) ¿Cuántas variables dummy necesitas?
+b) Si usas "Norte" como referencia, ¿cómo interpretarías el coeficiente de la dummy "Sur"?
+
+### Ejercicio 4: Interacción
+
+Explica qué significa una interacción significativa entre experiencia y educación en un modelo de salario.
+
+### Ejercicio 5: Comparación de modelos
+
+Modelo A: R² = 0.75, R² adj = 0.73, k = 5
+Modelo B: R² = 0.76, R² adj = 0.72, k = 8
+
+¿Qué modelo elegirías y por qué?
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+- Introduction to Statistical Learning - Multiple Linear Regression
+- Applied Linear Regression Models - Kutner et al.
+
+### Videos
+- StatQuest: Multiple Regression
+- Khan Academy: Regression with multiple predictors
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Sobreajuste
+
+Agregar muchos predictores puede resultar en sobreajuste:
+- Alto R² en datos de entrenamiento
+- Pobre desempeño en nuevos datos
+
+Solución: validación cruzada, selección cuidadosa de variables
+:::
+
+::: {.callout-tip}
+## Guía rápida
+
+1. **Exploración:** Analizar correlaciones, scatterplots
+2. **Modelado:** Ajustar modelo con predictores relevantes
+3. **Verificación:** Supuestos, multicolinealidad, VIF
+4. **Selección:** Stepwise, AIC/BIC
+5. **Validación:** Train-test split o cross-validation
+6. **Interpretación:** Coeficientes en contexto
+:::
+
+---
+
+*Última actualización: Enero 2026*

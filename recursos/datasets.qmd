@@ -1,0 +1,475 @@
+---
+title: "Catálogo de datasets"
+---
+
+## Introducción
+
+Este catálogo presenta los datasets disponibles para prácticas, tareas y proyectos del curso. Todos los datasets están preparados para análisis estadístico y documentados con descripciones de variables.
+
+---
+
+## Datasets incluidos en R
+
+### mtcars - Motor Trend Car Road Tests
+
+**Descripción:** Datos de rendimiento y características de 32 automóviles (1973-74).
+
+**Variables:** 11 variables, 32 observaciones
+
+**Variables principales:**
+- `mpg`: Millas por galón
+- `cyl`: Número de cilindros
+- `hp`: Caballos de fuerza
+- `wt`: Peso (1000 lbs)
+- `qsec`: Tiempo en 1/4 de milla
+- `am`: Transmisión (0=automática, 1=manual)
+
+**Uso típico:** Regresión lineal, comparación de grupos
+
+**Cómo cargar:**
+```r
+data(mtcars)
+head(mtcars)
+```
+
+---
+
+### iris - Edgar Anderson's Iris Data
+
+**Descripción:** Mediciones de flores iris de 3 especies diferentes.
+
+**Variables:** 5 variables, 150 observaciones (50 por especie)
+
+**Variables:**
+- `Sepal.Length`: Longitud del sépalo (cm)
+- `Sepal.Width`: Ancho del sépalo (cm)
+- `Petal.Length`: Longitud del pétalo (cm)
+- `Petal.Width`: Ancho del pétalo (cm)
+- `Species`: Especie (setosa, versicolor, virginica)
+
+**Uso típico:** Análisis exploratorio, ANOVA, clasificación
+
+**Cómo cargar:**
+```r
+data(iris)
+head(iris)
+```
+
+---
+
+### diamonds - Prices of over 50,000 round cut diamonds
+
+**Descripción:** Precio y atributos de ~54,000 diamantes (paquete ggplot2).
+
+**Variables:** 10 variables, 53,940 observaciones
+
+**Variables principales:**
+- `price`: Precio en dólares USD
+- `carat`: Peso del diamante
+- `cut`: Calidad del corte (Fair, Good, Very Good, Premium, Ideal)
+- `color`: Color del diamante (D mejor, J peor)
+- `clarity`: Claridad (I1 peor, IF mejor)
+- `x, y, z`: Dimensiones en mm
+
+**Uso típico:** Regresión múltiple, variables categóricas
+
+**Cómo cargar:**
+```r
+library(ggplot2)
+data(diamonds)
+head(diamonds)
+```
+
+---
+
+### mpg - Fuel economy data
+
+**Descripción:** Economía de combustible de 234 modelos de vehículos (1999-2008).
+
+**Variables:** 11 variables, 234 observaciones
+
+**Variables principales:**
+- `manufacturer`: Fabricante
+- `model`: Modelo
+- `displ`: Desplazamiento del motor (litros)
+- `year`: Año de fabricación
+- `cyl`: Número de cilindros
+- `cty`: Millas por galón en ciudad
+- `hwy`: Millas por galón en carretera
+- `class`: Tipo de vehículo
+
+**Uso típico:** Regresión, análisis comparativo
+
+**Cómo cargar:**
+```r
+library(ggplot2)
+data(mpg)
+head(mpg)
+```
+
+---
+
+## Datasets del curso
+
+*Los siguientes datasets estarán disponibles en la carpeta `data/` del repositorio*
+
+### estudiantes.csv
+
+**Descripción:** Datos ficticios de rendimiento académico de estudiantes.
+
+**Variables:** 8 variables, 200 observaciones
+
+**Variables:**
+- `id`: Identificador del estudiante
+- `edad`: Edad en años
+- `genero`: Género (M/F)
+- `horas_estudio`: Horas de estudio semanal
+- `faltas`: Número de faltas
+- `calificacion_parcial1`: Nota del primer parcial (0-100)
+- `calificacion_parcial2`: Nota del segundo parcial (0-100)
+- `calificacion_final`: Nota final (0-100)
+
+**Uso típico:** Regresión múltiple, pruebas t, ANOVA
+
+**Cómo cargar:**
+```r
+library(readr)
+estudiantes <- read_csv("data/estudiantes.csv")
+```
+
+---
+
+### salarios.csv
+
+**Descripción:** Datos de salarios y características de empleados.
+
+**Variables:** 7 variables, 500 observaciones
+
+**Variables:**
+- `id`: Identificador
+- `salario`: Salario anual (miles de USD)
+- `experiencia`: Años de experiencia
+- `educacion`: Años de educación
+- `genero`: Género (M/F)
+- `departamento`: Departamento (Ventas, IT, Marketing, HR)
+- `ciudad`: Ciudad (A, B, C)
+
+**Uso típico:** Regresión múltiple con variables dummy, análisis salarial
+
+**Cómo cargar:**
+```r
+salarios <- read_csv("data/salarios.csv")
+```
+
+---
+
+### experimento_farmacos.csv
+
+**Descripción:** Resultados de un experimento con 3 tratamientos farmacológicos.
+
+**Variables:** 4 variables, 90 observaciones
+
+**Variables:**
+- `paciente_id`: ID del paciente
+- `tratamiento`: Tratamiento (A, B, C)
+- `edad`: Edad del paciente
+- `respuesta`: Variable de respuesta (reducción de síntomas, 0-100)
+
+**Uso típico:** ANOVA unidireccional, pruebas post-hoc
+
+**Cómo cargar:**
+```r
+farmacos <- read_csv("data/experimento_farmacos.csv")
+```
+
+---
+
+### ventas_tiendas.csv
+
+**Descripción:** Ventas mensuales de tiendas con diferentes características.
+
+**Variables:** 6 variables, 120 observaciones
+
+**Variables:**
+- `tienda_id`: ID de la tienda
+- `mes`: Mes del año (1-12)
+- `ventas`: Ventas en miles de USD
+- `publicidad`: Gasto en publicidad (miles de USD)
+- `zona`: Zona geográfica (Norte, Sur, Este, Oeste)
+- `tamaño`: Tamaño de la tienda (Pequeña, Mediana, Grande)
+
+**Uso típico:** Regresión, ANOVA bidireccional
+
+**Cómo cargar:**
+```r
+ventas <- read_csv("data/ventas_tiendas.csv")
+```
+
+---
+
+### satisfaccion_clientes.csv
+
+**Descripción:** Encuesta de satisfacción de clientes.
+
+**Variables:** 5 variables, 300 observaciones
+
+**Variables:**
+- `cliente_id`: ID del cliente
+- `satisfaccion`: Nivel de satisfacción (1-5)
+- `tiempo_espera`: Tiempo de espera en minutos
+- `calidad_servicio`: Calificación de calidad (1-10)
+- `tipo_servicio`: Tipo (Estándar, Premium)
+
+**Uso típico:** Regresión, datos categóricos ordinales
+
+---
+
+### encuesta_preferencias.csv
+
+**Descripción:** Datos de encuesta sobre preferencias de productos.
+
+**Variables:** 4 variables, 400 observaciones
+
+**Variables:**
+- `id`: Identificador
+- `edad_grupo`: Grupo de edad (18-25, 26-35, 36-50, 50+)
+- `genero`: Género (M/F)
+- `preferencia`: Producto preferido (A, B, C, D)
+
+**Uso típico:** Tablas de contingencia, prueba chi-cuadrado
+
+**Cómo cargar:**
+```r
+encuesta <- read_csv("data/encuesta_preferencias.csv")
+```
+
+---
+
+## Datasets externos recomendados
+
+### Para proyecto final
+
+#### 1. Gapminder
+
+**Descripción:** Datos de desarrollo mundial (esperanza de vida, PIB per cápita, población)
+
+**Cómo obtener:**
+```r
+install.packages("gapminder")
+library(gapminder)
+data(gapminder)
+```
+
+**Variables:** País, continente, año, esperanza de vida, población, PIB per cápita
+
+---
+
+#### 2. palmerpenguins
+
+**Descripción:** Mediciones de pingüinos en la Antártida (alternativa moderna a iris)
+
+**Cómo obtener:**
+```r
+install.packages("palmerpenguins")
+library(palmerpenguins)
+data(penguins)
+```
+
+**Variables:** Especie, isla, medidas corporales, sexo
+
+---
+
+#### 3. nycflights13
+
+**Descripción:** Datos de todos los vuelos que salieron de NYC en 2013
+
+**Cómo obtener:**
+```r
+install.packages("nycflights13")
+library(nycflights13)
+data(flights)
+```
+
+**Variables:** Aerolínea, origen, destino, retrasos, etc.
+
+---
+
+### Repositorios de datos
+
+#### UCI Machine Learning Repository
+
+- **URL:** [archive.ics.uci.edu](https://archive.ics.uci.edu/)
+- **Datasets útiles:**
+  - Wine Quality
+  - Student Performance
+  - Adult Income
+  - Heart Disease
+
+#### Kaggle
+
+- **URL:** [kaggle.com/datasets](https://www.kaggle.com/datasets)
+- **Buscar:** "beginner datasets" o "regression datasets"
+
+#### Our World in Data
+
+- **URL:** [ourworldindata.org](https://ourworldindata.org/)
+- **Temas:** Salud, educación, medio ambiente, economía
+
+---
+
+## Guía de uso de datasets
+
+### Exploración inicial
+
+Cuando trabajas con un dataset nuevo, sigue estos pasos:
+
+```r
+# 1. Cargar datos
+datos <- read_csv("ruta/al/archivo.csv")
+
+# 2. Ver primeras filas
+head(datos)
+
+# 3. Estructura del dataset
+str(datos)
+
+# 4. Resumen estadístico
+summary(datos)
+
+# 5. Dimensiones
+dim(datos)
+
+# 6. Nombres de variables
+names(datos)
+
+# 7. Verificar datos faltantes
+sum(is.na(datos))
+colSums(is.na(datos))
+
+# 8. Tipos de variables
+sapply(datos, class)
+```
+
+### Limpieza de datos
+
+```r
+library(tidyverse)
+
+# Eliminar filas con NA
+datos_limpio <- datos %>% drop_na()
+
+# Reemplazar NA con la media (solo variables numéricas)
+datos$variable[is.na(datos$variable)] <- mean(datos$variable, na.rm = TRUE)
+
+# Convertir variables a factor
+datos$categoria <- as.factor(datos$categoria)
+
+# Renombrar variables
+datos <- datos %>%
+  rename(nueva_nombre = viejo_nombre)
+```
+
+---
+
+## Consideraciones éticas
+
+### Al usar datasets reales
+
+1. **Privacidad:** No uses datasets con información personal identificable sin anonimizar
+2. **Consentimiento:** Verifica que los datos fueron recolectados éticamente
+3. **Sesgos:** Reconoce posibles sesgos en los datos
+4. **Interpretación:** Ten cuidado con interpretaciones que puedan perpetuar discriminación
+
+### Citar datasets
+
+Siempre cita la fuente de los datos:
+
+```
+Ejemplo:
+Datos obtenidos de UCI Machine Learning Repository:
+Dua, D. and Graff, C. (2019). UCI Machine Learning Repository
+[http://archive.ics.uci.edu/ml]. Irvine, CA: University of California,
+School of Information and Computer Science.
+```
+
+---
+
+## Crear tus propios datasets
+
+### Simulación de datos en R
+
+```r
+# Generar datos normales
+set.seed(123)
+datos_sim <- data.frame(
+  x = rnorm(100, mean = 50, sd = 10),
+  y = rnorm(100, mean = 100, sd = 15)
+)
+
+# Generar datos con relación lineal
+set.seed(123)
+n <- 100
+x <- runif(n, 0, 10)
+y <- 2 + 3*x + rnorm(n, 0, 2)
+datos_regresion <- data.frame(x, y)
+
+# Generar datos categóricos
+set.seed(123)
+datos_cat <- data.frame(
+  grupo = sample(c("A", "B", "C"), 100, replace = TRUE),
+  valor = rnorm(100, 50, 10)
+)
+```
+
+---
+
+## Datasets para temas específicos
+
+### Para Tema 1: Estimación de parámetros
+- `mtcars` (media, IC)
+- `estudiantes.csv` (IC para diferentes grupos)
+
+### Para Tema 2: Pruebas de hipótesis
+- `iris` (prueba t entre especies)
+- `farmacos.csv` (comparación de tratamientos)
+
+### Para Tema 3: ANOVA
+- `farmacos.csv` (ANOVA unidireccional)
+- `ventas_tiendas.csv` (ANOVA bidireccional)
+
+### Para Tema 4: Datos categóricos
+- `encuesta_preferencias.csv` (chi-cuadrado)
+- `Titanic` dataset (supervivencia)
+
+### Para Tema 5: Regresión simple
+- `mtcars` (mpg ~ wt)
+- `estudiantes.csv` (calificación ~ horas de estudio)
+
+### Para Tema 6: Regresión múltiple
+- `mtcars` (mpg ~ hp + wt + cyl)
+- `salarios.csv` (salario ~ experiencia + educación + género)
+- `diamonds` (precio ~ carat + cut + color)
+
+---
+
+::: {.callout-tip}
+## Consejo para proyectos
+
+Para el proyecto final, elige un dataset que:
+
+1. Te interese personalmente
+2. Tenga suficientes observaciones (n > 50)
+3. Tenga variables relevantes para análisis
+4. Esté bien documentado
+5. Permita aplicar múltiples técnicas del curso
+:::
+
+::: {.callout-note}
+## Nota sobre disponibilidad
+
+Los datasets del curso (*.csv en carpeta `data/`) se irán agregando a medida que avancen los temas. Los datasets incluidos en R y paquetes están disponibles inmediatamente.
+:::
+
+---
+
+*Última actualización: Enero 2026*

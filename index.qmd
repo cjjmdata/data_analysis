@@ -1,73 +1,81 @@
 ---
-title: "STA 101: Data Analysis and Statistical Inference"
-execute: 
-  freeze: false
+title: "MAT2409 - Análisis de datos II"
 ---
 
-This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.
+## Bienvenida
 
-```{r}
-#| echo: false
-#| message: false
-#| warning: false
+Bienvenido/a al curso **MAT2409 - Análisis de datos II**. Este curso introduce a los estudiantes en los fundamentos del análisis estadístico, cubriendo desde la estimación de parámetros hasta el análisis de regresión múltiple.
 
-library(googlesheets4)
-library(gt)
-library(tidyverse)
-gs4_deauth()
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1VvyWuppOFLLJHHhoA1vTf7kuehWZ0nTaXI10fPsrzSk/edit?usp=sharing")
-```
+## Información del curso
 
-```{r}
-#| echo: false
+- **Código:** MAT2409
+- **Nombre:** Análisis de datos II
+- **Créditos:** 6
+- **Duración:** 16 semanas
 
-d |>
-  select(-dow) |>
-  mutate(
-    date = as.Date(date)
-  ) |>
-  gt() |>
-  fmt_date(date, date_style = 31) |>
-  sub_missing(columns = c(week, topic, prepare, materials, due), missing_text = "") |>
-  cols_align(
-    align = "center", 
-    columns = c(week)
-    ) |>
-  cols_align(
-    align = "right", 
-    columns = c(date)
-    ) |>
-  cols_align(
-    align = "left", 
-    columns = c(topic, prepare, materials, due)
-    ) |>
-  tab_style(
-    style = cell_borders(
-      sides = "right",
-      color = "#D3D3D3",
-      style = "solid"
-    ),
-    locations = cells_body(
-      columns = c(date, topic, prepare, materials)
-    )
-  ) |>
-  fmt_markdown(
-    columns = c(topic, prepare, materials, due)
-  ) |>
-  cols_width(
-    week ~ px(45),
-    date ~ px(100), 
-    topic ~ px(300),
-    prepare ~ px(250),
-    materials ~ px(90),
-    due ~ px(185)
-  ) |>
-  cols_label_with(fn = function(x) {
-      janitor::make_clean_names(x, case = "title") |>
-        toupper() |>
-        stringr::str_replace_all("^|$", "**") |>
-        md()
-    }) |>
-  tab_options(table.font.size = 13) |>
-  opt_row_striping()
-```
+## Descripción
+
+Este curso proporciona las herramientas fundamentales para el análisis estadístico de datos. Los estudiantes aprenderán a:
+
+- Estimar parámetros poblacionales a partir de muestras
+- Realizar pruebas de hipótesis para tomar decisiones basadas en datos
+- Aplicar análisis de varianza para comparar múltiples grupos
+- Analizar datos categóricos usando pruebas de chi-cuadrado
+- Construir e interpretar modelos de regresión lineal simple y múltiple
+- Utilizar R y Python para implementar análisis estadísticos
+
+## Estructura del curso
+
+El curso está organizado en 7 temas principales:
+
+| Tema | Contenido | Duración aprox. |
+|------|-----------|-----------------|
+| [Tema 0](temas/00-repaso/) | Conocimientos previos (repaso) | 1-2 semanas |
+| [Tema 1](temas/01-estimacion/) | Estimación de parámetros | 2-3 semanas |
+| [Tema 2](temas/02-pruebas-hipotesis/) | Pruebas de hipótesis | 2-3 semanas |
+| [Tema 3](temas/03-anova/) | Análisis de varianza | 2 semanas |
+| [Tema 4](temas/04-categoricos/) | Análisis de datos categóricos | 2 semanas |
+| [Tema 5](temas/05-regresion-simple/) | Análisis de regresión simple | 2 semanas |
+| [Tema 6](temas/06-regresion-multiple/) | Análisis de regresión múltiple | 2-3 semanas |
+
+::: {.callout-note}
+La duración de cada tema es aproximada y se ajustará según el avance y necesidades del grupo.
+:::
+
+## Metodología
+
+El curso combina:
+
+- **Clases teóricas:** Presentación de conceptos y métodos estadísticos
+- **Prácticas:** Ejercicios guiados para aplicar los conceptos
+- **Tareas:** Asignaciones individuales para reforzar el aprendizaje
+- **Análisis de datos reales:** Uso de datasets del mundo real
+
+## Herramientas
+
+Utilizaremos principalmente:
+
+- **R:** Lenguaje estadístico (versión 4.0 o superior)
+- **RStudio:** Entorno de desarrollo integrado
+- **Python:** Como alternativa para algunos análisis (opcional)
+- **Quarto:** Para crear reportes reproducibles
+
+Ver la sección [Recursos - Software](recursos/software.qmd) para instrucciones de instalación.
+
+## Evaluación
+
+Para información detallada sobre el sistema de evaluación, consulta la página de [Evaluación](evaluacion.qmd).
+
+## Recursos adicionales
+
+- [Programa del curso](programa.qmd) - Objetivos, contenidos y bibliografía
+- [Programa detallado](programa-detallado.qmd) - Desglose de temas y subtemas
+- [Recursos](recursos/software.qmd) - Software, referencias y datasets
+
+---
+
+::: {.callout-tip}
+## Consejo para el éxito
+
+El análisis de datos es una habilidad práctica. La mejor manera de aprenderlo es practicando. Dedica tiempo a trabajar con los ejemplos y datasets proporcionados.
+:::

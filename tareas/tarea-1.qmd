@@ -1,0 +1,312 @@
+---
+title: "Tarea 1: Título de la tarea"
+author: "Tu nombre aquí"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: show
+    code-tools: true
+    theme: cosmo
+execute:
+  eval: false
+---
+
+## Información de la tarea {.unnumbered}
+
+- **Temas cubiertos:** [Tema X - Nombre]
+- **Fecha de asignación:** [Fecha]
+- **Fecha de entrega:** [Fecha]
+- **Puntos totales:** [XXX puntos]
+- **Modalidad:** Individual
+
+::: {.callout-important}
+## Políticas de entrega
+
+- Entrega puntual: nota completa
+- Entrega tardía (hasta 24h): penalización del 20%
+- Entrega tardía (24-48h): penalización del 50%
+- Más de 48h: no se acepta (salvo justificación)
+:::
+
+---
+
+## Preparación {#sec-preparacion}
+
+### Librerías
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+# Cargar librerías necesarias
+library(tidyverse)
+library(here)
+
+# Configuración de gráficos
+theme_set(theme_minimal())
+```
+
+### Datos
+
+```{r}
+#| label: load-data
+
+# Cargar datos
+# datos <- read.csv(here("tareas/data/datos.csv"))
+
+# Descripción del dataset:
+# - Variable 1: [descripción]
+# - Variable 2: [descripción]
+# - ...
+```
+
+---
+
+## Problema 1: Título del problema [XX puntos]
+
+### Contexto
+
+[Descripción del contexto del problema y del dataset a usar]
+
+### Pregunta 1.1 [X puntos]
+
+**Enunciado:** [Descripción detallada de lo que se debe hacer]
+
+#### Solución
+
+```{r}
+#| label: prob1-1
+
+# Tu código aquí
+
+```
+
+#### Interpretación
+
+[Escribe aquí tu interpretación de los resultados]
+
+### Pregunta 1.2 [X puntos]
+
+**Enunciado:** [Descripción detallada de lo que se debe hacer]
+
+#### Solución
+
+```{r}
+#| label: prob1-2
+
+# Tu código aquí
+
+```
+
+#### Interpretación
+
+[Escribe aquí tu interpretación de los resultados]
+
+---
+
+## Problema 2: Título del problema [XX puntos]
+
+### Contexto
+
+[Descripción del contexto]
+
+### Pregunta 2.1: Exploración de datos [X puntos]
+
+**Enunciado:** Realiza un análisis exploratorio de los datos...
+
+#### Solución
+
+```{r}
+#| label: prob2-1
+
+# Estadísticas descriptivas
+
+
+# Visualizaciones
+
+```
+
+#### Descripción
+
+[Describe los hallazgos principales del análisis exploratorio]
+
+### Pregunta 2.2: Análisis estadístico [X puntos]
+
+**Enunciado:** [Descripción del análisis a realizar]
+
+#### Planteamiento de hipótesis
+
+- **H₀:** [Hipótesis nula]
+- **H₁:** [Hipótesis alternativa]
+
+#### Verificación de supuestos
+
+```{r}
+#| label: prob2-2-supuestos
+
+# Verificar supuestos necesarios
+
+```
+
+[Comentar si se cumplen los supuestos]
+
+#### Prueba estadística
+
+```{r}
+#| label: prob2-2-prueba
+
+# Realizar la prueba
+
+```
+
+#### Interpretación y conclusión
+
+[Interpreta los resultados y responde la pregunta de investigación]
+
+---
+
+## Problema 3: Visualización de datos [XX puntos]
+
+### Enunciado
+
+[Descripción de qué se debe visualizar y por qué]
+
+### Solución
+
+```{r}
+#| label: prob3
+#| fig-width: 10
+#| fig-height: 6
+#| fig-cap: "Título descriptivo del gráfico"
+
+# Código para crear la visualización
+
+```
+
+### Interpretación
+
+[Describe qué muestra la visualización y qué conclusiones se pueden obtener]
+
+---
+
+## Problema 4: Aplicación práctica [XX puntos]
+
+### Contexto
+
+[Descripción de un problema aplicado del mundo real]
+
+### Pregunta 4.1: Selección del método [X puntos]
+
+**Enunciado:** ¿Qué método estadístico es apropiado para este problema? Justifica tu respuesta.
+
+#### Respuesta
+
+[Tu justificación aquí, mencionando supuestos, tipo de variables, objetivo del análisis, etc.]
+
+### Pregunta 4.2: Implementación [X puntos]
+
+**Enunciado:** Implementa el análisis completo
+
+#### Paso 1: Preparación de datos
+
+```{r}
+#| label: prob4-2-prep
+
+# Preparar datos (limpieza, transformaciones si es necesario)
+
+```
+
+#### Paso 2: Análisis
+
+```{r}
+#| label: prob4-2-analisis
+
+# Realizar el análisis
+
+```
+
+#### Paso 3: Diagnóstico
+
+```{r}
+#| label: prob4-2-diagnostico
+#| fig-width: 10
+#| fig-height: 8
+
+# Verificar supuestos, diagnóstico del modelo
+
+```
+
+#### Paso 4: Resultados
+
+```{r}
+#| label: prob4-2-resultados
+
+# Presentar resultados principales (tabla, gráficos)
+
+```
+
+### Pregunta 4.3: Conclusiones [X puntos]
+
+**Enunciado:** Escribe un párrafo de conclusiones respondiendo la pregunta de investigación original.
+
+#### Respuesta
+
+[Tu respuesta aquí. Debe incluir:]
+[- Respuesta a la pregunta de investigación]
+[- Evidencia basada en los resultados]
+[- Limitaciones del análisis]
+[- Posibles extensiones]
+
+---
+
+## Reflexión [XX puntos]
+
+### Pregunta de reflexión
+
+**Enunciado:** Reflexiona sobre el proceso de análisis en esta tarea. ¿Qué desafíos enfrentaste? ¿Qué aprendiste?
+
+#### Respuesta
+
+[Escribe 1-2 párrafos reflexionando sobre tu proceso de aprendizaje]
+
+---
+
+## Referencias {.unnumbered}
+
+[Si usaste fuentes externas adicionales a las del curso, lístalas aquí]
+
+1. [Referencia 1]
+2. [Referencia 2]
+
+---
+
+## Apéndice: Información de sesión {.unnumbered}
+
+```{r}
+#| label: session-info
+
+sessionInfo()
+```
+
+---
+
+::: {.callout-tip}
+## Consejos para completar esta tarea
+
+1. Lee todo el enunciado antes de empezar
+2. Verifica que todos los bloques de código se ejecuten sin errores
+3. Asegúrate de interpretar los resultados, no solo producirlos
+4. Usa visualizaciones cuando sea apropiado
+5. Revisa la ortografía y claridad de tus respuestas
+6. Renderiza el documento final y revisa el HTML antes de entregar
+:::
+
+::: {.callout-warning}
+## Recordatorio sobre integridad académica
+
+Esta tarea debe ser completada de manera **individual**. Puedes consultar los materiales del curso y las referencias proporcionadas, pero no debes copiar código o respuestas de otros estudiantes. El plagio resultará en calificación de 0.
+:::

@@ -1,9 +1,43 @@
+# Quarto
+_site/
+/.quarto/
+
+# R
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+*.Rproj
 
-/.quarto/
-_site/
-/.luarc.json
-*Check-in*.csv
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+*.log
+
+# Data (descomentar si no quieres versionar datos grandes)
+# data/*.csv
+# data/*.xlsx
+
+# Rendered outputs (opcional, si prefieres no versionar el freeze)
+# _freeze/

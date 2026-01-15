@@ -1,0 +1,338 @@
+---
+title: "Evaluación"
+---
+
+## Sistema de evaluación
+
+El curso **MAT2409 - Análisis de datos II** utiliza un sistema de evaluación continua que combina diferentes componentes para valorar tanto el conocimiento teórico como las habilidades prácticas en análisis de datos.
+
+## Componentes de evaluación
+
+| Componente | Porcentaje | Cantidad | Descripción |
+|------------|------------|----------|-------------|
+| **Prácticas** | 30% | Semanales | Ejercicios prácticos en R/Python |
+| **Tareas** | 30% | 4-6 | Asignaciones individuales |
+| **Examen parcial** | 20% | 1 | Temas 1-3 |
+| **Proyecto final** | 20% | 1 | Análisis completo de datos |
+
+**Nota mínima de aprobación:** Se definirá según la política institucional.
+
+---
+
+## Prácticas (30%)
+
+### Descripción
+
+Las prácticas son ejercicios semanales que se realizarán durante las sesiones de laboratorio o clase. Su objetivo es aplicar inmediatamente los conceptos aprendidos usando software estadístico (R o Python).
+
+### Características
+
+- **Frecuencia:** Aproximadamente una práctica por semana
+- **Duración:** 1-2 horas por práctica
+- **Formato:** Archivo Quarto (.qmd) o Jupyter Notebook (.ipynb)
+- **Entrega:** Al finalizar la semana (fecha específica por práctica)
+
+### Contenido típico
+
+- Carga y exploración de datos
+- Aplicación de métodos estadísticos
+- Interpretación de resultados
+- Visualizaciones
+- Conclusiones breves
+
+### Criterios de evaluación
+
+| Criterio | Peso |
+|----------|------|
+| Código funcional y bien documentado | 40% |
+| Resultados correctos | 30% |
+| Interpretación adecuada | 20% |
+| Presentación y organización | 10% |
+
+::: {.callout-tip}
+## Consejo
+
+Las prácticas se pueden discutir con compañeros, pero cada estudiante debe escribir y ejecutar su propio código. El código copiado será penalizado.
+:::
+
+---
+
+## Tareas (30%)
+
+### Descripción
+
+Las tareas son asignaciones individuales más extensas que las prácticas, diseñadas para profundizar en los conceptos de cada tema principal del curso.
+
+### Características
+
+- **Cantidad:** 4-6 tareas durante el semestre
+- **Duración:** 1-2 semanas para completar cada tarea
+- **Formato:** Reporte en Quarto o PDF + código R/Python
+- **Modalidad:** Individual
+
+### Distribución tentativa
+
+| Tarea | Temas cubiertos | Semana aprox. |
+|-------|----------------|---------------|
+| Tarea 1 | Estimación de parámetros | 4-5 |
+| Tarea 2 | Pruebas de hipótesis | 7-8 |
+| Tarea 3 | ANOVA y datos categóricos | 11-12 |
+| Tarea 4 | Regresión simple | 14 |
+| Tarea 5 (opcional) | Regresión múltiple | 16 |
+
+### Contenido esperado
+
+- **Planteamiento del problema:** Descripción clara del análisis a realizar
+- **Exploración de datos:** Estadísticas descriptivas y visualizaciones
+- **Metodología:** Descripción de los métodos estadísticos aplicados
+- **Código documentado:** Scripts de R o Python bien comentados
+- **Resultados:** Tablas, gráficos y salidas del análisis
+- **Interpretación:** Explicación de los resultados en contexto
+- **Conclusiones:** Resumen de hallazgos principales
+- **Referencias:** Si se utilizan fuentes externas
+
+### Criterios de evaluación
+
+| Criterio | Peso |
+|----------|------|
+| Correctitud del análisis estadístico | 35% |
+| Calidad del código (limpio, eficiente, comentado) | 25% |
+| Interpretación y conclusiones | 25% |
+| Presentación del reporte (claridad, organización) | 10% |
+| Visualizaciones (apropiadas y bien etiquetadas) | 5% |
+
+### Política de entregas
+
+- **Entrega puntual:** Nota completa
+- **Entrega tardía (hasta 24 horas):** Penalización del 20%
+- **Entrega tardía (24-48 horas):** Penalización del 50%
+- **Más de 48 horas:** No se acepta (salvo justificación médica o causa mayor)
+
+::: {.callout-important}
+## Integridad académica
+
+Las tareas deben ser **completamente individuales**. El plagio o copia resultará en calificación de 0 para todas las partes involucradas y posibles sanciones adicionales.
+:::
+
+---
+
+## Examen parcial (20%)
+
+### Descripción
+
+El examen parcial evalúa la comprensión de los conceptos fundamentales cubiertos en la primera mitad del curso.
+
+### Características
+
+- **Fecha:** Aproximadamente en la semana 9 (después del Tema 3)
+- **Duración:** 2-3 horas
+- **Temas cubiertos:**
+  - Tema 1: Estimación de parámetros
+  - Tema 2: Pruebas de hipótesis
+  - Tema 3: Análisis de varianza
+- **Formato:** Por definir (presencial/en línea, libro abierto/cerrado)
+
+### Contenido del examen
+
+El examen puede incluir:
+
+- **Preguntas conceptuales:** Definiciones, interpretaciones, selección múltiple
+- **Problemas de aplicación:** Análisis de casos con cálculos
+- **Interpretación de resultados:** Análisis de salidas de software estadístico
+- **Preguntas de código:** Lectura e interpretación de código R/Python (posiblemente)
+
+### Material permitido
+
+- Por definir (puede incluir: calculadora, tablas estadísticas, cheatsheet de 1 página, etc.)
+
+### Criterios de evaluación
+
+| Criterio | Peso |
+|----------|------|
+| Comprensión de conceptos | 40% |
+| Aplicación correcta de métodos | 35% |
+| Interpretación de resultados | 20% |
+| Claridad en las respuestas | 5% |
+
+::: {.callout-note}
+## Preparación
+
+Se proporcionará un examen de práctica y una sesión de repaso antes del examen parcial.
+:::
+
+---
+
+## Proyecto final (20%)
+
+### Descripción
+
+El proyecto final es un análisis de datos completo e independiente donde los estudiantes demuestran el dominio de las técnicas aprendidas en el curso.
+
+### Características
+
+- **Modalidad:** Individual o en parejas (por definir)
+- **Duración:** 3-4 semanas (últimas semanas del curso)
+- **Dataset:** Proporcionado por el instructor o aprobado previamente
+- **Entrega:** Reporte completo + código + presentación
+
+### Componentes del proyecto
+
+1. **Propuesta (opcional, sin calificación):**
+   - Descripción del dataset
+   - Preguntas de investigación
+   - Plan de análisis
+
+2. **Reporte escrito (70% de la nota del proyecto):**
+   - Introducción y contexto
+   - Descripción de los datos
+   - Análisis exploratorio
+   - Análisis estadístico (estimación, pruebas, regresión, etc.)
+   - Resultados y visualizaciones
+   - Conclusiones
+   - Limitaciones del estudio
+   - Referencias
+   - Extensión: 8-12 páginas (sin contar código)
+
+3. **Código reproducible (20% de la nota del proyecto):**
+   - Scripts de R o Python bien documentados
+   - Formato: Quarto (.qmd) o Jupyter Notebook (.ipynb)
+   - Debe ser completamente reproducible
+
+4. **Presentación (10% de la nota del proyecto):**
+   - Duración: 10-15 minutos
+   - Formato: Slides (Quarto Reveal.js, PowerPoint, etc.)
+   - Contenido: Pregunta de investigación, métodos, hallazgos principales
+
+### Ejemplo de preguntas de investigación
+
+- ¿Qué factores influyen en el precio de las viviendas?
+- ¿Existe diferencia en rendimiento académico entre diferentes grupos?
+- ¿Cómo afecta la dosis de un medicamento a la respuesta de pacientes?
+- ¿Qué variables predicen la satisfacción del cliente?
+
+### Criterios de evaluación
+
+**Reporte (70%):**
+
+| Criterio | Peso |
+|----------|------|
+| Calidad del análisis estadístico | 30% |
+| Interpretación correcta y profunda | 25% |
+| Claridad y organización del reporte | 20% |
+| Visualizaciones apropiadas y efectivas | 15% |
+| Conclusiones bien fundamentadas | 10% |
+
+**Código (20%):**
+
+| Criterio | Peso |
+|----------|------|
+| Reproducibilidad completa | 40% |
+| Código limpio y bien documentado | 35% |
+| Eficiencia y buenas prácticas | 25% |
+
+**Presentación (10%):**
+
+| Criterio | Peso |
+|----------|------|
+| Claridad en la comunicación | 40% |
+| Calidad de las slides | 30% |
+| Manejo del tiempo | 15% |
+| Respuestas a preguntas | 15% |
+
+### Datasets sugeridos
+
+Se proporcionará una lista de datasets apropiados que cubren diversos dominios:
+
+- Salud pública
+- Economía y finanzas
+- Educación
+- Medio ambiente
+- Ciencias sociales
+- Deportes
+
+Ver [Recursos - Datasets](recursos/datasets.qmd) para más información.
+
+---
+
+## Escala de calificación
+
+Por definir según política institucional. Ejemplo:
+
+| Calificación | Rango |
+|--------------|-------|
+| Excelente | 90-100 |
+| Muy bueno | 80-89 |
+| Bueno | 70-79 |
+| Suficiente | 60-69 |
+| Insuficiente | 0-59 |
+
+---
+
+## Políticas adicionales
+
+### Asistencia
+
+- La asistencia a clases es altamente recomendada
+- La asistencia a las sesiones de prácticas puede ser obligatoria (por definir)
+- La asistencia al examen parcial es obligatoria
+
+### Justificación de ausencias
+
+- Problemas de salud deben ser justificados con certificado médico
+- Otras situaciones excepcionales deben comunicarse al instructor con anticipación
+
+### Re-evaluaciones
+
+- Política de re-evaluaciones a definir según normativa institucional
+- Generalmente se permite recuperar el examen parcial en caso de ausencia justificada
+
+### Integridad académica
+
+Todas las formas de deshonestidad académica (plagio, copia, suplantación, etc.) resultarán en:
+
+1. Calificación de 0 en la actividad correspondiente
+2. Reporte a las autoridades académicas
+3. Posibles sanciones adicionales según el reglamento institucional
+
+### Comunicación de calificaciones
+
+- Las prácticas se calificarán y devolverán en la semana siguiente
+- Las tareas se calificarán en 1-2 semanas
+- El examen parcial se calificará en 1 semana
+- El proyecto final se calificará al finalizar el curso
+
+---
+
+## Recursos de apoyo
+
+### Para mejorar el desempeño
+
+- **Horarios de consulta:** [Por definir]
+- **Tutorías:** [Si están disponibles]
+- **Grupos de estudio:** Se anima la formación de grupos de estudio
+- **Recursos en línea:** Ver [Recursos - Referencias](recursos/referencias.qmd)
+
+### Herramientas de apoyo
+
+- Acceso a software estadístico (R/RStudio)
+- Datasets de práctica
+- Ejemplos resueltos
+- Cheatsheets de R
+
+---
+
+::: {.callout-tip}
+## Consejo final
+
+La mejor manera de tener éxito en este curso es:
+
+1. **Asistir regularmente** a clases y sesiones prácticas
+2. **Practicar constantemente** con R/Python
+3. **Empezar temprano** las tareas y el proyecto
+4. **Hacer preguntas** cuando algo no esté claro
+5. **Colaborar éticamente** con compañeros para aprender juntos
+:::
+
+---
+
+*Las políticas específicas pueden ajustarse al inicio del curso. Los estudiantes serán notificados de cualquier cambio.*
