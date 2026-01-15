@@ -9,6 +9,8 @@ project:
     - recursos/software.qmd
     - recursos/referencias.qmd
     - recursos/datasets.qmd
+    - practicas/practica-1.qmd
+    - tareas/tarea-1.qmd
 
 website:
   title: "MAT2409 - Análisis de datos II"
