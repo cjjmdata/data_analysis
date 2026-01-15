@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - index.qmd
+    - programa.qmd
 
 website:
   title: "MAT2409 - Análisis de datos II"
