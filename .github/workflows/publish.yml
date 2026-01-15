@@ -39,10 +39,37 @@ jobs:
                              "readxl", "haven"))
         shell: Rscript {0}
 
+      - name: Test Quarto installation
+        run: |
+          echo "Quarto version:"
+          quarto --version
+          echo ""
+          echo "Checking Quarto configuration:"
+          quarto check
+        shell: bash
+
+      - name: List files to render
+        run: |
+          echo "Root .qmd files:"
+          ls -la *.qmd
+          echo ""
+          echo "Temas .qmd files:"
+          find temas -name "*.qmd"
+        shell: bash
+
       - name: Render Quarto Project
         run: |
           echo "Starting Quarto render..."
-          quarto render --verbose
+          quarto render --verbose 2>&1 | tee render_output.log
+          exit_code=${PIPESTATUS[0]}
+          if [ $exit_code -ne 0 ]; then
+            echo ""
+            echo "================================"
+            echo "RENDER FAILED - Last 100 lines:"
+            echo "================================"
+            tail -100 render_output.log
+            exit $exit_code
+          fi
         shell: bash
 
       - name: Deploy to GitHub Pages
