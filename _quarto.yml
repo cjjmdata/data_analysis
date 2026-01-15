@@ -6,6 +6,9 @@ project:
     - programa.qmd
     - programa-detallado.qmd
     - evaluacion.qmd
+    - recursos/software.qmd
+    - recursos/referencias.qmd
+    - recursos/datasets.qmd
 
 website:
   title: "MAT2409 - Análisis de datos II"
