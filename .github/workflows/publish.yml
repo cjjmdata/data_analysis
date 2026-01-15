@@ -33,7 +33,10 @@ jobs:
 
       - name: Install R packages
         run: |
-          install.packages(c("tidyverse", "here", "knitr", "rmarkdown", "quarto"))
+          install.packages(c("tidyverse", "here", "knitr", "rmarkdown", "quarto",
+                             "car", "lmtest", "DescTools", "psych",
+                             "ggpubr", "patchwork", "gt", "kableExtra",
+                             "readxl", "haven"))
         shell: Rscript {0}
 
       - name: Render Quarto Project
