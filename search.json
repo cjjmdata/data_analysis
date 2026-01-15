@@ -1,0 +1,660 @@
+[
+  {
+    "objectID": "tareas/tarea-1.html",
+    "href": "tareas/tarea-1.html",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "",
+    "text": "Temas cubiertos: [Tema X - Nombre]\nFecha de asignación: [Fecha]\nFecha de entrega: [Fecha]\nPuntos totales: [XXX puntos]\nModalidad: Individual\n\n\n\n\n\n\n\nImportantPolíticas de entrega\n\n\n\n\nEntrega puntual: nota completa\nEntrega tardía (hasta 24h): penalización del 20%\nEntrega tardía (24-48h): penalización del 50%\nMás de 48h: no se acepta (salvo justificación)"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#información-de-la-tarea",
+    "href": "tareas/tarea-1.html#información-de-la-tarea",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "",
+    "text": "Temas cubiertos: [Tema X - Nombre]\nFecha de asignación: [Fecha]\nFecha de entrega: [Fecha]\nPuntos totales: [XXX puntos]\nModalidad: Individual\n\n\n\n\n\n\n\nImportantPolíticas de entrega\n\n\n\n\nEntrega puntual: nota completa\nEntrega tardía (hasta 24h): penalización del 20%\nEntrega tardía (24-48h): penalización del 50%\nMás de 48h: no se acepta (salvo justificación)"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#sec-preparacion",
+    "href": "tareas/tarea-1.html#sec-preparacion",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "1 Preparación",
+    "text": "1 Preparación\n\n1.1 Librerías\n\n\nCode\n# Cargar librerías necesarias\nlibrary(tidyverse)\nlibrary(here)\n\n# Configuración de gráficos\ntheme_set(theme_minimal())\n\n\n\n\n1.2 Datos\n\n\nCode\n# Cargar datos\n# datos &lt;- read.csv(here(\"tareas/data/datos.csv\"))\n\n# Descripción del dataset:\n# - Variable 1: [descripción]\n# - Variable 2: [descripción]\n# - ..."
+  },
+  {
+    "objectID": "tareas/tarea-1.html#problema-1-título-del-problema-xx-puntos",
+    "href": "tareas/tarea-1.html#problema-1-título-del-problema-xx-puntos",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "2 Problema 1: Título del problema [XX puntos]",
+    "text": "2 Problema 1: Título del problema [XX puntos]\n\n2.1 Contexto\n[Descripción del contexto del problema y del dataset a usar]\n\n\n2.2 Pregunta 1.1 [X puntos]\nEnunciado: [Descripción detallada de lo que se debe hacer]\n\n2.2.1 Solución\n\n\nCode\n# Tu código aquí\n\n\n\n\n2.2.2 Interpretación\n[Escribe aquí tu interpretación de los resultados]\n\n\n\n2.3 Pregunta 1.2 [X puntos]\nEnunciado: [Descripción detallada de lo que se debe hacer]\n\n2.3.1 Solución\n\n\nCode\n# Tu código aquí\n\n\n\n\n2.3.2 Interpretación\n[Escribe aquí tu interpretación de los resultados]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#problema-2-título-del-problema-xx-puntos",
+    "href": "tareas/tarea-1.html#problema-2-título-del-problema-xx-puntos",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "3 Problema 2: Título del problema [XX puntos]",
+    "text": "3 Problema 2: Título del problema [XX puntos]\n\n3.1 Contexto\n[Descripción del contexto]\n\n\n3.2 Pregunta 2.1: Exploración de datos [X puntos]\nEnunciado: Realiza un análisis exploratorio de los datos…\n\n3.2.1 Solución\n\n\nCode\n# Estadísticas descriptivas\n\n\n# Visualizaciones\n\n\n\n\n3.2.2 Descripción\n[Describe los hallazgos principales del análisis exploratorio]\n\n\n\n3.3 Pregunta 2.2: Análisis estadístico [X puntos]\nEnunciado: [Descripción del análisis a realizar]\n\n3.3.1 Planteamiento de hipótesis\n\nH₀: [Hipótesis nula]\nH₁: [Hipótesis alternativa]\n\n\n\n3.3.2 Verificación de supuestos\n\n\nCode\n# Verificar supuestos necesarios\n\n\n[Comentar si se cumplen los supuestos]\n\n\n3.3.3 Prueba estadística\n\n\nCode\n# Realizar la prueba\n\n\n\n\n3.3.4 Interpretación y conclusión\n[Interpreta los resultados y responde la pregunta de investigación]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#problema-3-visualización-de-datos-xx-puntos",
+    "href": "tareas/tarea-1.html#problema-3-visualización-de-datos-xx-puntos",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "4 Problema 3: Visualización de datos [XX puntos]",
+    "text": "4 Problema 3: Visualización de datos [XX puntos]\n\n4.1 Enunciado\n[Descripción de qué se debe visualizar y por qué]\n\n\n4.2 Solución\n\n\nCode\n# Código para crear la visualización\n\n\n\n\n4.3 Interpretación\n[Describe qué muestra la visualización y qué conclusiones se pueden obtener]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#problema-4-aplicación-práctica-xx-puntos",
+    "href": "tareas/tarea-1.html#problema-4-aplicación-práctica-xx-puntos",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "5 Problema 4: Aplicación práctica [XX puntos]",
+    "text": "5 Problema 4: Aplicación práctica [XX puntos]\n\n5.1 Contexto\n[Descripción de un problema aplicado del mundo real]\n\n\n5.2 Pregunta 4.1: Selección del método [X puntos]\nEnunciado: ¿Qué método estadístico es apropiado para este problema? Justifica tu respuesta.\n\n5.2.1 Respuesta\n[Tu justificación aquí, mencionando supuestos, tipo de variables, objetivo del análisis, etc.]\n\n\n\n5.3 Pregunta 4.2: Implementación [X puntos]\nEnunciado: Implementa el análisis completo\n\n5.3.1 Paso 1: Preparación de datos\n\n\nCode\n# Preparar datos (limpieza, transformaciones si es necesario)\n\n\n\n\n5.3.2 Paso 2: Análisis\n\n\nCode\n# Realizar el análisis\n\n\n\n\n5.3.3 Paso 3: Diagnóstico\n\n\nCode\n# Verificar supuestos, diagnóstico del modelo\n\n\n\n\n5.3.4 Paso 4: Resultados\n\n\nCode\n# Presentar resultados principales (tabla, gráficos)\n\n\n\n\n\n5.4 Pregunta 4.3: Conclusiones [X puntos]\nEnunciado: Escribe un párrafo de conclusiones respondiendo la pregunta de investigación original.\n\n5.4.1 Respuesta\n[Tu respuesta aquí. Debe incluir:] [- Respuesta a la pregunta de investigación] [- Evidencia basada en los resultados] [- Limitaciones del análisis] [- Posibles extensiones]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#reflexión-xx-puntos",
+    "href": "tareas/tarea-1.html#reflexión-xx-puntos",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "6 Reflexión [XX puntos]",
+    "text": "6 Reflexión [XX puntos]\n\n6.1 Pregunta de reflexión\nEnunciado: Reflexiona sobre el proceso de análisis en esta tarea. ¿Qué desafíos enfrentaste? ¿Qué aprendiste?\n\n6.1.1 Respuesta\n[Escribe 1-2 párrafos reflexionando sobre tu proceso de aprendizaje]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#referencias",
+    "href": "tareas/tarea-1.html#referencias",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "Referencias",
+    "text": "Referencias\n[Si usaste fuentes externas adicionales a las del curso, lístalas aquí]\n\n[Referencia 1]\n[Referencia 2]"
+  },
+  {
+    "objectID": "tareas/tarea-1.html#apéndice-información-de-sesión",
+    "href": "tareas/tarea-1.html#apéndice-información-de-sesión",
+    "title": "Tarea 1: Título de la tarea",
+    "section": "Apéndice: Información de sesión",
+    "text": "Apéndice: Información de sesión\n\n\nCode\nsessionInfo()\n\n\n\n\n\n\n\n\n\nTipConsejos para completar esta tarea\n\n\n\n\nLee todo el enunciado antes de empezar\nVerifica que todos los bloques de código se ejecuten sin errores\nAsegúrate de interpretar los resultados, no solo producirlos\nUsa visualizaciones cuando sea apropiado\nRevisa la ortografía y claridad de tus respuestas\nRenderiza el documento final y revisa el HTML antes de entregar\n\n\n\n\n\n\n\n\n\nWarningRecordatorio sobre integridad académica\n\n\n\nEsta tarea debe ser completada de manera individual. Puedes consultar los materiales del curso y las referencias proporcionadas, pero no debes copiar código o respuestas de otros estudiantes. El plagio resultará en calificación de 0."
+  },
+  {
+    "objectID": "recursos/datasets.html",
+    "href": "recursos/datasets.html",
+    "title": "Catálogo de datasets",
+    "section": "",
+    "text": "Este catálogo presenta los datasets disponibles para prácticas, tareas y proyectos del curso. Todos los datasets están preparados para análisis estadístico y documentados con descripciones de variables."
+  },
+  {
+    "objectID": "recursos/datasets.html#introducción",
+    "href": "recursos/datasets.html#introducción",
+    "title": "Catálogo de datasets",
+    "section": "",
+    "text": "Este catálogo presenta los datasets disponibles para prácticas, tareas y proyectos del curso. Todos los datasets están preparados para análisis estadístico y documentados con descripciones de variables."
+  },
+  {
+    "objectID": "recursos/datasets.html#datasets-incluidos-en-r",
+    "href": "recursos/datasets.html#datasets-incluidos-en-r",
+    "title": "Catálogo de datasets",
+    "section": "Datasets incluidos en R",
+    "text": "Datasets incluidos en R\n\nmtcars - Motor Trend Car Road Tests\nDescripción: Datos de rendimiento y características de 32 automóviles (1973-74).\nVariables: 11 variables, 32 observaciones\nVariables principales: - mpg: Millas por galón - cyl: Número de cilindros - hp: Caballos de fuerza - wt: Peso (1000 lbs) - qsec: Tiempo en 1/4 de milla - am: Transmisión (0=automática, 1=manual)\nUso típico: Regresión lineal, comparación de grupos\nCómo cargar:\ndata(mtcars)\nhead(mtcars)\n\n\n\niris - Edgar Anderson’s Iris Data\nDescripción: Mediciones de flores iris de 3 especies diferentes.\nVariables: 5 variables, 150 observaciones (50 por especie)\nVariables: - Sepal.Length: Longitud del sépalo (cm) - Sepal.Width: Ancho del sépalo (cm) - Petal.Length: Longitud del pétalo (cm) - Petal.Width: Ancho del pétalo (cm) - Species: Especie (setosa, versicolor, virginica)\nUso típico: Análisis exploratorio, ANOVA, clasificación\nCómo cargar:\ndata(iris)\nhead(iris)\n\n\n\ndiamonds - Prices of over 50,000 round cut diamonds\nDescripción: Precio y atributos de ~54,000 diamantes (paquete ggplot2).\nVariables: 10 variables, 53,940 observaciones\nVariables principales: - price: Precio en dólares USD - carat: Peso del diamante - cut: Calidad del corte (Fair, Good, Very Good, Premium, Ideal) - color: Color del diamante (D mejor, J peor) - clarity: Claridad (I1 peor, IF mejor) - x, y, z: Dimensiones en mm\nUso típico: Regresión múltiple, variables categóricas\nCómo cargar:\nlibrary(ggplot2)\ndata(diamonds)\nhead(diamonds)\n\n\n\nmpg - Fuel economy data\nDescripción: Economía de combustible de 234 modelos de vehículos (1999-2008).\nVariables: 11 variables, 234 observaciones\nVariables principales: - manufacturer: Fabricante - model: Modelo - displ: Desplazamiento del motor (litros) - year: Año de fabricación - cyl: Número de cilindros - cty: Millas por galón en ciudad - hwy: Millas por galón en carretera - class: Tipo de vehículo\nUso típico: Regresión, análisis comparativo\nCómo cargar:\nlibrary(ggplot2)\ndata(mpg)\nhead(mpg)"
+  },
+  {
+    "objectID": "recursos/datasets.html#datasets-del-curso",
+    "href": "recursos/datasets.html#datasets-del-curso",
+    "title": "Catálogo de datasets",
+    "section": "Datasets del curso",
+    "text": "Datasets del curso\nLos siguientes datasets estarán disponibles en la carpeta data/ del repositorio\n\nestudiantes.csv\nDescripción: Datos ficticios de rendimiento académico de estudiantes.\nVariables: 8 variables, 200 observaciones\nVariables: - id: Identificador del estudiante - edad: Edad en años - genero: Género (M/F) - horas_estudio: Horas de estudio semanal - faltas: Número de faltas - calificacion_parcial1: Nota del primer parcial (0-100) - calificacion_parcial2: Nota del segundo parcial (0-100) - calificacion_final: Nota final (0-100)\nUso típico: Regresión múltiple, pruebas t, ANOVA\nCómo cargar:\nlibrary(readr)\nestudiantes &lt;- read_csv(\"data/estudiantes.csv\")\n\n\n\nsalarios.csv\nDescripción: Datos de salarios y características de empleados.\nVariables: 7 variables, 500 observaciones\nVariables: - id: Identificador - salario: Salario anual (miles de USD) - experiencia: Años de experiencia - educacion: Años de educación - genero: Género (M/F) - departamento: Departamento (Ventas, IT, Marketing, HR) - ciudad: Ciudad (A, B, C)\nUso típico: Regresión múltiple con variables dummy, análisis salarial\nCómo cargar:\nsalarios &lt;- read_csv(\"data/salarios.csv\")\n\n\n\nexperimento_farmacos.csv\nDescripción: Resultados de un experimento con 3 tratamientos farmacológicos.\nVariables: 4 variables, 90 observaciones\nVariables: - paciente_id: ID del paciente - tratamiento: Tratamiento (A, B, C) - edad: Edad del paciente - respuesta: Variable de respuesta (reducción de síntomas, 0-100)\nUso típico: ANOVA unidireccional, pruebas post-hoc\nCómo cargar:\nfarmacos &lt;- read_csv(\"data/experimento_farmacos.csv\")\n\n\n\nventas_tiendas.csv\nDescripción: Ventas mensuales de tiendas con diferentes características.\nVariables: 6 variables, 120 observaciones\nVariables: - tienda_id: ID de la tienda - mes: Mes del año (1-12) - ventas: Ventas en miles de USD - publicidad: Gasto en publicidad (miles de USD) - zona: Zona geográfica (Norte, Sur, Este, Oeste) - tamaño: Tamaño de la tienda (Pequeña, Mediana, Grande)\nUso típico: Regresión, ANOVA bidireccional\nCómo cargar:\nventas &lt;- read_csv(\"data/ventas_tiendas.csv\")\n\n\n\nsatisfaccion_clientes.csv\nDescripción: Encuesta de satisfacción de clientes.\nVariables: 5 variables, 300 observaciones\nVariables: - cliente_id: ID del cliente - satisfaccion: Nivel de satisfacción (1-5) - tiempo_espera: Tiempo de espera en minutos - calidad_servicio: Calificación de calidad (1-10) - tipo_servicio: Tipo (Estándar, Premium)\nUso típico: Regresión, datos categóricos ordinales\n\n\n\nencuesta_preferencias.csv\nDescripción: Datos de encuesta sobre preferencias de productos.\nVariables: 4 variables, 400 observaciones\nVariables: - id: Identificador - edad_grupo: Grupo de edad (18-25, 26-35, 36-50, 50+) - genero: Género (M/F) - preferencia: Producto preferido (A, B, C, D)\nUso típico: Tablas de contingencia, prueba chi-cuadrado\nCómo cargar:\nencuesta &lt;- read_csv(\"data/encuesta_preferencias.csv\")"
+  },
+  {
+    "objectID": "recursos/datasets.html#datasets-externos-recomendados",
+    "href": "recursos/datasets.html#datasets-externos-recomendados",
+    "title": "Catálogo de datasets",
+    "section": "Datasets externos recomendados",
+    "text": "Datasets externos recomendados\n\nPara proyecto final\n\n1. Gapminder\nDescripción: Datos de desarrollo mundial (esperanza de vida, PIB per cápita, población)\nCómo obtener:\ninstall.packages(\"gapminder\")\nlibrary(gapminder)\ndata(gapminder)\nVariables: País, continente, año, esperanza de vida, población, PIB per cápita\n\n\n\n2. palmerpenguins\nDescripción: Mediciones de pingüinos en la Antártida (alternativa moderna a iris)\nCómo obtener:\ninstall.packages(\"palmerpenguins\")\nlibrary(palmerpenguins)\ndata(penguins)\nVariables: Especie, isla, medidas corporales, sexo\n\n\n\n3. nycflights13\nDescripción: Datos de todos los vuelos que salieron de NYC en 2013\nCómo obtener:\ninstall.packages(\"nycflights13\")\nlibrary(nycflights13)\ndata(flights)\nVariables: Aerolínea, origen, destino, retrasos, etc.\n\n\n\n\nRepositorios de datos\n\nUCI Machine Learning Repository\n\nURL: archive.ics.uci.edu\nDatasets útiles:\n\nWine Quality\nStudent Performance\nAdult Income\nHeart Disease\n\n\n\n\nKaggle\n\nURL: kaggle.com/datasets\nBuscar: “beginner datasets” o “regression datasets”\n\n\n\nOur World in Data\n\nURL: ourworldindata.org\nTemas: Salud, educación, medio ambiente, economía"
+  },
+  {
+    "objectID": "recursos/datasets.html#guía-de-uso-de-datasets",
+    "href": "recursos/datasets.html#guía-de-uso-de-datasets",
+    "title": "Catálogo de datasets",
+    "section": "Guía de uso de datasets",
+    "text": "Guía de uso de datasets\n\nExploración inicial\nCuando trabajas con un dataset nuevo, sigue estos pasos:\n# 1. Cargar datos\ndatos &lt;- read_csv(\"ruta/al/archivo.csv\")\n\n# 2. Ver primeras filas\nhead(datos)\n\n# 3. Estructura del dataset\nstr(datos)\n\n# 4. Resumen estadístico\nsummary(datos)\n\n# 5. Dimensiones\ndim(datos)\n\n# 6. Nombres de variables\nnames(datos)\n\n# 7. Verificar datos faltantes\nsum(is.na(datos))\ncolSums(is.na(datos))\n\n# 8. Tipos de variables\nsapply(datos, class)\n\n\nLimpieza de datos\nlibrary(tidyverse)\n\n# Eliminar filas con NA\ndatos_limpio &lt;- datos %&gt;% drop_na()\n\n# Reemplazar NA con la media (solo variables numéricas)\ndatos$variable[is.na(datos$variable)] &lt;- mean(datos$variable, na.rm = TRUE)\n\n# Convertir variables a factor\ndatos$categoria &lt;- as.factor(datos$categoria)\n\n# Renombrar variables\ndatos &lt;- datos %&gt;%\n  rename(nueva_nombre = viejo_nombre)"
+  },
+  {
+    "objectID": "recursos/datasets.html#consideraciones-éticas",
+    "href": "recursos/datasets.html#consideraciones-éticas",
+    "title": "Catálogo de datasets",
+    "section": "Consideraciones éticas",
+    "text": "Consideraciones éticas\n\nAl usar datasets reales\n\nPrivacidad: No uses datasets con información personal identificable sin anonimizar\nConsentimiento: Verifica que los datos fueron recolectados éticamente\nSesgos: Reconoce posibles sesgos en los datos\nInterpretación: Ten cuidado con interpretaciones que puedan perpetuar discriminación\n\n\n\nCitar datasets\nSiempre cita la fuente de los datos:\nEjemplo:\nDatos obtenidos de UCI Machine Learning Repository:\nDua, D. and Graff, C. (2019). UCI Machine Learning Repository\n[http://archive.ics.uci.edu/ml]. Irvine, CA: University of California,\nSchool of Information and Computer Science."
+  },
+  {
+    "objectID": "recursos/datasets.html#crear-tus-propios-datasets",
+    "href": "recursos/datasets.html#crear-tus-propios-datasets",
+    "title": "Catálogo de datasets",
+    "section": "Crear tus propios datasets",
+    "text": "Crear tus propios datasets\n\nSimulación de datos en R\n# Generar datos normales\nset.seed(123)\ndatos_sim &lt;- data.frame(\n  x = rnorm(100, mean = 50, sd = 10),\n  y = rnorm(100, mean = 100, sd = 15)\n)\n\n# Generar datos con relación lineal\nset.seed(123)\nn &lt;- 100\nx &lt;- runif(n, 0, 10)\ny &lt;- 2 + 3*x + rnorm(n, 0, 2)\ndatos_regresion &lt;- data.frame(x, y)\n\n# Generar datos categóricos\nset.seed(123)\ndatos_cat &lt;- data.frame(\n  grupo = sample(c(\"A\", \"B\", \"C\"), 100, replace = TRUE),\n  valor = rnorm(100, 50, 10)\n)"
+  },
+  {
+    "objectID": "recursos/datasets.html#datasets-para-temas-específicos",
+    "href": "recursos/datasets.html#datasets-para-temas-específicos",
+    "title": "Catálogo de datasets",
+    "section": "Datasets para temas específicos",
+    "text": "Datasets para temas específicos\n\nPara Tema 1: Estimación de parámetros\n\nmtcars (media, IC)\nestudiantes.csv (IC para diferentes grupos)\n\n\n\nPara Tema 2: Pruebas de hipótesis\n\niris (prueba t entre especies)\nfarmacos.csv (comparación de tratamientos)\n\n\n\nPara Tema 3: ANOVA\n\nfarmacos.csv (ANOVA unidireccional)\nventas_tiendas.csv (ANOVA bidireccional)\n\n\n\nPara Tema 4: Datos categóricos\n\nencuesta_preferencias.csv (chi-cuadrado)\nTitanic dataset (supervivencia)\n\n\n\nPara Tema 5: Regresión simple\n\nmtcars (mpg ~ wt)\nestudiantes.csv (calificación ~ horas de estudio)\n\n\n\nPara Tema 6: Regresión múltiple\n\nmtcars (mpg ~ hp + wt + cyl)\nsalarios.csv (salario ~ experiencia + educación + género)\ndiamonds (precio ~ carat + cut + color)\n\n\n\n\n\n\n\n\nTipConsejo para proyectos\n\n\n\nPara el proyecto final, elige un dataset que:\n\nTe interese personalmente\nTenga suficientes observaciones (n &gt; 50)\nTenga variables relevantes para análisis\nEsté bien documentado\nPermita aplicar múltiples técnicas del curso\n\n\n\n\n\n\n\n\n\nNoteNota sobre disponibilidad\n\n\n\nLos datasets del curso (*.csv en carpeta data/) se irán agregando a medida que avancen los temas. Los datasets incluidos en R y paquetes están disponibles inmediatamente.\n\n\n\nÚltima actualización: Enero 2026"
+  },
+  {
+    "objectID": "recursos/software.html",
+    "href": "recursos/software.html",
+    "title": "Software y herramientas",
+    "section": "",
+    "text": "Este curso utiliza principalmente R y RStudio para el análisis estadístico, con Python como alternativa opcional. Todas las herramientas son gratuitas y de código abierto."
+  },
+  {
+    "objectID": "recursos/software.html#introducción",
+    "href": "recursos/software.html#introducción",
+    "title": "Software y herramientas",
+    "section": "",
+    "text": "Este curso utiliza principalmente R y RStudio para el análisis estadístico, con Python como alternativa opcional. Todas las herramientas son gratuitas y de código abierto."
+  },
+  {
+    "objectID": "recursos/software.html#r-y-rstudio",
+    "href": "recursos/software.html#r-y-rstudio",
+    "title": "Software y herramientas",
+    "section": "R y RStudio",
+    "text": "R y RStudio\n\n¿Qué es R?\nR es un lenguaje de programación y entorno para análisis estadístico y visualización de datos. Es:\n\nGratuito y de código abierto\nAmpliamente usado en estadística y ciencia de datos\nTiene miles de paquetes disponibles\nExcelente para análisis reproducible\n\n\n\n¿Qué es RStudio?\nRStudio es un entorno de desarrollo integrado (IDE) que facilita el trabajo con R. Proporciona:\n\nEditor de código con resaltado de sintaxis\nConsola interactiva de R\nVisualizador de gráficos\nGestor de paquetes\nIntegración con Quarto para reportes"
+  },
+  {
+    "objectID": "recursos/software.html#instalación-de-r-y-rstudio",
+    "href": "recursos/software.html#instalación-de-r-y-rstudio",
+    "title": "Software y herramientas",
+    "section": "Instalación de R y RStudio",
+    "text": "Instalación de R y RStudio\n\nPaso 1: Instalar R\nOrden importante: Primero R, luego RStudio.\n\nWindows\n\nVe a https://cran.r-project.org/bin/windows/base/\nDescarga el instalador más reciente (por ejemplo, R-4.4.x)\nEjecuta el instalador\nAcepta las opciones predeterminadas\nCompleta la instalación\n\n\n\nmacOS\n\nVe a https://cran.r-project.org/bin/macosx/\nDescarga el archivo .pkg apropiado para tu procesador:\n\nApple Silicon (M1/M2/M3): R-4.4.x-arm64.pkg\nIntel: R-4.4.x-x86_64.pkg\n\nAbre el archivo descargado\nSigue las instrucciones del instalador\n\n\n\nLinux (Ubuntu/Debian)\n# Actualizar repositorios\nsudo apt update\n\n# Instalar R\nsudo apt install r-base\n\n# Verificar instalación\nR --version\n\n\n\nPaso 2: Instalar RStudio\n\nVe a https://posit.co/download/rstudio-desktop/\nDescarga RStudio Desktop (versión gratuita)\nSelecciona el instalador para tu sistema operativo\nEjecuta el instalador\nSigue las instrucciones\n\n\n\nVerificar instalación\n\nAbre RStudio\nEn la consola (panel inferior izquierdo), escribe:\n\nR.version.string\nDeberías ver algo como: “R version 4.4.x (YYYY-MM-DD)”"
+  },
+  {
+    "objectID": "recursos/software.html#paquetes-de-r-necesarios",
+    "href": "recursos/software.html#paquetes-de-r-necesarios",
+    "title": "Software y herramientas",
+    "section": "Paquetes de R necesarios",
+    "text": "Paquetes de R necesarios\n\nInstalar paquetes básicos\nEn RStudio, ejecuta los siguientes comandos en la consola:\n# Paquetes esenciales\ninstall.packages(\"tidyverse\")   # Colección de paquetes para ciencia de datos\ninstall.packages(\"here\")        # Manejo de rutas de archivos\ninstall.packages(\"quarto\")      # Sistema de publicación científica\n\n# Paquetes para análisis estadístico\ninstall.packages(\"car\")         # Herramientas de regresión\ninstall.packages(\"lmtest\")      # Pruebas de modelos lineales\ninstall.packages(\"DescTools\")   # Herramientas descriptivas\ninstall.packages(\"psych\")       # Análisis psicométrico y descriptivo\n\n# Paquetes para visualización\ninstall.packages(\"ggplot2\")     # Gráficos (incluido en tidyverse)\ninstall.packages(\"ggpubr\")      # Extensión de ggplot2\ninstall.packages(\"patchwork\")   # Combinar gráficos\n\n# Paquetes para datos\ninstall.packages(\"readxl\")      # Leer archivos Excel\ninstall.packages(\"haven\")       # Leer SPSS, Stata, SAS\n\n# Paquetes para reportes\ninstall.packages(\"knitr\")       # Motor de documentos dinámicos\ninstall.packages(\"rmarkdown\")   # Markdown con R\ninstall.packages(\"gt\")          # Tablas elegantes\ninstall.packages(\"kableExtra\")  # Tablas con formato\n\n\nVerificar instalación de paquetes\n# Cargar paquete\nlibrary(tidyverse)\n\n# Si carga sin errores, está instalado correctamente\n\n\nActualizar paquetes\n# Actualizar todos los paquetes instalados\nupdate.packages(ask = FALSE)"
+  },
+  {
+    "objectID": "recursos/software.html#quarto",
+    "href": "recursos/software.html#quarto",
+    "title": "Software y herramientas",
+    "section": "Quarto",
+    "text": "Quarto\n\n¿Qué es Quarto?\nQuarto es un sistema de publicación científica y técnica de código abierto. Permite:\n\nCrear documentos reproducibles combinando código y texto\nRenderizar a HTML, PDF, Word, y más\nCrear presentaciones y sitios web\nIntegración con R, Python, y Julia\n\n\n\nInstalación\nQuarto ya viene incluido con versiones recientes de RStudio (2022.07 o superior).\nPara verificar:\n\nEn RStudio, File &gt; New File &gt; Quarto Document\nSi aparece la opción, Quarto está instalado\n\nPara instalar manualmente:\n\nVe a https://quarto.org/docs/get-started/\nDescarga el instalador para tu sistema\nInstala siguiendo las instrucciones\n\n\n\nPrimer documento Quarto\n\nEn RStudio: File &gt; New File &gt; Quarto Document\nCompleta título y autor\nClick en “Create”\nClick en “Render” (botón arriba del editor)\n\n¡Listo! Has creado tu primer documento."
+  },
+  {
+    "objectID": "recursos/software.html#python-opcional",
+    "href": "recursos/software.html#python-opcional",
+    "title": "Software y herramientas",
+    "section": "Python (Opcional)",
+    "text": "Python (Opcional)\n\n¿Cuándo usar Python?\nPython es una alternativa a R para análisis de datos. En este curso:\n\nR es recomendado (más orientado a estadística)\nPython es opcional (bueno para integración con otros sistemas)\n\n\n\nInstalación de Python\n\nOpción 1: Anaconda (Recomendado)\n\nVe a https://www.anaconda.com/download\nDescarga Anaconda para tu sistema\nInstala siguiendo las instrucciones\nAnaconda incluye Python + paquetes científicos\n\n\n\nOpción 2: Python directo\n\nVe a https://www.python.org/downloads/\nDescarga Python 3.10 o superior\nDurante instalación, marca “Add Python to PATH”\n\n\n\n\nPaquetes de Python necesarios\n# Con pip\npip install numpy pandas scipy matplotlib seaborn statsmodels scikit-learn jupyter\nO con Anaconda:\n# Ya vienen incluidos en Anaconda\n# Para actualizar:\nconda update --all\n\n\nIDE para Python\n\nJupyter Notebook: Incluido con Anaconda\nVS Code: https://code.visualstudio.com/\nPyCharm: https://www.jetbrains.com/pycharm/\nRStudio: También soporta Python"
+  },
+  {
+    "objectID": "recursos/software.html#recursos-en-línea",
+    "href": "recursos/software.html#recursos-en-línea",
+    "title": "Software y herramientas",
+    "section": "Recursos en línea",
+    "text": "Recursos en línea\n\nPosit Cloud (antes RStudio Cloud)\nSi tienes problemas instalando software localmente, puedes usar:\nPosit Cloud: https://posit.cloud/\n\nR y RStudio en el navegador\nGratis para uso básico\nNo requiere instalación local\n\n\n\nGoogle Colab (para Python)\nGoogle Colab: https://colab.research.google.com/\n\nPython en el navegador\nGratis con cuenta de Google\nIncluye paquetes de ciencia de datos"
+  },
+  {
+    "objectID": "recursos/software.html#solución-de-problemas",
+    "href": "recursos/software.html#solución-de-problemas",
+    "title": "Software y herramientas",
+    "section": "Solución de problemas",
+    "text": "Solución de problemas\n\nR/RStudio\nProblema: “Package not found”\nSolución:\ninstall.packages(\"nombre_paquete\")\nProblema: Error al cargar paquete\nSolución:\n# Reinstalar el paquete\nremove.packages(\"nombre_paquete\")\ninstall.packages(\"nombre_paquete\")\nProblema: RStudio no encuentra R\nSolución: - Reinstala R primero, luego RStudio - Verifica la ruta en Tools &gt; Global Options &gt; General\n\n\nPython\nProblema: “Module not found”\nSolución:\npip install nombre_modulo\nProblema: Conflictos de versiones\nSolución:\n# Usar entorno virtual\npython -m venv mi_entorno\nsource mi_entorno/bin/activate  # Linux/Mac\nmi_entorno\\Scripts\\activate  # Windows\n\n# Luego instalar paquetes\npip install -r requirements.txt"
+  },
+  {
+    "objectID": "recursos/software.html#cheatsheets-hojas-de-referencia",
+    "href": "recursos/software.html#cheatsheets-hojas-de-referencia",
+    "title": "Software y herramientas",
+    "section": "Cheatsheets (Hojas de referencia)",
+    "text": "Cheatsheets (Hojas de referencia)\n\nR\n\nRStudio IDE Cheatsheet\ndplyr (manipulación de datos)\nggplot2 (visualización)\nQuarto\n\n\n\nPython\n\nPandas\nNumPy\nMatplotlib"
+  },
+  {
+    "objectID": "recursos/software.html#ayuda-y-soporte",
+    "href": "recursos/software.html#ayuda-y-soporte",
+    "title": "Software y herramientas",
+    "section": "Ayuda y soporte",
+    "text": "Ayuda y soporte\n\nDentro de R\n# Ayuda sobre una función\n?mean\nhelp(mean)\n\n# Buscar ayuda\n??regression\n\n# Ejemplos de uso\nexample(lm)\n\n\nRecursos en línea\n\nStack Overflow: stackoverflow.com - Preguntas y respuestas\nR for Data Science: r4ds.hadley.nz - Libro gratis\nPosit Community: community.rstudio.com - Foro oficial\n\n\n\n\n\n\n\n\nTipRecomendación\n\n\n\nInstala R y RStudio antes de la primera clase. Si encuentras problemas, busca ayuda en el foro del curso o en horario de consultas.\n\n\n\n\n\n\n\n\nNoteVersiones recomendadas (2026)\n\n\n\n\nR: 4.3.0 o superior\nRStudio: 2023.06 o superior\nPython: 3.10 o superior (si decides usarlo)\n\n\n\n\nÚltima actualización: Enero 2026"
+  },
+  {
+    "objectID": "programa-detallado.html",
+    "href": "programa-detallado.html",
+    "title": "Programa detallado",
+    "section": "",
+    "text": "Este documento presenta el desglose detallado de los contenidos del curso MAT2409 - Análisis de datos II. La duración de cada tema es aproximada y se ajustará según el ritmo de aprendizaje y las necesidades del grupo.\n\n\n\n\n\n\nNoteNota sobre la planificación\n\n\n\nLa distribución temporal es flexible y se adaptará al avance del curso. El instructor ajustará los tiempos según las características y necesidades del grupo."
+  },
+  {
+    "objectID": "programa-detallado.html#desglose-de-temas",
+    "href": "programa-detallado.html#desglose-de-temas",
+    "title": "Programa detallado",
+    "section": "",
+    "text": "Este documento presenta el desglose detallado de los contenidos del curso MAT2409 - Análisis de datos II. La duración de cada tema es aproximada y se ajustará según el ritmo de aprendizaje y las necesidades del grupo.\n\n\n\n\n\n\nNoteNota sobre la planificación\n\n\n\nLa distribución temporal es flexible y se adaptará al avance del curso. El instructor ajustará los tiempos según las características y necesidades del grupo."
+  },
+  {
+    "objectID": "programa-detallado.html#tema-0-conocimientos-previos-repaso",
+    "href": "programa-detallado.html#tema-0-conocimientos-previos-repaso",
+    "title": "Programa detallado",
+    "section": "Tema 0: Conocimientos previos (repaso)",
+    "text": "Tema 0: Conocimientos previos (repaso)\nDuración aproximada: 1-2 semanas\n\nContenidos\n\nMedidas de tendencia central\n\nMedia, mediana, moda\nCuartiles y percentiles\nMedidas de dispersión (varianza, desviación estándar)\n\n\n\nIntroducción a la probabilidad\n\nConceptos básicos de probabilidad\nReglas de probabilidad\nProbabilidad condicional\nIndependencia de eventos\n\n\n\nDistribuciones de probabilidad\n\nVariables aleatorias discretas y continuas\nDistribución normal\nDistribución binomial\nUso de tablas estadísticas\n\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-1-estimación-de-parámetros",
+    "href": "programa-detallado.html#tema-1-estimación-de-parámetros",
+    "title": "Programa detallado",
+    "section": "Tema 1: Estimación de parámetros",
+    "text": "Tema 1: Estimación de parámetros\nDuración aproximada: 2-3 semanas\n\n1.1 Estimación puntual\n\nConcepto de estimador\nPropiedades deseables: insesgadez, consistencia, eficiencia\nMétodo de momentos\nMétodo de máxima verosimilitud\nEstimadores comunes: media muestral, proporción muestral, varianza muestral\n\n\n\n1.2 Estimación por intervalos: media y proporción\n\nConcepto de intervalo de confianza\nNivel de confianza e interpretación\nIntervalo de confianza para la media (σ conocida)\nIntervalo de confianza para la media (σ desconocida) - distribución t\nIntervalo de confianza para proporciones\nIntervalo de confianza para la diferencia de medias\nIntervalo de confianza para la diferencia de proporciones\n\n\n\n1.3 Estimación del tamaño de muestra\n\nDeterminación del tamaño muestral para estimar media\nDeterminación del tamaño muestral para estimar proporción\nConsideraciones prácticas\n\n\n\n1.4 Aplicaciones con R\n\nCálculo de estimadores puntuales\nConstrucción de intervalos de confianza\nVisualización de intervalos\nSimulaciones para entender el concepto de intervalo de confianza\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-2-pruebas-de-hipótesis",
+    "href": "programa-detallado.html#tema-2-pruebas-de-hipótesis",
+    "title": "Programa detallado",
+    "section": "Tema 2: Pruebas de hipótesis",
+    "text": "Tema 2: Pruebas de hipótesis\nDuración aproximada: 2-3 semanas\n\n2.1 Formulación de hipótesis\n\nHipótesis nula (H₀) y alternativa (H₁)\nTipos de hipótesis alternativas (bilateral, unilateral)\nErrores tipo I y tipo II\nNivel de significancia (α)\nPotencia de una prueba (1-β)\nValor p e interpretación\nRegión crítica y región de aceptación\n\n\n\n2.2 Pruebas de hipótesis una muestra\n\nPrueba Z para la media (σ conocida)\nPrueba t para la media (σ desconocida)\nPrueba para una proporción\nPrueba para la varianza (chi-cuadrado)\nRelación entre pruebas de hipótesis e intervalos de confianza\n\n\n\n2.3 Pruebas de hipótesis dos muestras\n\nPrueba t para dos muestras independientes\n\nVarianzas iguales (pooled)\nVarianzas diferentes (Welch)\n\nPrueba t para muestras pareadas\nPrueba para dos proporciones\nPrueba F para comparar varianzas\nConsideraciones sobre normalidad y tamaño muestral\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-3-análisis-de-varianza",
+    "href": "programa-detallado.html#tema-3-análisis-de-varianza",
+    "title": "Programa detallado",
+    "section": "Tema 3: Análisis de varianza",
+    "text": "Tema 3: Análisis de varianza\nDuración aproximada: 2 semanas\n\n3.1 ANOVA unidireccional\n\nMotivación: comparación de múltiples grupos\nSupuestos del modelo ANOVA\n\nNormalidad\nHomogeneidad de varianzas\nIndependencia\n\nHipótesis del ANOVA\nDescomposición de la varianza total\n\nVarianza entre grupos (SSB)\nVarianza dentro de grupos (SSW)\n\nTabla ANOVA\nEstadístico F y distribución F\nInterpretación de resultados\nVerificación de supuestos\nPruebas post-hoc\n\nTukey HSD\nBonferroni\nScheffé\n\n\n\n\n3.2 ANOVA bidireccional\n\nDiseño factorial 2x2 y extensiones\nEfectos principales\nEfectos de interacción\nInterpretación de interacciones\nGráficos de interacción\nAnálisis de residuos\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-4-análisis-de-datos-categóricos",
+    "href": "programa-detallado.html#tema-4-análisis-de-datos-categóricos",
+    "title": "Programa detallado",
+    "section": "Tema 4: Análisis de datos categóricos",
+    "text": "Tema 4: Análisis de datos categóricos\nDuración aproximada: 2 semanas\n\n4.1 Prueba de bondad de ajuste\n\nDatos de frecuencia\nDistribución chi-cuadrado\nPrueba de bondad de ajuste\nAplicaciones: verificar si los datos siguen una distribución específica\nGrados de libertad\n\n\n\n4.2 Prueba ji cuadrada\n\nTablas de contingencia\nFrecuencias observadas vs. esperadas\nEstadístico chi-cuadrado\nInterpretación del valor p\n\n\n\n4.3 Análisis de contingencia\n\nPrueba de independencia\n\nHipótesis de independencia\nAplicaciones\n\nPrueba de homogeneidad\n\nComparación de distribuciones\n\nMedidas de asociación\n\nCoeficiente de contingencia\nV de Cramér\nRazón de momios (odds ratio)\n\nResiduos estandarizados\nVisualización de tablas de contingencia\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-5-análisis-de-regresión-simple",
+    "href": "programa-detallado.html#tema-5-análisis-de-regresión-simple",
+    "title": "Programa detallado",
+    "section": "Tema 5: Análisis de regresión simple",
+    "text": "Tema 5: Análisis de regresión simple\nDuración aproximada: 2 semanas\n\n5.1 Determinación del modelo lineal\n\nRelación entre dos variables cuantitativas\nDiagrama de dispersión\nCorrelación de Pearson\nModelo de regresión lineal simple: y = β₀ + β₁x + ε\nMétodo de mínimos cuadrados ordinarios (MCO)\nEstimación de β₀ y β₁\nInterpretación de la pendiente e intercepto\nPredicción de valores\n\n\n\n5.2 Análisis de validez del modelo\n\nSupuestos del modelo de regresión\n\nLinealidad\nNormalidad de errores\nHomocedasticidad (varianza constante)\nIndependencia de errores\n\nAnálisis de residuos\n\nGráficos de residuos\nGráfico Q-Q\nResiduos vs. valores ajustados\n\nDetección de valores atípicos e influyentes\n\nDistancia de Cook\nLeverage\n\nCoeficiente de determinación (R²)\nCoeficiente de determinación ajustado\nError estándar de la regresión\n\n\n\n5.3 Interpretación del modelo\n\nInferencia sobre los parámetros\n\nIntervalos de confianza para β₀ y β₁\nPrueba t para significancia de parámetros\n\nIntervalos de confianza para la respuesta media\nIntervalos de predicción para valores individuales\nTransformaciones de variables\nLimitaciones del modelo\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#tema-6-análisis-de-regresión-múltiple",
+    "href": "programa-detallado.html#tema-6-análisis-de-regresión-múltiple",
+    "title": "Programa detallado",
+    "section": "Tema 6: Análisis de regresión múltiple",
+    "text": "Tema 6: Análisis de regresión múltiple\nDuración aproximada: 2-3 semanas\n\n6.1 Modelo de regresión lineal múltiple\n\nExtensión del modelo simple\nModelo con k variables predictoras\nInterpretación de coeficientes parciales\nEstimación por mínimos cuadrados\nNotación matricial (introducción)\nR² y R² ajustado en regresión múltiple\n\n\n\n6.2 Construcción de modelos\n\nSelección de variables\n\nMétodo forward (hacia adelante)\nMétodo backward (hacia atrás)\nMétodo stepwise (paso a paso)\nCriterios de selección (AIC, BIC, Cp de Mallows)\n\nMulticolinealidad\n\nDetección (VIF - Factor de Inflación de Varianza)\nConsecuencias\nSoluciones\n\nVariables dummy (categóricas)\nTérminos de interacción\nTérminos polinomiales\n\n\n\n6.3 Pruebas de significancia\n\nPrueba F global\nPruebas t para coeficientes individuales\nPruebas para subconjuntos de variables\nComparación de modelos anidados\nValidación cruzada\nValidación del modelo con datos de prueba\n\n\n\nRecursos\n\nNotas del tema"
+  },
+  {
+    "objectID": "programa-detallado.html#recursos-generales",
+    "href": "programa-detallado.html#recursos-generales",
+    "title": "Programa detallado",
+    "section": "Recursos generales",
+    "text": "Recursos generales\n\nSoftware\n\nInstalación y configuración de R y Python\n\n\n\nReferencias\n\nBibliografía y recursos adicionales\n\n\n\nDatos\n\nCatálogo de datasets del curso"
+  },
+  {
+    "objectID": "programa-detallado.html#calendario-flexible",
+    "href": "programa-detallado.html#calendario-flexible",
+    "title": "Programa detallado",
+    "section": "Calendario flexible",
+    "text": "Calendario flexible\nLa siguiente tabla muestra una distribución aproximada del curso en 16 semanas. Esta planificación es flexible y se ajustará según el progreso del grupo:\n\n\n\nSemanas\nTema\nContenido principal\n\n\n\n\n1-2\nTema 0\nRepaso de conocimientos previos\n\n\n3-5\nTema 1\nEstimación de parámetros\n\n\n6-8\nTema 2\nPruebas de hipótesis\n\n\n9-10\nTema 3\nAnálisis de varianza (ANOVA)\n\n\n11-12\nTema 4\nAnálisis de datos categóricos\n\n\n13-14\nTema 5\nRegresión lineal simple\n\n\n15-16\nTema 6\nRegresión lineal múltiple\n\n\n\n\n\n\n\n\n\nTipFlexibilidad en el aprendizaje\n\n\n\nAlgunos temas pueden requerir más o menos tiempo dependiendo del dominio previo de los estudiantes y la complejidad de los ejemplos trabajados. El instructor comunicará ajustes al cronograma cuando sea necesario.\n\n\n\nÚltima actualización: Enero 2026"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "",
+    "text": "Bienvenido/a al curso MAT2409 - Análisis de datos II. Este curso introduce a los estudiantes en los fundamentos del análisis estadístico, cubriendo desde la estimación de parámetros hasta el análisis de regresión múltiple."
+  },
+  {
+    "objectID": "index.html#bienvenida",
+    "href": "index.html#bienvenida",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "",
+    "text": "Bienvenido/a al curso MAT2409 - Análisis de datos II. Este curso introduce a los estudiantes en los fundamentos del análisis estadístico, cubriendo desde la estimación de parámetros hasta el análisis de regresión múltiple."
+  },
+  {
+    "objectID": "index.html#información-del-curso",
+    "href": "index.html#información-del-curso",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Información del curso",
+    "text": "Información del curso\n\nCódigo: MAT2409\nNombre: Análisis de datos II\nCréditos: 6\nDuración: 16 semanas"
+  },
+  {
+    "objectID": "index.html#descripción",
+    "href": "index.html#descripción",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Descripción",
+    "text": "Descripción\nEste curso proporciona las herramientas fundamentales para el análisis estadístico de datos. Los estudiantes aprenderán a:\n\nEstimar parámetros poblacionales a partir de muestras\nRealizar pruebas de hipótesis para tomar decisiones basadas en datos\nAplicar análisis de varianza para comparar múltiples grupos\nAnalizar datos categóricos usando pruebas de chi-cuadrado\nConstruir e interpretar modelos de regresión lineal simple y múltiple\nUtilizar R y Python para implementar análisis estadísticos"
+  },
+  {
+    "objectID": "index.html#estructura-del-curso",
+    "href": "index.html#estructura-del-curso",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Estructura del curso",
+    "text": "Estructura del curso\nEl curso está organizado en 7 temas principales:\n\n\n\nTema\nContenido\nDuración aprox.\n\n\n\n\nTema 0\nConocimientos previos (repaso)\n1-2 semanas\n\n\nTema 1\nEstimación de parámetros\n2-3 semanas\n\n\nTema 2\nPruebas de hipótesis\n2-3 semanas\n\n\nTema 3\nAnálisis de varianza\n2 semanas\n\n\nTema 4\nAnálisis de datos categóricos\n2 semanas\n\n\nTema 5\nAnálisis de regresión simple\n2 semanas\n\n\nTema 6\nAnálisis de regresión múltiple\n2-3 semanas\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nLa duración de cada tema es aproximada y se ajustará según el avance y necesidades del grupo."
+  },
+  {
+    "objectID": "index.html#metodología",
+    "href": "index.html#metodología",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Metodología",
+    "text": "Metodología\nEl curso combina:\n\nClases teóricas: Presentación de conceptos y métodos estadísticos\nPrácticas: Ejercicios guiados para aplicar los conceptos\nTareas: Asignaciones individuales para reforzar el aprendizaje\nAnálisis de datos reales: Uso de datasets del mundo real"
+  },
+  {
+    "objectID": "index.html#herramientas",
+    "href": "index.html#herramientas",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Herramientas",
+    "text": "Herramientas\nUtilizaremos principalmente:\n\nR: Lenguaje estadístico (versión 4.0 o superior)\nRStudio: Entorno de desarrollo integrado\nPython: Como alternativa para algunos análisis (opcional)\nQuarto: Para crear reportes reproducibles\n\nVer la sección Recursos - Software para instrucciones de instalación."
+  },
+  {
+    "objectID": "index.html#evaluación",
+    "href": "index.html#evaluación",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Evaluación",
+    "text": "Evaluación\nPara información detallada sobre el sistema de evaluación, consulta la página de Evaluación."
+  },
+  {
+    "objectID": "index.html#recursos-adicionales",
+    "href": "index.html#recursos-adicionales",
+    "title": "MAT2409 - Análisis de datos II",
+    "section": "Recursos adicionales",
+    "text": "Recursos adicionales\n\nPrograma del curso - Objetivos, contenidos y bibliografía\nPrograma detallado - Desglose de temas y subtemas\nRecursos - Software, referencias y datasets\n\n\n\n\n\n\n\n\nTipConsejo para el éxito\n\n\n\nEl análisis de datos es una habilidad práctica. La mejor manera de aprenderlo es practicando. Dedica tiempo a trabajar con los ejemplos y datasets proporcionados."
+  },
+  {
+    "objectID": "programa.html",
+    "href": "programa.html",
+    "title": "Programa del curso",
+    "section": "",
+    "text": "MAT2409 - Análisis de datos II es un curso que introduce a los estudiantes en los fundamentos de la estadística inferencial y el análisis de datos. El curso enfatiza tanto los conceptos teóricos como la aplicación práctica mediante el uso de software estadístico (R y Python).\nLos estudiantes aprenderán a:\n\nRealizar estimaciones de parámetros poblacionales\nDiseñar y ejecutar pruebas de hipótesis\nAplicar análisis de varianza (ANOVA)\nAnalizar datos categóricos\nConstruir e interpretar modelos de regresión\n\nEl curso se basa en el análisis de datos reales, permitiendo a los estudiantes desarrollar habilidades prácticas aplicables en investigación, industria y toma de decisiones."
+  },
+  {
+    "objectID": "programa.html#descripción-del-curso",
+    "href": "programa.html#descripción-del-curso",
+    "title": "Programa del curso",
+    "section": "",
+    "text": "MAT2409 - Análisis de datos II es un curso que introduce a los estudiantes en los fundamentos de la estadística inferencial y el análisis de datos. El curso enfatiza tanto los conceptos teóricos como la aplicación práctica mediante el uso de software estadístico (R y Python).\nLos estudiantes aprenderán a:\n\nRealizar estimaciones de parámetros poblacionales\nDiseñar y ejecutar pruebas de hipótesis\nAplicar análisis de varianza (ANOVA)\nAnalizar datos categóricos\nConstruir e interpretar modelos de regresión\n\nEl curso se basa en el análisis de datos reales, permitiendo a los estudiantes desarrollar habilidades prácticas aplicables en investigación, industria y toma de decisiones."
+  },
+  {
+    "objectID": "programa.html#información-general",
+    "href": "programa.html#información-general",
+    "title": "Programa del curso",
+    "section": "Información general",
+    "text": "Información general\n\nCódigo: MAT2409\nNombre: Análisis de datos II\nCréditos: 6\nDuración: 16 semanas\nPrerrequisitos: Conocimientos básicos de estadística descriptiva y probabilidad"
+  },
+  {
+    "objectID": "programa.html#objetivos-de-aprendizaje",
+    "href": "programa.html#objetivos-de-aprendizaje",
+    "title": "Programa del curso",
+    "section": "Objetivos de aprendizaje",
+    "text": "Objetivos de aprendizaje\nAl finalizar el curso, los estudiantes serán capaces de:\n\nComprender los fundamentos de la inferencia estadística y su aplicación en la toma de decisiones\nEstimar parámetros poblacionales utilizando métodos de estimación puntual y por intervalos\nDiseñar y ejecutar pruebas de hipótesis apropiadas para diferentes escenarios\nAplicar análisis de varianza para comparar múltiples grupos\nAnalizar relaciones entre variables categóricas usando pruebas de chi-cuadrado\nConstruir modelos de regresión lineal simple y múltiple\nValidar e interpretar modelos estadísticos de manera crítica\nUtilizar software estadístico (R/Python) para implementar análisis\nComunicar resultados estadísticos de manera clara y efectiva\nEvaluar críticamente estudios y análisis estadísticos"
+  },
+  {
+    "objectID": "programa.html#contenidos",
+    "href": "programa.html#contenidos",
+    "title": "Programa del curso",
+    "section": "Contenidos",
+    "text": "Contenidos\n\nTema 0: Conocimientos previos (repaso)\n\nMedidas de tendencia central y dispersión\nVisualización de datos\nIntroducción a la probabilidad\nDistribuciones de probabilidad básicas\n\n\n\nTema 1: Estimación de parámetros\n\n1.1 Estimación puntual\n\nPropiedades de los estimadores\nMétodo de máxima verosimilitud\n\n1.2 Estimación por intervalos\n\nIntervalos de confianza para la media\nIntervalos de confianza para proporciones\n\n1.3 Determinación del tamaño de muestra\n1.4 Aplicaciones con R\n\n\n\nTema 2: Pruebas de hipótesis\n\n2.1 Formulación de hipótesis\n\nHipótesis nula y alternativa\nErrores tipo I y tipo II\nNivel de significancia y potencia\n\n2.2 Pruebas de hipótesis para una muestra\n\nPrueba t de Student\nPrueba Z\nPrueba de proporciones\n\n2.3 Pruebas de hipótesis para dos muestras\n\nMuestras independientes\nMuestras pareadas\n\n\n\n\nTema 3: Análisis de varianza\n\n3.1 ANOVA unidireccional\n\nSupuestos del modelo\nDescomposición de la varianza\nPruebas post-hoc\n\n3.2 ANOVA bidireccional\n\nDiseño factorial\nEfectos principales e interacciones\n\n\n\n\nTema 4: Análisis de datos categóricos\n\n4.1 Prueba de bondad de ajuste\n\nPrueba chi-cuadrado de ajuste\n\n4.2 Tablas de contingencia\n\nPrueba de independencia\nPrueba de homogeneidad\n\n4.3 Medidas de asociación\n\n\n\nTema 5: Análisis de regresión simple\n\n5.1 Determinación del modelo lineal\n\nMétodo de mínimos cuadrados\nInterpretación de parámetros\n\n5.2 Análisis de validez del modelo\n\nSupuestos del modelo\nAnálisis de residuos\nCoeficiente de determinación (R²)\n\n5.3 Inferencia en regresión\n\nIntervalos de confianza para parámetros\nPruebas de hipótesis\nPredicción\n\n\n\n\nTema 6: Análisis de regresión múltiple\n\n6.1 Modelo de regresión lineal múltiple\n\nEstimación de parámetros\nInterpretación\n\n6.2 Construcción de modelos\n\nSelección de variables\nMulticolinealidad\n\n6.3 Validación del modelo\n\nPruebas de significancia\nDiagnóstico de modelos"
+  },
+  {
+    "objectID": "programa.html#metodología",
+    "href": "programa.html#metodología",
+    "title": "Programa del curso",
+    "section": "Metodología",
+    "text": "Metodología\nEl curso se estructura en:\n\nClases teóricas (40%): Presentación de conceptos, teoremas y métodos\nPrácticas en computadora (30%): Implementación de análisis usando R/Python\nEjercicios y tareas (20%): Resolución de problemas aplicados\nProyectos de análisis (10%): Análisis completo de datasets reales\n\n\nEnfoque pedagógico\n\nAprendizaje basado en problemas reales\nUso intensivo de software estadístico\nÉnfasis en interpretación y comunicación de resultados\nAnálisis crítico de estudios y reportes estadísticos"
+  },
+  {
+    "objectID": "programa.html#evaluación",
+    "href": "programa.html#evaluación",
+    "title": "Programa del curso",
+    "section": "Evaluación",
+    "text": "Evaluación\n\n\n\nComponente\nPorcentaje\nDescripción\n\n\n\n\nPrácticas\n30%\nEjercicios semanales en R/Python\n\n\nTareas\n30%\nAsignaciones individuales\n\n\nExamen parcial\n20%\nEvaluación de temas 1-3\n\n\nProyecto final\n20%\nAnálisis completo de un dataset\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nPara información más detallada sobre evaluación, consulta la página Evaluación."
+  },
+  {
+    "objectID": "programa.html#bibliografía",
+    "href": "programa.html#bibliografía",
+    "title": "Programa del curso",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nTextos principales\n\nMoore, D. S., McCabe, G. P., & Craig, B. A. (2017). Introduction to the Practice of Statistics (9th ed.). W.H. Freeman.\nNavidi, W. (2019). Statistics for Engineers and Scientists (5th ed.). McGraw-Hill.\nJames, G., Witten, D., Hastie, T., & Tibshirani, R. (2021). An Introduction to Statistical Learning with Applications in R (2nd ed.). Springer. Disponible gratis\n\n\n\nRecursos en línea (acceso libre)\n\nDiez, D. M., Çetinkaya-Rundel, M., & Barr, C. D. OpenIntro Statistics (4th ed.). openintro.org\nIsmay, C., & Kim, A. Y. Statistical Inference via Data Science: A ModernDive into R and the Tidyverse. moderndive.com\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2nd ed.). O’Reilly. r4ds.hadley.nz\n\n\n\nRecursos de R\n\nR Documentation: rdocumentation.org\nRStudio Cheatsheets: rstudio.com/resources/cheatsheets"
+  },
+  {
+    "objectID": "programa.html#software-requerido",
+    "href": "programa.html#software-requerido",
+    "title": "Programa del curso",
+    "section": "Software requerido",
+    "text": "Software requerido\n\nR (versión 4.0 o superior): cran.r-project.org\nRStudio (última versión): posit.co/download/rstudio-desktop\nPython (opcional, versión 3.8+): python.org\n\nVer Recursos - Software para instrucciones detalladas de instalación."
+  },
+  {
+    "objectID": "programa.html#carga-de-trabajo",
+    "href": "programa.html#carga-de-trabajo",
+    "title": "Programa del curso",
+    "section": "Carga de trabajo",
+    "text": "Carga de trabajo\nSe espera que los estudiantes dediquen aproximadamente:\n\n3 horas/semana en clase\n4-6 horas/semana de trabajo independiente (lecturas, prácticas, tareas)\n\nTotal: ~7-9 horas/semana"
+  },
+  {
+    "objectID": "programa.html#políticas-del-curso",
+    "href": "programa.html#políticas-del-curso",
+    "title": "Programa del curso",
+    "section": "Políticas del curso",
+    "text": "Políticas del curso\n\nIntegridad académica\nSe espera que todos los estudiantes mantengan los más altos estándares de integridad académica. El plagio, copia o cualquier forma de deshonestidad académica no será tolerada.\n\n\nColaboración\n\nLas prácticas pueden ser discutidas con compañeros, pero cada estudiante debe escribir su propio código\nLas tareas deben ser completadas de manera individual\nEl proyecto final puede ser individual o en parejas (a definir)\n\n\n\nEntregas\n\nLas asignaciones deben entregarse en la fecha y hora especificadas\nSe aplicará una penalización por entregas tardías (a definir según política institucional)"
+  },
+  {
+    "objectID": "programa.html#contacto-y-soporte",
+    "href": "programa.html#contacto-y-soporte",
+    "title": "Programa del curso",
+    "section": "Contacto y soporte",
+    "text": "Contacto y soporte\nPara consultas sobre el curso:\n\nDurante clase: Preguntas y discusiones\nHorario de consulta: [Por definir]\nCorreo electrónico: [Por definir]\n\n\nEste programa puede sufrir modificaciones durante el curso. Los estudiantes serán notificados de cualquier cambio significativo."
+  },
+  {
+    "objectID": "evaluacion.html",
+    "href": "evaluacion.html",
+    "title": "Evaluación",
+    "section": "",
+    "text": "El curso MAT2409 - Análisis de datos II utiliza un sistema de evaluación continua que combina diferentes componentes para valorar tanto el conocimiento teórico como las habilidades prácticas en análisis de datos."
+  },
+  {
+    "objectID": "evaluacion.html#sistema-de-evaluación",
+    "href": "evaluacion.html#sistema-de-evaluación",
+    "title": "Evaluación",
+    "section": "",
+    "text": "El curso MAT2409 - Análisis de datos II utiliza un sistema de evaluación continua que combina diferentes componentes para valorar tanto el conocimiento teórico como las habilidades prácticas en análisis de datos."
+  },
+  {
+    "objectID": "evaluacion.html#componentes-de-evaluación",
+    "href": "evaluacion.html#componentes-de-evaluación",
+    "title": "Evaluación",
+    "section": "Componentes de evaluación",
+    "text": "Componentes de evaluación\n\n\n\nComponente\nPorcentaje\nCantidad\nDescripción\n\n\n\n\nPrácticas\n30%\nSemanales\nEjercicios prácticos en R/Python\n\n\nTareas\n30%\n4-6\nAsignaciones individuales\n\n\nExamen parcial\n20%\n1\nTemas 1-3\n\n\nProyecto final\n20%\n1\nAnálisis completo de datos\n\n\n\nNota mínima de aprobación: Se definirá según la política institucional."
+  },
+  {
+    "objectID": "evaluacion.html#prácticas-30",
+    "href": "evaluacion.html#prácticas-30",
+    "title": "Evaluación",
+    "section": "Prácticas (30%)",
+    "text": "Prácticas (30%)\n\nDescripción\nLas prácticas son ejercicios semanales que se realizarán durante las sesiones de laboratorio o clase. Su objetivo es aplicar inmediatamente los conceptos aprendidos usando software estadístico (R o Python).\n\n\nCaracterísticas\n\nFrecuencia: Aproximadamente una práctica por semana\nDuración: 1-2 horas por práctica\nFormato: Archivo Quarto (.qmd) o Jupyter Notebook (.ipynb)\nEntrega: Al finalizar la semana (fecha específica por práctica)\n\n\n\nContenido típico\n\nCarga y exploración de datos\nAplicación de métodos estadísticos\nInterpretación de resultados\nVisualizaciones\nConclusiones breves\n\n\n\nCriterios de evaluación\n\n\n\nCriterio\nPeso\n\n\n\n\nCódigo funcional y bien documentado\n40%\n\n\nResultados correctos\n30%\n\n\nInterpretación adecuada\n20%\n\n\nPresentación y organización\n10%\n\n\n\n\n\n\n\n\n\nTipConsejo\n\n\n\nLas prácticas se pueden discutir con compañeros, pero cada estudiante debe escribir y ejecutar su propio código. El código copiado será penalizado."
+  },
+  {
+    "objectID": "evaluacion.html#tareas-30",
+    "href": "evaluacion.html#tareas-30",
+    "title": "Evaluación",
+    "section": "Tareas (30%)",
+    "text": "Tareas (30%)\n\nDescripción\nLas tareas son asignaciones individuales más extensas que las prácticas, diseñadas para profundizar en los conceptos de cada tema principal del curso.\n\n\nCaracterísticas\n\nCantidad: 4-6 tareas durante el semestre\nDuración: 1-2 semanas para completar cada tarea\nFormato: Reporte en Quarto o PDF + código R/Python\nModalidad: Individual\n\n\n\nDistribución tentativa\n\n\n\nTarea\nTemas cubiertos\nSemana aprox.\n\n\n\n\nTarea 1\nEstimación de parámetros\n4-5\n\n\nTarea 2\nPruebas de hipótesis\n7-8\n\n\nTarea 3\nANOVA y datos categóricos\n11-12\n\n\nTarea 4\nRegresión simple\n14\n\n\nTarea 5 (opcional)\nRegresión múltiple\n16\n\n\n\n\n\nContenido esperado\n\nPlanteamiento del problema: Descripción clara del análisis a realizar\nExploración de datos: Estadísticas descriptivas y visualizaciones\nMetodología: Descripción de los métodos estadísticos aplicados\nCódigo documentado: Scripts de R o Python bien comentados\nResultados: Tablas, gráficos y salidas del análisis\nInterpretación: Explicación de los resultados en contexto\nConclusiones: Resumen de hallazgos principales\nReferencias: Si se utilizan fuentes externas\n\n\n\nCriterios de evaluación\n\n\n\nCriterio\nPeso\n\n\n\n\nCorrectitud del análisis estadístico\n35%\n\n\nCalidad del código (limpio, eficiente, comentado)\n25%\n\n\nInterpretación y conclusiones\n25%\n\n\nPresentación del reporte (claridad, organización)\n10%\n\n\nVisualizaciones (apropiadas y bien etiquetadas)\n5%\n\n\n\n\n\nPolítica de entregas\n\nEntrega puntual: Nota completa\nEntrega tardía (hasta 24 horas): Penalización del 20%\nEntrega tardía (24-48 horas): Penalización del 50%\nMás de 48 horas: No se acepta (salvo justificación médica o causa mayor)\n\n\n\n\n\n\n\nImportantIntegridad académica\n\n\n\nLas tareas deben ser completamente individuales. El plagio o copia resultará en calificación de 0 para todas las partes involucradas y posibles sanciones adicionales."
+  },
+  {
+    "objectID": "evaluacion.html#examen-parcial-20",
+    "href": "evaluacion.html#examen-parcial-20",
+    "title": "Evaluación",
+    "section": "Examen parcial (20%)",
+    "text": "Examen parcial (20%)\n\nDescripción\nEl examen parcial evalúa la comprensión de los conceptos fundamentales cubiertos en la primera mitad del curso.\n\n\nCaracterísticas\n\nFecha: Aproximadamente en la semana 9 (después del Tema 3)\nDuración: 2-3 horas\nTemas cubiertos:\n\nTema 1: Estimación de parámetros\nTema 2: Pruebas de hipótesis\nTema 3: Análisis de varianza\n\nFormato: Por definir (presencial/en línea, libro abierto/cerrado)\n\n\n\nContenido del examen\nEl examen puede incluir:\n\nPreguntas conceptuales: Definiciones, interpretaciones, selección múltiple\nProblemas de aplicación: Análisis de casos con cálculos\nInterpretación de resultados: Análisis de salidas de software estadístico\nPreguntas de código: Lectura e interpretación de código R/Python (posiblemente)\n\n\n\nMaterial permitido\n\nPor definir (puede incluir: calculadora, tablas estadísticas, cheatsheet de 1 página, etc.)\n\n\n\nCriterios de evaluación\n\n\n\nCriterio\nPeso\n\n\n\n\nComprensión de conceptos\n40%\n\n\nAplicación correcta de métodos\n35%\n\n\nInterpretación de resultados\n20%\n\n\nClaridad en las respuestas\n5%\n\n\n\n\n\n\n\n\n\nNotePreparación\n\n\n\nSe proporcionará un examen de práctica y una sesión de repaso antes del examen parcial."
+  },
+  {
+    "objectID": "evaluacion.html#proyecto-final-20",
+    "href": "evaluacion.html#proyecto-final-20",
+    "title": "Evaluación",
+    "section": "Proyecto final (20%)",
+    "text": "Proyecto final (20%)\n\nDescripción\nEl proyecto final es un análisis de datos completo e independiente donde los estudiantes demuestran el dominio de las técnicas aprendidas en el curso.\n\n\nCaracterísticas\n\nModalidad: Individual o en parejas (por definir)\nDuración: 3-4 semanas (últimas semanas del curso)\nDataset: Proporcionado por el instructor o aprobado previamente\nEntrega: Reporte completo + código + presentación\n\n\n\nComponentes del proyecto\n\nPropuesta (opcional, sin calificación):\n\nDescripción del dataset\nPreguntas de investigación\nPlan de análisis\n\nReporte escrito (70% de la nota del proyecto):\n\nIntroducción y contexto\nDescripción de los datos\nAnálisis exploratorio\nAnálisis estadístico (estimación, pruebas, regresión, etc.)\nResultados y visualizaciones\nConclusiones\nLimitaciones del estudio\nReferencias\nExtensión: 8-12 páginas (sin contar código)\n\nCódigo reproducible (20% de la nota del proyecto):\n\nScripts de R o Python bien documentados\nFormato: Quarto (.qmd) o Jupyter Notebook (.ipynb)\nDebe ser completamente reproducible\n\nPresentación (10% de la nota del proyecto):\n\nDuración: 10-15 minutos\nFormato: Slides (Quarto Reveal.js, PowerPoint, etc.)\nContenido: Pregunta de investigación, métodos, hallazgos principales\n\n\n\n\nEjemplo de preguntas de investigación\n\n¿Qué factores influyen en el precio de las viviendas?\n¿Existe diferencia en rendimiento académico entre diferentes grupos?\n¿Cómo afecta la dosis de un medicamento a la respuesta de pacientes?\n¿Qué variables predicen la satisfacción del cliente?\n\n\n\nCriterios de evaluación\nReporte (70%):\n\n\n\nCriterio\nPeso\n\n\n\n\nCalidad del análisis estadístico\n30%\n\n\nInterpretación correcta y profunda\n25%\n\n\nClaridad y organización del reporte\n20%\n\n\nVisualizaciones apropiadas y efectivas\n15%\n\n\nConclusiones bien fundamentadas\n10%\n\n\n\nCódigo (20%):\n\n\n\nCriterio\nPeso\n\n\n\n\nReproducibilidad completa\n40%\n\n\nCódigo limpio y bien documentado\n35%\n\n\nEficiencia y buenas prácticas\n25%\n\n\n\nPresentación (10%):\n\n\n\nCriterio\nPeso\n\n\n\n\nClaridad en la comunicación\n40%\n\n\nCalidad de las slides\n30%\n\n\nManejo del tiempo\n15%\n\n\nRespuestas a preguntas\n15%\n\n\n\n\n\nDatasets sugeridos\nSe proporcionará una lista de datasets apropiados que cubren diversos dominios:\n\nSalud pública\nEconomía y finanzas\nEducación\nMedio ambiente\nCiencias sociales\nDeportes\n\nVer Recursos - Datasets para más información."
+  },
+  {
+    "objectID": "evaluacion.html#escala-de-calificación",
+    "href": "evaluacion.html#escala-de-calificación",
+    "title": "Evaluación",
+    "section": "Escala de calificación",
+    "text": "Escala de calificación\nPor definir según política institucional. Ejemplo:\n\n\n\nCalificación\nRango\n\n\n\n\nExcelente\n90-100\n\n\nMuy bueno\n80-89\n\n\nBueno\n70-79\n\n\nSuficiente\n60-69\n\n\nInsuficiente\n0-59"
+  },
+  {
+    "objectID": "evaluacion.html#políticas-adicionales",
+    "href": "evaluacion.html#políticas-adicionales",
+    "title": "Evaluación",
+    "section": "Políticas adicionales",
+    "text": "Políticas adicionales\n\nAsistencia\n\nLa asistencia a clases es altamente recomendada\nLa asistencia a las sesiones de prácticas puede ser obligatoria (por definir)\nLa asistencia al examen parcial es obligatoria\n\n\n\nJustificación de ausencias\n\nProblemas de salud deben ser justificados con certificado médico\nOtras situaciones excepcionales deben comunicarse al instructor con anticipación\n\n\n\nRe-evaluaciones\n\nPolítica de re-evaluaciones a definir según normativa institucional\nGeneralmente se permite recuperar el examen parcial en caso de ausencia justificada\n\n\n\nIntegridad académica\nTodas las formas de deshonestidad académica (plagio, copia, suplantación, etc.) resultarán en:\n\nCalificación de 0 en la actividad correspondiente\nReporte a las autoridades académicas\nPosibles sanciones adicionales según el reglamento institucional\n\n\n\nComunicación de calificaciones\n\nLas prácticas se calificarán y devolverán en la semana siguiente\nLas tareas se calificarán en 1-2 semanas\nEl examen parcial se calificará en 1 semana\nEl proyecto final se calificará al finalizar el curso"
+  },
+  {
+    "objectID": "evaluacion.html#recursos-de-apoyo",
+    "href": "evaluacion.html#recursos-de-apoyo",
+    "title": "Evaluación",
+    "section": "Recursos de apoyo",
+    "text": "Recursos de apoyo\n\nPara mejorar el desempeño\n\nHorarios de consulta: [Por definir]\nTutorías: [Si están disponibles]\nGrupos de estudio: Se anima la formación de grupos de estudio\nRecursos en línea: Ver Recursos - Referencias\n\n\n\nHerramientas de apoyo\n\nAcceso a software estadístico (R/RStudio)\nDatasets de práctica\nEjemplos resueltos\nCheatsheets de R\n\n\n\n\n\n\n\n\nTipConsejo final\n\n\n\nLa mejor manera de tener éxito en este curso es:\n\nAsistir regularmente a clases y sesiones prácticas\nPracticar constantemente con R/Python\nEmpezar temprano las tareas y el proyecto\nHacer preguntas cuando algo no esté claro\nColaborar éticamente con compañeros para aprender juntos\n\n\n\n\nLas políticas específicas pueden ajustarse al inicio del curso. Los estudiantes serán notificados de cualquier cambio."
+  },
+  {
+    "objectID": "recursos/referencias.html",
+    "href": "recursos/referencias.html",
+    "title": "Referencias y recursos adicionales",
+    "section": "",
+    "text": "Autores: Mine Çetinkaya-Rundel y Johanna Hardin\nEditorial: OpenIntro (2023)\nAcceso: Gratis online\nDescripción: Texto moderno de estadística con enfoque en simulación y bootstrap. Excelente para aprender estadística inferencial.\nNivel: Introductorio\n\n\n\n\n\nAutores: David Diez, Mine Çetinkaya-Rundel, Christopher Barr\nEditorial: OpenIntro (4ta edición)\nAcceso: Gratis online\nDescripción: Texto completo de estadística introductoria con muchos ejemplos y ejercicios.\nNivel: Introductorio\n\n\n\n\n\nAutores: Chester Ismay y Albert Y. Kim\nAcceso: Gratis online\nDescripción: Enfoque moderno usando tidyverse. Excelente para aprender R y estadística simultáneamente.\nNivel: Introductorio\n\n\n\n\n\nAutores: Hadley Wickham, Mine Çetinkaya-Rundel, Garrett Grolemund\nEditorial: O’Reilly (2da edición, 2023)\nAcceso: Gratis online\nDescripción: Referencia esencial para análisis de datos con R y tidyverse.\nNivel: Introductorio a intermedio\n\n\n\n\n\nAutores: Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani\nEditorial: Springer (2da edición, 2021)\nAcceso: Gratis online\nDescripción: Introducción accesible al aprendizaje estadístico. Incluye laboratorios en R.\nNivel: Intermedio\n\n\n\n\n\n\n\n\n\nAutores: Kutner, Nachtsheim, Neter, Li\nEditorial: McGraw-Hill (5ta edición)\nDescripción: Texto comprehensivo sobre regresión y ANOVA.\nNivel: Intermedio a avanzado\n\n\n\n\n\nAutores: Trevor Hastie, Robert Tibshirani, Jerome Friedman\nEditorial: Springer (2da edición)\nAcceso: Gratis online\nDescripción: Texto avanzado sobre aprendizaje estadístico.\nNivel: Avanzado\n\n\n\n\n\n\n\n\n\nAutores: George W. Snedecor, William G. Cochran\nDescripción: Clásico de estadística aplicada, disponible en español.\nNivel: Intermedio\n\n\n\n\n\nAutores: Mario Triola\nEditorial: Pearson\nDescripción: Texto introductorio en español, ampliamente usado.\nNivel: Introductorio"
+  },
+  {
+    "objectID": "recursos/referencias.html#libros-de-texto",
+    "href": "recursos/referencias.html#libros-de-texto",
+    "title": "Referencias y recursos adicionales",
+    "section": "",
+    "text": "Autores: Mine Çetinkaya-Rundel y Johanna Hardin\nEditorial: OpenIntro (2023)\nAcceso: Gratis online\nDescripción: Texto moderno de estadística con enfoque en simulación y bootstrap. Excelente para aprender estadística inferencial.\nNivel: Introductorio\n\n\n\n\n\nAutores: David Diez, Mine Çetinkaya-Rundel, Christopher Barr\nEditorial: OpenIntro (4ta edición)\nAcceso: Gratis online\nDescripción: Texto completo de estadística introductoria con muchos ejemplos y ejercicios.\nNivel: Introductorio\n\n\n\n\n\nAutores: Chester Ismay y Albert Y. Kim\nAcceso: Gratis online\nDescripción: Enfoque moderno usando tidyverse. Excelente para aprender R y estadística simultáneamente.\nNivel: Introductorio\n\n\n\n\n\nAutores: Hadley Wickham, Mine Çetinkaya-Rundel, Garrett Grolemund\nEditorial: O’Reilly (2da edición, 2023)\nAcceso: Gratis online\nDescripción: Referencia esencial para análisis de datos con R y tidyverse.\nNivel: Introductorio a intermedio\n\n\n\n\n\nAutores: Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani\nEditorial: Springer (2da edición, 2021)\nAcceso: Gratis online\nDescripción: Introducción accesible al aprendizaje estadístico. Incluye laboratorios en R.\nNivel: Intermedio\n\n\n\n\n\n\n\n\n\nAutores: Kutner, Nachtsheim, Neter, Li\nEditorial: McGraw-Hill (5ta edición)\nDescripción: Texto comprehensivo sobre regresión y ANOVA.\nNivel: Intermedio a avanzado\n\n\n\n\n\nAutores: Trevor Hastie, Robert Tibshirani, Jerome Friedman\nEditorial: Springer (2da edición)\nAcceso: Gratis online\nDescripción: Texto avanzado sobre aprendizaje estadístico.\nNivel: Avanzado\n\n\n\n\n\n\n\n\n\nAutores: George W. Snedecor, William G. Cochran\nDescripción: Clásico de estadística aplicada, disponible en español.\nNivel: Intermedio\n\n\n\n\n\nAutores: Mario Triola\nEditorial: Pearson\nDescripción: Texto introductorio en español, ampliamente usado.\nNivel: Introductorio"
+  },
+  {
+    "objectID": "recursos/referencias.html#recursos-en-línea",
+    "href": "recursos/referencias.html#recursos-en-línea",
+    "title": "Referencias y recursos adicionales",
+    "section": "Recursos en línea",
+    "text": "Recursos en línea\n\nTutoriales y cursos\n\nKhan Academy\n\nURL: khanacademy.org/math/statistics-probability\nDescripción: Videos y ejercicios interactivos de estadística\nIdioma: Inglés y español\nCosto: Gratis\n\n\n\nStatQuest\n\nURL: YouTube - StatQuest\nDescripción: Videos cortos y claros sobre conceptos estadísticos\nIdioma: Inglés (subtítulos disponibles)\nCosto: Gratis\n\n\n\nCoursera\n\nCurso: “Statistics with R Specialization” (Duke University)\nURL: coursera.org\nDescripción: Especialización completa en estadística con R\nCosto: Gratis para auditar\n\n\n\nDataCamp\n\nURL: datacamp.com\nCursos relevantes:\n\nIntroduction to Statistics in R\nInference for Categorical Data in R\nLinear Regression in R\n\nCosto: Suscripción mensual (prueba gratuita disponible)\n\n\n\n\n\nDocumentación oficial\n\nR Documentation\n\nCRAN: cran.r-project.org\nR Manuals: cran.r-project.org/manuals.html\nR Documentation: rdocumentation.org\n\n\n\nTidyverse\n\nURL: tidyverse.org\nPaquetes:\n\ndplyr: manipulación de datos\nggplot2: visualización\ntidyr: organización de datos\nreadr: importación de datos\n\n\n\n\nQuarto\n\nURL: quarto.org\nGuías: quarto.org/docs/guide/\n\n\n\n\n\nBlogs y sitios web\n\nR-bloggers\n\nURL: r-bloggers.com\nDescripción: Agregador de blogs sobre R\n\n\n\nSimply Statistics\n\nURL: simplystatistics.org\nDescripción: Blog sobre estadística y ciencia de datos\n\n\n\nFlowing Data\n\nURL: flowingdata.com\nDescripción: Visualización de datos y estadística"
+  },
+  {
+    "objectID": "recursos/referencias.html#cheatsheets-hojas-de-referencia-rápida",
+    "href": "recursos/referencias.html#cheatsheets-hojas-de-referencia-rápida",
+    "title": "Referencias y recursos adicionales",
+    "section": "Cheatsheets (Hojas de referencia rápida)",
+    "text": "Cheatsheets (Hojas de referencia rápida)\n\nRStudio Cheatsheets\nDisponibles en: posit.co/resources/cheatsheets/\nMás útiles para el curso:\n\nRStudio IDE - Interfaz de RStudio\nData Transformation (dplyr) - Manipulación de datos\nData Visualization (ggplot2) - Creación de gráficos\nData Import - Importar datos\nQuarto - Documentos reproducibles\n\n\n\nCheatsheets de estadística\n\nProbability Cheatsheet: github.com/wzchen/probability_cheatsheet\nStatistics Cheatsheet: Buscar “statistics cheatsheet PDF” en Google"
+  },
+  {
+    "objectID": "recursos/referencias.html#comunidades-y-foros",
+    "href": "recursos/referencias.html#comunidades-y-foros",
+    "title": "Referencias y recursos adicionales",
+    "section": "Comunidades y foros",
+    "text": "Comunidades y foros\n\nStack Overflow\n\nURL: stackoverflow.com\nTags relevantes: [r], [statistics], [ggplot2], [regression]\nDescripción: Preguntas y respuestas sobre programación y estadística\n\n\n\nPosit Community\n\nURL: community.rstudio.com\nDescripción: Foro oficial de la comunidad R/RStudio\n\n\n\nReddit\n\nr/statistics: reddit.com/r/statistics\nr/rstats: reddit.com/r/rstats\nr/datascience: reddit.com/r/datascience\n\n\n\nCross Validated\n\nURL: stats.stackexchange.com\nDescripción: Q&A específico sobre estadística (parte de Stack Exchange)"
+  },
+  {
+    "objectID": "recursos/referencias.html#datasets-y-repositorios-de-datos",
+    "href": "recursos/referencias.html#datasets-y-repositorios-de-datos",
+    "title": "Referencias y recursos adicionales",
+    "section": "Datasets y repositorios de datos",
+    "text": "Datasets y repositorios de datos\n\nDentro de R\n# Datasets incluidos en R\ndata()  # Lista todos los datasets disponibles\n\n# Datasets populares\ndata(mtcars)   # Autos\ndata(iris)     # Flores\ndata(mpg)      # Economía de combustible (ggplot2)\n\n\nRepositorios online\n\nUCI Machine Learning Repository\n\nURL: archive.ics.uci.edu/ml\nDescripción: Cientos de datasets para aprendizaje automático y estadística\n\n\n\nKaggle\n\nURL: kaggle.com/datasets\nDescripción: Datasets de competencias y proyectos\n\n\n\nGoogle Dataset Search\n\nURL: datasetsearch.research.google.com\nDescripción: Buscador de datasets\n\n\n\nOur World in Data\n\nURL: ourworldindata.org\nDescripción: Datos sobre problemas globales\n\n\n\nDatos Gobierno de Chile (para datasets locales)\n\nURL: datos.gob.cl\n\nVer también: Recursos - Datasets para datasets específicos del curso."
+  },
+  {
+    "objectID": "recursos/referencias.html#tablas-estadísticas",
+    "href": "recursos/referencias.html#tablas-estadísticas",
+    "title": "Referencias y recursos adicionales",
+    "section": "Tablas estadísticas",
+    "text": "Tablas estadísticas\n\nTablas de distribuciones\nEn R, no necesitas tablas físicas (todo se calcula con funciones), pero si las prefieres:\n\nTabla Z (normal estándar): Buscar “standard normal table PDF”\nTabla t: Buscar “t distribution table PDF”\nTabla F: Buscar “F distribution table PDF”\nTabla chi-cuadrado: Buscar “chi-square table PDF”\n\n\n\nUsar R en lugar de tablas\n# Valor crítico z para 95% de confianza (bilateral)\nqnorm(0.975)  # 1.96\n\n# Valor crítico t para 95% con 20 grados de libertad\nqt(0.975, df = 20)  # 2.086\n\n# Probabilidad: P(Z &lt; 1.96)\npnorm(1.96)  # 0.975"
+  },
+  {
+    "objectID": "recursos/referencias.html#software-alternativo",
+    "href": "recursos/referencias.html#software-alternativo",
+    "title": "Referencias y recursos adicionales",
+    "section": "Software alternativo",
+    "text": "Software alternativo\n\nSPSS\n\nURL: ibm.com/spss\nCosto: Comercial (costoso)\nDescripción: Popular en ciencias sociales\nAlternativa gratuita: PSPP\n\n\n\nSAS\n\nURL: sas.com\nCosto: Comercial\nDescripción: Usado en industria farmacéutica y finanzas\nVersión gratuita: SAS University Edition\n\n\n\nStata\n\nURL: stata.com\nCosto: Comercial\nDescripción: Popular en economía y ciencias sociales\n\n\n\nJASP\n\nURL: jasp-stats.org\nCosto: Gratis y open source\nDescripción: Interfaz gráfica para estadística (alternativa a SPSS)\n\n\n\njamovi\n\nURL: jamovi.org\nCosto: Gratis y open source\nDescripción: Interfaz gráfica basada en R"
+  },
+  {
+    "objectID": "recursos/referencias.html#guías-de-estilo",
+    "href": "recursos/referencias.html#guías-de-estilo",
+    "title": "Referencias y recursos adicionales",
+    "section": "Guías de estilo",
+    "text": "Guías de estilo\n\nPara código R\n\nTidyverse Style Guide: style.tidyverse.org\nGoogle’s R Style Guide: Buscar “Google R style guide”\n\n\n\nPara visualizaciones\n\nData Visualization Best Practices: Fundamentals of Data Visualization (libro gratis)"
+  },
+  {
+    "objectID": "recursos/referencias.html#artículos-académicos-influyentes",
+    "href": "recursos/referencias.html#artículos-académicos-influyentes",
+    "title": "Referencias y recursos adicionales",
+    "section": "Artículos académicos influyentes",
+    "text": "Artículos académicos influyentes\n\nEstadística general\n\n“The Earth is Round (p &lt; .05)” - Jacob Cohen (1994)\n\nCrítica al mal uso de valores p\n\n“Why Most Published Research Findings Are False” - John Ioannidis (2005)\n\nSobre problemas en investigación estadística\n\n\n\n\nVisualización\n\n“The Visual Display of Quantitative Information” - Edward Tufte\n\nClásico sobre visualización de datos"
+  },
+  {
+    "objectID": "recursos/referencias.html#revistas-académicas",
+    "href": "recursos/referencias.html#revistas-académicas",
+    "title": "Referencias y recursos adicionales",
+    "section": "Revistas académicas",
+    "text": "Revistas académicas\n\nOpen Access (acceso libre)\n\nPLOS ONE: journals.plos.org/plosone\nJournal of Statistical Software: jstatsoft.org\nR Journal: journal.r-project.org\n\n\n\n\n\n\n\n\nTipConsejo de estudio\n\n\n\nNo intentes leer todo de una vez. Usa estos recursos como referencia cuando:\n\nNecesites aclarar un concepto\nQuieras ver ejemplos adicionales\nBusques profundizar en un tema específico\nTengas dudas sobre cómo hacer algo en R\n\n\n\n\n\n\n\n\n\nNoteRecursos gratuitos destacados\n\n\n\nLos siguientes recursos son completamente gratuitos y de alta calidad:\n\nIntroduction to Modern Statistics\nR for Data Science (r4ds)\nModernDive\nKhan Academy\nStatQuest (YouTube)\n\n\n\n\nÚltima actualización: Enero 2026"
+  },
+  {
+    "objectID": "practicas/practica-1.html",
+    "href": "practicas/practica-1.html",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "",
+    "text": "Tema relacionado: [Tema X]\nFecha de asignación: [Fecha]\nFecha de entrega: [Fecha]\nPuntos: [XX puntos]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#información",
+    "href": "practicas/practica-1.html#información",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "",
+    "text": "Tema relacionado: [Tema X]\nFecha de asignación: [Fecha]\nFecha de entrega: [Fecha]\nPuntos: [XX puntos]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#objetivos",
+    "href": "practicas/practica-1.html#objetivos",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Objetivos",
+    "text": "Objetivos\nAl completar esta práctica, serás capaz de:\n\n[Objetivo 1]\n[Objetivo 2]\n[Objetivo 3]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#instrucciones",
+    "href": "practicas/practica-1.html#instrucciones",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Instrucciones",
+    "text": "Instrucciones\n\nCompleta todos los ejercicios en este documento Quarto\nAgrega tus respuestas en bloques de código R o Python\nIncluye explicaciones breves de tus resultados\nRenderiza el documento a HTML al finalizar\nEntrega el archivo .qmd y el archivo .html generado"
+  },
+  {
+    "objectID": "practicas/practica-1.html#preparación",
+    "href": "practicas/practica-1.html#preparación",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Preparación",
+    "text": "Preparación\n\nCargar paquetes\n\n# Cargar paquetes necesarios\nlibrary(tidyverse)\nlibrary(here)\n\n# Si usas Python, puedes usar:\n# import pandas as pd\n# import numpy as np\n# import matplotlib.pyplot as plt\n\n\n\nCargar datos\n\n# Ejemplo: cargar dataset\n# datos &lt;- read.csv(here(\"practicas/data/datos.csv\"))\n\n# O usar dataset incluido en R\n# data(mtcars)\n# datos &lt;- mtcars"
+  },
+  {
+    "objectID": "practicas/practica-1.html#ejercicio-1-título-del-ejercicio",
+    "href": "practicas/practica-1.html#ejercicio-1-título-del-ejercicio",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Ejercicio 1: Título del ejercicio",
+    "text": "Ejercicio 1: Título del ejercicio\n\nParte a)\nPregunta: [Descripción de lo que se debe hacer]\n\n# Tu código aquí\n\nRespuesta: [Escribe tu interpretación aquí]\n\n\nParte b)\nPregunta: [Descripción de lo que se debe hacer]\n\n# Tu código aquí\n\nRespuesta: [Escribe tu interpretación aquí]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#ejercicio-2-título-del-ejercicio",
+    "href": "practicas/practica-1.html#ejercicio-2-título-del-ejercicio",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Ejercicio 2: Título del ejercicio",
+    "text": "Ejercicio 2: Título del ejercicio\n\nParte a)\nPregunta: [Descripción de lo que se debe hacer]\n\n# Tu código aquí\n\nRespuesta: [Escribe tu interpretación aquí]\n\n\nParte b)\nPregunta: [Descripción de lo que se debe hacer]\n\n# Tu código aquí\n\nRespuesta: [Escribe tu interpretación aquí]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#ejercicio-3-visualización",
+    "href": "practicas/practica-1.html#ejercicio-3-visualización",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Ejercicio 3: Visualización",
+    "text": "Ejercicio 3: Visualización\nPregunta: [Descripción de lo que se debe hacer]\n\n# Tu código para crear el gráfico aquí\n\nInterpretación: [Describe qué muestra el gráfico y qué conclusiones obtienes]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#ejercicio-4-análisis-estadístico",
+    "href": "practicas/practica-1.html#ejercicio-4-análisis-estadístico",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Ejercicio 4: Análisis estadístico",
+    "text": "Ejercicio 4: Análisis estadístico\nPregunta: [Descripción del análisis a realizar]\n\n# Tu código de análisis aquí\n\nInterpretación: [Interpreta los resultados del análisis estadístico]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#conclusiones",
+    "href": "practicas/practica-1.html#conclusiones",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Conclusiones",
+    "text": "Conclusiones\nEscribe 2-3 oraciones resumiendo lo que aprendiste en esta práctica:\n[Tus conclusiones aquí]"
+  },
+  {
+    "objectID": "practicas/practica-1.html#información-de-sesión",
+    "href": "practicas/practica-1.html#información-de-sesión",
+    "title": "Práctica 1: Título de la práctica",
+    "section": "Información de sesión",
+    "text": "Información de sesión\n\nsessionInfo()\n\n\n\n\n\n\n\n\nNoteNota sobre la entrega\n\n\n\nAsegúrate de que tu documento se renderice correctamente antes de entregarlo. Verifica que todos los bloques de código se ejecuten sin errores."
+  }
+]
