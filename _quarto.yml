@@ -90,7 +90,7 @@ format:
     fig-align: center
 
 execute:
-  enabled: false
+  eval: false
   warning: false
   message: false
   echo: true
