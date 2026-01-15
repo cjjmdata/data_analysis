@@ -5,6 +5,8 @@ format:
     code-fold: false
     code-tools: true
     toc: true
+execute:
+  eval: false
 ---
 
 ## Información
