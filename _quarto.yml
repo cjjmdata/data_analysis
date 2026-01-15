@@ -4,6 +4,8 @@ project:
   render:
     - index.qmd
     - programa.qmd
+    - programa-detallado.qmd
+    - evaluacion.qmd
 
 website:
   title: "MAT2409 - Análisis de datos II"
