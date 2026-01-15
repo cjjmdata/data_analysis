@@ -75,16 +75,13 @@ website:
 
 format:
   html:
-    theme:
-      light: [cosmo, style/sta101.scss]
-      dark: [cosmo, style/sta101.scss, style/dark.scss]
+    theme: cosmo
     linkcolor: "#798b93"
     toc: true
     toc-depth: 3
     code-copy: true
     code-overflow: wrap
     code-tools: false
-    mainfont: "Atkinson Hyperlegible"
     fig-width: 8
     fig-height: 6
     fig-align: center
