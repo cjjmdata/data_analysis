@@ -40,7 +40,10 @@ jobs:
         shell: Rscript {0}
 
       - name: Render Quarto Project
-        uses: quarto-dev/quarto-actions/render@v2
+        run: |
+          echo "Starting Quarto render..."
+          quarto render --verbose
+        shell: bash
 
       - name: Deploy to GitHub Pages
         if: github.event_name != 'pull_request'
