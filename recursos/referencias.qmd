@@ -1,0 +1,383 @@
+---
+title: "Referencias y recursos adicionales"
+---
+
+## Libros de texto
+
+### Textos principales (en inglés)
+
+#### 1. Introduction to Modern Statistics (IMS)
+
+- **Autores:** Mine Çetinkaya-Rundel y Johanna Hardin
+- **Editorial:** OpenIntro (2023)
+- **Acceso:** [Gratis online](https://openintro-ims2.netlify.app/)
+- **Descripción:** Texto moderno de estadística con enfoque en simulación y bootstrap. Excelente para aprender estadística inferencial.
+- **Nivel:** Introductorio
+
+#### 2. OpenIntro Statistics
+
+- **Autores:** David Diez, Mine Çetinkaya-Rundel, Christopher Barr
+- **Editorial:** OpenIntro (4ta edición)
+- **Acceso:** [Gratis online](https://www.openintro.org/book/os/)
+- **Descripción:** Texto completo de estadística introductoria con muchos ejemplos y ejercicios.
+- **Nivel:** Introductorio
+
+#### 3. Statistical Inference via Data Science: A ModernDive into R
+
+- **Autores:** Chester Ismay y Albert Y. Kim
+- **Acceso:** [Gratis online](https://moderndive.com/)
+- **Descripción:** Enfoque moderno usando tidyverse. Excelente para aprender R y estadística simultáneamente.
+- **Nivel:** Introductorio
+
+#### 4. R for Data Science (r4ds)
+
+- **Autores:** Hadley Wickham, Mine Çetinkaya-Rundel, Garrett Grolemund
+- **Editorial:** O'Reilly (2da edición, 2023)
+- **Acceso:** [Gratis online](https://r4ds.hadley.nz/)
+- **Descripción:** Referencia esencial para análisis de datos con R y tidyverse.
+- **Nivel:** Introductorio a intermedio
+
+#### 5. Introduction to Statistical Learning (ISL)
+
+- **Autores:** Gareth James, Daniela Witten, Trevor Hastie, Robert Tibshirani
+- **Editorial:** Springer (2da edición, 2021)
+- **Acceso:** [Gratis online](https://www.statlearning.com/)
+- **Descripción:** Introducción accesible al aprendizaje estadístico. Incluye laboratorios en R.
+- **Nivel:** Intermedio
+
+---
+
+### Textos de referencia avanzada
+
+#### 6. Applied Linear Statistical Models
+
+- **Autores:** Kutner, Nachtsheim, Neter, Li
+- **Editorial:** McGraw-Hill (5ta edición)
+- **Descripción:** Texto comprehensivo sobre regresión y ANOVA.
+- **Nivel:** Intermedio a avanzado
+
+#### 7. The Elements of Statistical Learning
+
+- **Autores:** Trevor Hastie, Robert Tibshirani, Jerome Friedman
+- **Editorial:** Springer (2da edición)
+- **Acceso:** [Gratis online](https://hastie.su.domains/ElemStatLearn/)
+- **Descripción:** Texto avanzado sobre aprendizaje estadístico.
+- **Nivel:** Avanzado
+
+---
+
+### Libros en español
+
+#### 8. Estadística para Investigadores
+
+- **Autores:** George W. Snedecor, William G. Cochran
+- **Descripción:** Clásico de estadística aplicada, disponible en español.
+- **Nivel:** Intermedio
+
+#### 9. Introducción a la Estadística
+
+- **Autores:** Mario Triola
+- **Editorial:** Pearson
+- **Descripción:** Texto introductorio en español, ampliamente usado.
+- **Nivel:** Introductorio
+
+---
+
+## Recursos en línea
+
+### Tutoriales y cursos
+
+#### Khan Academy
+
+- **URL:** [khanacademy.org/math/statistics-probability](https://www.khanacademy.org/math/statistics-probability)
+- **Descripción:** Videos y ejercicios interactivos de estadística
+- **Idioma:** Inglés y español
+- **Costo:** Gratis
+
+#### StatQuest
+
+- **URL:** [YouTube - StatQuest](https://www.youtube.com/c/joshstarmer)
+- **Descripción:** Videos cortos y claros sobre conceptos estadísticos
+- **Idioma:** Inglés (subtítulos disponibles)
+- **Costo:** Gratis
+
+#### Coursera
+
+- **Curso:** "Statistics with R Specialization" (Duke University)
+- **URL:** [coursera.org](https://www.coursera.org/)
+- **Descripción:** Especialización completa en estadística con R
+- **Costo:** Gratis para auditar
+
+#### DataCamp
+
+- **URL:** [datacamp.com](https://www.datacamp.com/)
+- **Cursos relevantes:**
+  - Introduction to Statistics in R
+  - Inference for Categorical Data in R
+  - Linear Regression in R
+- **Costo:** Suscripción mensual (prueba gratuita disponible)
+
+---
+
+### Documentación oficial
+
+#### R Documentation
+
+- **CRAN:** [cran.r-project.org](https://cran.r-project.org/)
+- **R Manuals:** [cran.r-project.org/manuals.html](https://cran.r-project.org/manuals.html)
+- **R Documentation:** [rdocumentation.org](https://www.rdocumentation.org/)
+
+#### Tidyverse
+
+- **URL:** [tidyverse.org](https://www.tidyverse.org/)
+- **Paquetes:**
+  - dplyr: manipulación de datos
+  - ggplot2: visualización
+  - tidyr: organización de datos
+  - readr: importación de datos
+
+#### Quarto
+
+- **URL:** [quarto.org](https://quarto.org/)
+- **Guías:** [quarto.org/docs/guide/](https://quarto.org/docs/guide/)
+
+---
+
+### Blogs y sitios web
+
+#### R-bloggers
+
+- **URL:** [r-bloggers.com](https://www.r-bloggers.com/)
+- **Descripción:** Agregador de blogs sobre R
+
+#### Simply Statistics
+
+- **URL:** [simplystatistics.org](https://simplystatistics.org/)
+- **Descripción:** Blog sobre estadística y ciencia de datos
+
+#### Flowing Data
+
+- **URL:** [flowingdata.com](https://flowingdata.com/)
+- **Descripción:** Visualización de datos y estadística
+
+---
+
+## Cheatsheets (Hojas de referencia rápida)
+
+### RStudio Cheatsheets
+
+Disponibles en: [posit.co/resources/cheatsheets/](https://posit.co/resources/cheatsheets/)
+
+**Más útiles para el curso:**
+
+1. **RStudio IDE** - Interfaz de RStudio
+2. **Data Transformation (dplyr)** - Manipulación de datos
+3. **Data Visualization (ggplot2)** - Creación de gráficos
+4. **Data Import** - Importar datos
+5. **Quarto** - Documentos reproducibles
+
+### Cheatsheets de estadística
+
+- **Probability Cheatsheet:** [github.com/wzchen/probability_cheatsheet](https://github.com/wzchen/probability_cheatsheet)
+- **Statistics Cheatsheet:** Buscar "statistics cheatsheet PDF" en Google
+
+---
+
+## Comunidades y foros
+
+### Stack Overflow
+
+- **URL:** [stackoverflow.com](https://stackoverflow.com/)
+- **Tags relevantes:** `[r]`, `[statistics]`, `[ggplot2]`, `[regression]`
+- **Descripción:** Preguntas y respuestas sobre programación y estadística
+
+### Posit Community
+
+- **URL:** [community.rstudio.com](https://community.rstudio.com/)
+- **Descripción:** Foro oficial de la comunidad R/RStudio
+
+### Reddit
+
+- **r/statistics:** [reddit.com/r/statistics](https://www.reddit.com/r/statistics/)
+- **r/rstats:** [reddit.com/r/rstats](https://www.reddit.com/r/rstats/)
+- **r/datascience:** [reddit.com/r/datascience](https://www.reddit.com/r/datascience/)
+
+### Cross Validated
+
+- **URL:** [stats.stackexchange.com](https://stats.stackexchange.com/)
+- **Descripción:** Q&A específico sobre estadística (parte de Stack Exchange)
+
+---
+
+## Datasets y repositorios de datos
+
+### Dentro de R
+
+```r
+# Datasets incluidos en R
+data()  # Lista todos los datasets disponibles
+
+# Datasets populares
+data(mtcars)   # Autos
+data(iris)     # Flores
+data(mpg)      # Economía de combustible (ggplot2)
+```
+
+### Repositorios online
+
+#### UCI Machine Learning Repository
+
+- **URL:** [archive.ics.uci.edu/ml](https://archive.ics.uci.edu/ml)
+- **Descripción:** Cientos de datasets para aprendizaje automático y estadística
+
+#### Kaggle
+
+- **URL:** [kaggle.com/datasets](https://www.kaggle.com/datasets)
+- **Descripción:** Datasets de competencias y proyectos
+
+#### Google Dataset Search
+
+- **URL:** [datasetsearch.research.google.com](https://datasetsearch.research.google.com/)
+- **Descripción:** Buscador de datasets
+
+#### Our World in Data
+
+- **URL:** [ourworldindata.org](https://ourworldindata.org/)
+- **Descripción:** Datos sobre problemas globales
+
+#### Datos Gobierno de Chile (para datasets locales)
+
+- **URL:** [datos.gob.cl](https://datos.gob.cl/)
+
+Ver también: [Recursos - Datasets](datasets.qmd) para datasets específicos del curso.
+
+---
+
+## Tablas estadísticas
+
+### Tablas de distribuciones
+
+En R, no necesitas tablas físicas (todo se calcula con funciones), pero si las prefieres:
+
+- **Tabla Z (normal estándar):** Buscar "standard normal table PDF"
+- **Tabla t:** Buscar "t distribution table PDF"
+- **Tabla F:** Buscar "F distribution table PDF"
+- **Tabla chi-cuadrado:** Buscar "chi-square table PDF"
+
+### Usar R en lugar de tablas
+
+```r
+# Valor crítico z para 95% de confianza (bilateral)
+qnorm(0.975)  # 1.96
+
+# Valor crítico t para 95% con 20 grados de libertad
+qt(0.975, df = 20)  # 2.086
+
+# Probabilidad: P(Z < 1.96)
+pnorm(1.96)  # 0.975
+```
+
+---
+
+## Software alternativo
+
+### SPSS
+
+- **URL:** [ibm.com/spss](https://www.ibm.com/products/spss-statistics)
+- **Costo:** Comercial (costoso)
+- **Descripción:** Popular en ciencias sociales
+- **Alternativa gratuita:** PSPP
+
+### SAS
+
+- **URL:** [sas.com](https://www.sas.com/)
+- **Costo:** Comercial
+- **Descripción:** Usado en industria farmacéutica y finanzas
+- **Versión gratuita:** SAS University Edition
+
+### Stata
+
+- **URL:** [stata.com](https://www.stata.com/)
+- **Costo:** Comercial
+- **Descripción:** Popular en economía y ciencias sociales
+
+### JASP
+
+- **URL:** [jasp-stats.org](https://jasp-stats.org/)
+- **Costo:** Gratis y open source
+- **Descripción:** Interfaz gráfica para estadística (alternativa a SPSS)
+
+### jamovi
+
+- **URL:** [jamovi.org](https://www.jamovi.org/)
+- **Costo:** Gratis y open source
+- **Descripción:** Interfaz gráfica basada en R
+
+---
+
+## Guías de estilo
+
+### Para código R
+
+- **Tidyverse Style Guide:** [style.tidyverse.org](https://style.tidyverse.org/)
+- **Google's R Style Guide:** Buscar "Google R style guide"
+
+### Para visualizaciones
+
+- **Data Visualization Best Practices:** [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/) (libro gratis)
+
+---
+
+## Artículos académicos influyentes
+
+### Estadística general
+
+1. **"The Earth is Round (p < .05)"** - Jacob Cohen (1994)
+   - Crítica al mal uso de valores p
+
+2. **"Why Most Published Research Findings Are False"** - John Ioannidis (2005)
+   - Sobre problemas en investigación estadística
+
+### Visualización
+
+3. **"The Visual Display of Quantitative Information"** - Edward Tufte
+   - Clásico sobre visualización de datos
+
+---
+
+## Revistas académicas
+
+### Open Access (acceso libre)
+
+- **PLOS ONE:** [journals.plos.org/plosone](https://journals.plos.org/plosone/)
+- **Journal of Statistical Software:** [jstatsoft.org](https://www.jstatsoft.org/)
+- **R Journal:** [journal.r-project.org](https://journal.r-project.org/)
+
+---
+
+::: {.callout-tip}
+## Consejo de estudio
+
+No intentes leer todo de una vez. Usa estos recursos como referencia cuando:
+
+1. Necesites aclarar un concepto
+2. Quieras ver ejemplos adicionales
+3. Busques profundizar en un tema específico
+4. Tengas dudas sobre cómo hacer algo en R
+:::
+
+::: {.callout-note}
+## Recursos gratuitos destacados
+
+Los siguientes recursos son completamente gratuitos y de alta calidad:
+
+- Introduction to Modern Statistics
+- R for Data Science (r4ds)
+- ModernDive
+- Khan Academy
+- StatQuest (YouTube)
+:::
+
+---
+
+*Última actualización: Enero 2026*

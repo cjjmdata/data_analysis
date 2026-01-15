@@ -1,0 +1,535 @@
+---
+title: "Tema 5: Análisis de regresión simple"
+---
+
+## Introducción
+
+La regresión lineal simple es una técnica fundamental para modelar la relación entre dos variables cuantitativas: una variable predictora (independiente) y una variable respuesta (dependiente). Este método permite describir, cuantificar y predecir esta relación.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Identificar cuándo es apropiado usar regresión lineal simple
+- Estimar los parámetros del modelo usando mínimos cuadrados
+- Interpretar la pendiente e intercepto del modelo
+- Evaluar la bondad de ajuste usando R²
+- Verificar los supuestos del modelo
+- Realizar inferencia sobre los parámetros
+- Construir intervalos de confianza y predicción
+- Detectar valores atípicos e influyentes
+- Implementar análisis de regresión en R/Python
+
+---
+
+## Contenido
+
+### 5.1 Determinación del modelo lineal
+
+#### Relación entre variables
+
+**Variables**
+- Variable respuesta (Y): la que queremos predecir o explicar
+- Variable predictora (X): la que usamos para predecir
+
+**Diagrama de dispersión**
+- Gráfico de Y vs X
+- Primera visualización de la relación
+- Identificación de patrones
+
+#### Correlación de Pearson
+
+**Definición**
+$$r = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum(x_i - \bar{x})^2 \sum(y_i - \bar{y})^2}}$$
+
+**Propiedades**
+- Rango: -1 ≤ r ≤ 1
+- r > 0: relación positiva
+- r < 0: relación negativa
+- |r| cercano a 1: relación lineal fuerte
+- r = 0: no relación lineal (puede haber relación no lineal)
+
+**Importante**
+- Correlación no implica causalidad
+- Sensible a valores atípicos
+
+#### Modelo de regresión lineal simple
+
+**Ecuación del modelo**
+$$y_i = \beta_0 + \beta_1 x_i + \epsilon_i$$
+
+donde:
+- y_i: valor observado de Y
+- x_i: valor observado de X
+- β₀: intercepto (valor esperado de Y cuando X=0)
+- β₁: pendiente (cambio en Y por unidad de cambio en X)
+- ε_i: error aleatorio
+
+**Supuestos sobre los errores**
+- E(ε_i) = 0
+- Var(ε_i) = σ² (constante)
+- ε_i ~ Normal(0, σ²)
+- Los errores son independientes
+
+#### Método de mínimos cuadrados ordinarios (MCO)
+
+**Objetivo**
+- Minimizar la suma de cuadrados de los residuos
+
+**Suma de cuadrados de residuos (SCR)**
+$$SCR = \sum_{i=1}^{n}(y_i - \hat{y}_i)^2 = \sum_{i=1}^{n}(y_i - \hat{\beta}_0 - \hat{\beta}_1 x_i)^2$$
+
+**Estimadores de mínimos cuadrados**
+
+Pendiente:
+$$\hat{\beta}_1 = \frac{\sum(x_i - \bar{x})(y_i - \bar{y})}{\sum(x_i - \bar{x})^2} = r \frac{s_y}{s_x}$$
+
+Intercepto:
+$$\hat{\beta}_0 = \bar{y} - \hat{\beta}_1 \bar{x}$$
+
+**Ecuación de regresión ajustada**
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+#### Interpretación de parámetros
+
+**Intercepto (β₀)**
+- Valor esperado de Y cuando X = 0
+- Puede no tener interpretación práctica si X = 0 está fuera del rango de datos
+
+**Pendiente (β₁)**
+- Cambio promedio en Y por cada unidad de aumento en X
+- Ejemplo: β₁ = 2.5 significa que Y aumenta 2.5 unidades por cada unidad de aumento en X
+
+#### Predicción
+
+**Valor predicho**
+$$\hat{y} = \hat{\beta}_0 + \hat{\beta}_1 x$$
+
+**Residuos**
+$$e_i = y_i - \hat{y}_i$$
+
+- Diferencia entre valor observado y predicho
+- Base para diagnóstico del modelo
+
+---
+
+### 5.2 Análisis de validez del modelo
+
+#### Supuestos del modelo
+
+1. **Linealidad**
+   - La relación entre X e Y es lineal
+   - Verificación: diagrama de dispersión, gráfico de residuos
+
+2. **Independencia de errores**
+   - Los errores son independientes
+   - Garantizado por diseño del estudio
+
+3. **Normalidad de errores**
+   - Los errores siguen distribución normal
+   - Verificación: QQ-plot de residuos, histograma
+
+4. **Homocedasticidad (varianza constante)**
+   - La varianza de los errores es constante
+   - Verificación: gráfico de residuos vs valores ajustados
+
+#### Análisis de residuos
+
+**Gráfico de residuos vs valores ajustados**
+- Patrón aleatorio → supuestos OK
+- Patrón en forma de embudo → heterocedasticidad
+- Patrón curvo → no linealidad
+
+**QQ-plot (Quantile-Quantile plot)**
+- Residuos vs cuantiles teóricos de normal
+- Puntos sobre la línea → normalidad OK
+- Desviaciones sistemáticas → violación de normalidad
+
+**Histograma de residuos**
+- Debe parecer aproximadamente normal
+- Centrado en cero
+
+#### Coeficiente de determinación (R²)
+
+**Definición**
+$$R^2 = 1 - \frac{SCR}{SCT} = \frac{SCReg}{SCT}$$
+
+donde:
+- SCR = Suma de cuadrados de residuos
+- SCT = Suma de cuadrados total
+- SCReg = Suma de cuadrados de regresión
+
+**Interpretación**
+- Proporción de varianza de Y explicada por X
+- Rango: 0 ≤ R² ≤ 1
+- R² = 0.75 significa que 75% de la variabilidad de Y es explicada por X
+- R² = r² (en regresión simple)
+
+**Limitaciones**
+- R² alto no implica causalidad
+- R² alto no garantiza que el modelo sea apropiado
+- Siempre verificar supuestos
+
+#### Error estándar de la regresión
+
+**Definición**
+$$s = \sqrt{\frac{SCR}{n-2}}$$
+
+**Interpretación**
+- Desviación estándar de los residuos
+- Estimación de σ
+- Típicamente, ~68% de observaciones están dentro de ± s de la línea
+
+#### Detección de valores atípicos e influyentes
+
+**Residuos estandarizados**
+$$r_i = \frac{e_i}{s\sqrt{1-h_{ii}}}$$
+
+- |r_i| > 2: posible atípico
+- |r_i| > 3: atípico
+
+**Leverage (h_ii)**
+- Mide qué tan extremo es x_i
+- Punto de alto leverage puede ser influyente
+
+**Distancia de Cook**
+- Mide influencia de cada observación
+- D_i > 1: muy influyente
+- D_i > 0.5: posiblemente influyente
+
+---
+
+### 5.3 Interpretación del modelo
+
+#### Inferencia sobre los parámetros
+
+**Intervalos de confianza para β₁**
+$$\hat{\beta}_1 \pm t_{\alpha/2, n-2} \times SE(\hat{\beta}_1)$$
+
+**Prueba de hipótesis para β₁**
+- H₀: β₁ = 0 (no hay relación lineal)
+- H₁: β₁ ≠ 0
+
+**Estadístico de prueba**
+$$t = \frac{\hat{\beta}_1}{SE(\hat{\beta}_1)}$$
+
+- Distribución: t con n-2 grados de libertad
+
+**Interpretación**
+- Si rechazamos H₀: hay evidencia de relación lineal
+
+#### Intervalos de confianza para la respuesta media
+
+**IC para E(Y|X=x₀)**
+$$\hat{y}_0 \pm t_{\alpha/2, n-2} \times s\sqrt{\frac{1}{n} + \frac{(x_0 - \bar{x})^2}{\sum(x_i - \bar{x})^2}}$$
+
+**Interpretación**
+- Intervalo para el valor promedio de Y cuando X = x₀
+- Más estrecho cerca de x̄
+
+#### Intervalos de predicción
+
+**IP para un valor individual**
+$$\hat{y}_0 \pm t_{\alpha/2, n-2} \times s\sqrt{1 + \frac{1}{n} + \frac{(x_0 - \bar{x})^2}{\sum(x_i - \bar{x})^2}}$$
+
+**Diferencia con IC**
+- IP es más ancho que IC
+- IC: para el promedio de Y
+- IP: para un valor individual de Y
+
+#### Transformaciones
+
+**Cuándo transformar**
+- No linealidad
+- Heterocedasticidad
+- No normalidad de errores
+
+**Transformaciones comunes**
+- log(Y): para relación exponencial
+- √Y: para estabilizar varianza
+- 1/Y: para relación hiperbólica
+- log(X) y log(Y): para relación potencial
+
+---
+
+## Ejemplos en R
+
+### Regresión simple básica
+
+```{r}
+#| eval: false
+
+# Datos de ejemplo: peso vs altura
+altura <- c(160, 165, 170, 175, 180, 185, 190)
+peso <- c(55, 60, 65, 70, 75, 80, 85)
+
+# Diagrama de dispersión
+plot(altura, peso, main = "Peso vs Altura",
+     xlab = "Altura (cm)", ylab = "Peso (kg)", pch = 19)
+
+# Correlación
+cor(altura, peso)
+
+# Ajustar modelo de regresión
+modelo <- lm(peso ~ altura)
+summary(modelo)
+
+# Agregar línea de regresión al gráfico
+abline(modelo, col = "red", lwd = 2)
+
+# Ecuación de regresión
+coef(modelo)
+# Interpretación: peso = -70 + 0.789 * altura
+```
+
+### Análisis de residuos
+
+```{r}
+#| eval: false
+
+# Gráficos de diagnóstico
+par(mfrow = c(2, 2))
+plot(modelo)
+par(mfrow = c(1, 1))
+
+# Residuos vs valores ajustados
+plot(fitted(modelo), residuals(modelo),
+     main = "Residuos vs Valores ajustados",
+     xlab = "Valores ajustados", ylab = "Residuos")
+abline(h = 0, col = "red", lty = 2)
+
+# QQ-plot
+qqnorm(residuals(modelo))
+qqline(residuals(modelo), col = "red")
+
+# Histograma de residuos
+hist(residuals(modelo), main = "Histograma de residuos",
+     xlab = "Residuos", col = "lightblue")
+```
+
+### Predicción e intervalos
+
+```{r}
+#| eval: false
+
+# Predicción para altura = 172 cm
+nueva_altura <- data.frame(altura = 172)
+
+# Intervalo de confianza (para la media)
+predict(modelo, newdata = nueva_altura, interval = "confidence", level = 0.95)
+
+# Intervalo de predicción (para un individuo)
+predict(modelo, newdata = nueva_altura, interval = "prediction", level = 0.95)
+
+# Visualización de intervalos
+library(ggplot2)
+datos_df <- data.frame(altura, peso)
+
+ggplot(datos_df, aes(x = altura, y = peso)) +
+  geom_point() +
+  geom_smooth(method = "lm", se = TRUE, level = 0.95) +
+  labs(title = "Regresión con IC del 95%",
+       x = "Altura (cm)", y = "Peso (kg)") +
+  theme_minimal()
+```
+
+### Identificación de puntos influyentes
+
+```{r}
+#| eval: false
+
+# Distancia de Cook
+cooksd <- cooks.distance(modelo)
+plot(cooksd, type = "h", main = "Distancia de Cook")
+abline(h = 1, col = "red", lty = 2)
+
+# Identificar puntos influyentes
+influential <- which(cooksd > 0.5)
+if(length(influential) > 0) {
+  cat("Puntos potencialmente influyentes:", influential, "\n")
+}
+
+# Leverage
+hatvalues(modelo)
+
+# Residuos estandarizados
+rstandard(modelo)
+```
+
+---
+
+## Ejemplos en Python
+
+### Regresión simple
+
+```{python}
+#| eval: false
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy import stats
+from sklearn.linear_model import LinearRegression
+
+# Datos
+altura = np.array([160, 165, 170, 175, 180, 185, 190])
+peso = np.array([55, 60, 65, 70, 75, 80, 85])
+
+# Diagrama de dispersión
+plt.scatter(altura, peso)
+plt.xlabel('Altura (cm)')
+plt.ylabel('Peso (kg)')
+plt.title('Peso vs Altura')
+
+# Correlación
+correlacion = np.corrcoef(altura, peso)[0, 1]
+print(f"Correlación: {correlacion}")
+
+# Regresión con scipy
+pendiente, intercepto, r_valor, p_valor, std_err = stats.linregress(altura, peso)
+print(f"Intercepto: {intercepto}")
+print(f"Pendiente: {pendiente}")
+print(f"R²: {r_valor**2}")
+
+# Línea de regresión
+plt.plot(altura, intercepto + pendiente * altura, 'r', label='Regresión')
+plt.legend()
+plt.show()
+
+# Alternativamente con sklearn
+modelo = LinearRegression()
+modelo.fit(altura.reshape(-1, 1), peso)
+print(f"Intercepto: {modelo.intercept_}")
+print(f"Pendiente: {modelo.coef_[0]}")
+```
+
+### Análisis con statsmodels
+
+```{python}
+#| eval: false
+
+import statsmodels.api as sm
+
+# Preparar datos
+X = sm.add_constant(altura)  # Agregar intercepto
+y = peso
+
+# Ajustar modelo
+modelo_sm = sm.OLS(y, X).fit()
+print(modelo_sm.summary())
+
+# Predicción con intervalos
+nueva_altura = np.array([[1, 172]])  # [1, altura] para incluir intercepto
+pred = modelo_sm.get_prediction(nueva_altura)
+print("\nPredicción e intervalos:")
+print(pred.summary_frame(alpha=0.05))
+
+# Gráficos de diagnóstico
+import matplotlib.pyplot as plt
+from statsmodels.graphics.gofplots import qqplot
+
+fig, axes = plt.subplots(2, 2, figsize=(12, 10))
+
+# Residuos vs ajustados
+axes[0, 0].scatter(modelo_sm.fittedvalues, modelo_sm.resid)
+axes[0, 0].axhline(y=0, color='r', linestyle='--')
+axes[0, 0].set_xlabel('Valores ajustados')
+axes[0, 0].set_ylabel('Residuos')
+axes[0, 0].set_title('Residuos vs Ajustados')
+
+# QQ-plot
+qqplot(modelo_sm.resid, line='s', ax=axes[0, 1])
+axes[0, 1].set_title('QQ-plot')
+
+# Histograma de residuos
+axes[1, 0].hist(modelo_sm.resid, bins=10, edgecolor='black')
+axes[1, 0].set_xlabel('Residuos')
+axes[1, 0].set_ylabel('Frecuencia')
+axes[1, 0].set_title('Histograma de Residuos')
+
+# Distancia de Cook
+from statsmodels.stats.outliers_influence import OLSInfluence
+influence = OLSInfluence(modelo_sm)
+axes[1, 1].stem(influence.cooks_distance[0])
+axes[1, 1].set_xlabel('Observación')
+axes[1, 1].set_ylabel('Distancia de Cook')
+axes[1, 1].set_title('Distancia de Cook')
+
+plt.tight_layout()
+plt.show()
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Interpretación
+
+Un modelo de regresión entre horas de estudio (X) y calificación (Y) da:
+ŷ = 55 + 3.5x, R² = 0.64
+
+a) Interpreta el intercepto y la pendiente
+b) Interpreta el R²
+c) ¿Cuál sería la calificación predicha para alguien que estudia 5 horas?
+
+### Ejercicio 2: Análisis completo
+
+Dados los siguientes datos de ventas (miles de $) vs publicidad (miles de $):
+
+```
+Publicidad: 1, 2, 3, 4, 5, 6
+Ventas:    10, 15, 18, 22, 25, 30
+```
+
+a) Calcula la correlación
+b) Ajusta un modelo de regresión
+c) Verifica los supuestos
+d) Interpreta R²
+e) Predice las ventas con publicidad = 4.5
+
+### Ejercicio 3: Residuos
+
+¿Qué indican los siguientes patrones en un gráfico de residuos vs ajustados?
+a) Patrón en forma de embudo
+b) Patrón curvo
+c) Patrón aleatorio
+
+### Ejercicio 4: IC vs IP
+
+Explica la diferencia entre un intervalo de confianza para la respuesta media y un intervalo de predicción. ¿Cuál es más ancho y por qué?
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+- OpenIntro Statistics - Linear regression
+- Introduction to Statistical Learning - Linear Regression
+
+### Videos
+- StatQuest: Linear Regression
+- Khan Academy: Least squares regression
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Extrapolación
+
+No uses el modelo para predecir valores de X fuera del rango observado. La relación puede no ser lineal en ese rango.
+:::
+
+::: {.callout-tip}
+## Verificación de supuestos
+
+Siempre verifica los supuestos antes de interpretar el modelo:
+1. Gráfico de dispersión (linealidad general)
+2. Gráfico de residuos vs ajustados (linealidad, homocedasticidad)
+3. QQ-plot (normalidad)
+4. Distancia de Cook (puntos influyentes)
+:::
+
+---
+
+*Última actualización: Enero 2026*

@@ -1,0 +1,323 @@
+---
+title: "Programa detallado"
+---
+
+## Desglose de temas
+
+Este documento presenta el desglose detallado de los contenidos del curso **MAT2409 - Análisis de datos II**. La duración de cada tema es aproximada y se ajustará según el ritmo de aprendizaje y las necesidades del grupo.
+
+::: {.callout-note}
+## Nota sobre la planificación
+
+La distribución temporal es flexible y se adaptará al avance del curso. El instructor ajustará los tiempos según las características y necesidades del grupo.
+:::
+
+---
+
+## Tema 0: Conocimientos previos (repaso)
+
+**Duración aproximada:** 1-2 semanas
+
+### Contenidos
+
+#### Medidas de tendencia central
+- Media, mediana, moda
+- Cuartiles y percentiles
+- Medidas de dispersión (varianza, desviación estándar)
+
+#### Introducción a la probabilidad
+- Conceptos básicos de probabilidad
+- Reglas de probabilidad
+- Probabilidad condicional
+- Independencia de eventos
+
+#### Distribuciones de probabilidad
+- Variables aleatorias discretas y continuas
+- Distribución normal
+- Distribución binomial
+- Uso de tablas estadísticas
+
+### Recursos
+- [Notas del tema](temas/00-repaso/)
+
+---
+
+## Tema 1: Estimación de parámetros
+
+**Duración aproximada:** 2-3 semanas
+
+### 1.1 Estimación puntual
+
+- Concepto de estimador
+- Propiedades deseables: insesgadez, consistencia, eficiencia
+- Método de momentos
+- Método de máxima verosimilitud
+- Estimadores comunes: media muestral, proporción muestral, varianza muestral
+
+### 1.2 Estimación por intervalos: media y proporción
+
+- Concepto de intervalo de confianza
+- Nivel de confianza e interpretación
+- Intervalo de confianza para la media (σ conocida)
+- Intervalo de confianza para la media (σ desconocida) - distribución t
+- Intervalo de confianza para proporciones
+- Intervalo de confianza para la diferencia de medias
+- Intervalo de confianza para la diferencia de proporciones
+
+### 1.3 Estimación del tamaño de muestra
+
+- Determinación del tamaño muestral para estimar media
+- Determinación del tamaño muestral para estimar proporción
+- Consideraciones prácticas
+
+### 1.4 Aplicaciones con R
+
+- Cálculo de estimadores puntuales
+- Construcción de intervalos de confianza
+- Visualización de intervalos
+- Simulaciones para entender el concepto de intervalo de confianza
+
+### Recursos
+- [Notas del tema](temas/01-estimacion/)
+
+---
+
+## Tema 2: Pruebas de hipótesis
+
+**Duración aproximada:** 2-3 semanas
+
+### 2.1 Formulación de hipótesis
+
+- Hipótesis nula (H₀) y alternativa (H₁)
+- Tipos de hipótesis alternativas (bilateral, unilateral)
+- Errores tipo I y tipo II
+- Nivel de significancia (α)
+- Potencia de una prueba (1-β)
+- Valor p e interpretación
+- Región crítica y región de aceptación
+
+### 2.2 Pruebas de hipótesis una muestra
+
+- Prueba Z para la media (σ conocida)
+- Prueba t para la media (σ desconocida)
+- Prueba para una proporción
+- Prueba para la varianza (chi-cuadrado)
+- Relación entre pruebas de hipótesis e intervalos de confianza
+
+### 2.3 Pruebas de hipótesis dos muestras
+
+- Prueba t para dos muestras independientes
+  - Varianzas iguales (pooled)
+  - Varianzas diferentes (Welch)
+- Prueba t para muestras pareadas
+- Prueba para dos proporciones
+- Prueba F para comparar varianzas
+- Consideraciones sobre normalidad y tamaño muestral
+
+### Recursos
+- [Notas del tema](temas/02-pruebas-hipotesis/)
+
+---
+
+## Tema 3: Análisis de varianza
+
+**Duración aproximada:** 2 semanas
+
+### 3.1 ANOVA unidireccional
+
+- Motivación: comparación de múltiples grupos
+- Supuestos del modelo ANOVA
+  - Normalidad
+  - Homogeneidad de varianzas
+  - Independencia
+- Hipótesis del ANOVA
+- Descomposición de la varianza total
+  - Varianza entre grupos (SSB)
+  - Varianza dentro de grupos (SSW)
+- Tabla ANOVA
+- Estadístico F y distribución F
+- Interpretación de resultados
+- Verificación de supuestos
+- Pruebas post-hoc
+  - Tukey HSD
+  - Bonferroni
+  - Scheffé
+
+### 3.2 ANOVA bidireccional
+
+- Diseño factorial 2x2 y extensiones
+- Efectos principales
+- Efectos de interacción
+- Interpretación de interacciones
+- Gráficos de interacción
+- Análisis de residuos
+
+### Recursos
+- [Notas del tema](temas/03-anova/)
+
+---
+
+## Tema 4: Análisis de datos categóricos
+
+**Duración aproximada:** 2 semanas
+
+### 4.1 Prueba de bondad de ajuste
+
+- Datos de frecuencia
+- Distribución chi-cuadrado
+- Prueba de bondad de ajuste
+- Aplicaciones: verificar si los datos siguen una distribución específica
+- Grados de libertad
+
+### 4.2 Prueba ji cuadrada
+
+- Tablas de contingencia
+- Frecuencias observadas vs. esperadas
+- Estadístico chi-cuadrado
+- Interpretación del valor p
+
+### 4.3 Análisis de contingencia
+
+- Prueba de independencia
+  - Hipótesis de independencia
+  - Aplicaciones
+- Prueba de homogeneidad
+  - Comparación de distribuciones
+- Medidas de asociación
+  - Coeficiente de contingencia
+  - V de Cramér
+  - Razón de momios (odds ratio)
+- Residuos estandarizados
+- Visualización de tablas de contingencia
+
+### Recursos
+- [Notas del tema](temas/04-categoricos/)
+
+---
+
+## Tema 5: Análisis de regresión simple
+
+**Duración aproximada:** 2 semanas
+
+### 5.1 Determinación del modelo lineal
+
+- Relación entre dos variables cuantitativas
+- Diagrama de dispersión
+- Correlación de Pearson
+- Modelo de regresión lineal simple: y = β₀ + β₁x + ε
+- Método de mínimos cuadrados ordinarios (MCO)
+- Estimación de β₀ y β₁
+- Interpretación de la pendiente e intercepto
+- Predicción de valores
+
+### 5.2 Análisis de validez del modelo
+
+- Supuestos del modelo de regresión
+  - Linealidad
+  - Normalidad de errores
+  - Homocedasticidad (varianza constante)
+  - Independencia de errores
+- Análisis de residuos
+  - Gráficos de residuos
+  - Gráfico Q-Q
+  - Residuos vs. valores ajustados
+- Detección de valores atípicos e influyentes
+  - Distancia de Cook
+  - Leverage
+- Coeficiente de determinación (R²)
+- Coeficiente de determinación ajustado
+- Error estándar de la regresión
+
+### 5.3 Interpretación del modelo
+
+- Inferencia sobre los parámetros
+  - Intervalos de confianza para β₀ y β₁
+  - Prueba t para significancia de parámetros
+- Intervalos de confianza para la respuesta media
+- Intervalos de predicción para valores individuales
+- Transformaciones de variables
+- Limitaciones del modelo
+
+### Recursos
+- [Notas del tema](temas/05-regresion-simple/)
+
+---
+
+## Tema 6: Análisis de regresión múltiple
+
+**Duración aproximada:** 2-3 semanas
+
+### 6.1 Modelo de regresión lineal múltiple
+
+- Extensión del modelo simple
+- Modelo con k variables predictoras
+- Interpretación de coeficientes parciales
+- Estimación por mínimos cuadrados
+- Notación matricial (introducción)
+- R² y R² ajustado en regresión múltiple
+
+### 6.2 Construcción de modelos
+
+- Selección de variables
+  - Método forward (hacia adelante)
+  - Método backward (hacia atrás)
+  - Método stepwise (paso a paso)
+  - Criterios de selección (AIC, BIC, Cp de Mallows)
+- Multicolinealidad
+  - Detección (VIF - Factor de Inflación de Varianza)
+  - Consecuencias
+  - Soluciones
+- Variables dummy (categóricas)
+- Términos de interacción
+- Términos polinomiales
+
+### 6.3 Pruebas de significancia
+
+- Prueba F global
+- Pruebas t para coeficientes individuales
+- Pruebas para subconjuntos de variables
+- Comparación de modelos anidados
+- Validación cruzada
+- Validación del modelo con datos de prueba
+
+### Recursos
+- [Notas del tema](temas/06-regresion-multiple/)
+
+---
+
+## Recursos generales
+
+### Software
+- [Instalación y configuración de R y Python](recursos/software.qmd)
+
+### Referencias
+- [Bibliografía y recursos adicionales](recursos/referencias.qmd)
+
+### Datos
+- [Catálogo de datasets del curso](recursos/datasets.qmd)
+
+---
+
+## Calendario flexible
+
+La siguiente tabla muestra una distribución **aproximada** del curso en 16 semanas. Esta planificación es **flexible** y se ajustará según el progreso del grupo:
+
+| Semanas | Tema | Contenido principal |
+|---------|------|---------------------|
+| 1-2 | Tema 0 | Repaso de conocimientos previos |
+| 3-5 | Tema 1 | Estimación de parámetros |
+| 6-8 | Tema 2 | Pruebas de hipótesis |
+| 9-10 | Tema 3 | Análisis de varianza (ANOVA) |
+| 11-12 | Tema 4 | Análisis de datos categóricos |
+| 13-14 | Tema 5 | Regresión lineal simple |
+| 15-16 | Tema 6 | Regresión lineal múltiple |
+
+::: {.callout-tip}
+## Flexibilidad en el aprendizaje
+
+Algunos temas pueden requerir más o menos tiempo dependiendo del dominio previo de los estudiantes y la complejidad de los ejemplos trabajados. El instructor comunicará ajustes al cronograma cuando sea necesario.
+:::
+
+---
+
+*Última actualización: Enero 2026*

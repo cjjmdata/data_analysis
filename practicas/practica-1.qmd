@@ -1,0 +1,181 @@
+---
+title: "Práctica 1: Título de la práctica"
+format:
+  html:
+    code-fold: false
+    code-tools: true
+    toc: true
+---
+
+## Información
+
+- **Tema relacionado:** [Tema X]
+- **Fecha de asignación:** [Fecha]
+- **Fecha de entrega:** [Fecha]
+- **Puntos:** [XX puntos]
+
+## Objetivos
+
+Al completar esta práctica, serás capaz de:
+
+1. [Objetivo 1]
+2. [Objetivo 2]
+3. [Objetivo 3]
+
+## Instrucciones
+
+- Completa todos los ejercicios en este documento Quarto
+- Agrega tus respuestas en bloques de código R o Python
+- Incluye explicaciones breves de tus resultados
+- Renderiza el documento a HTML al finalizar
+- Entrega el archivo .qmd y el archivo .html generado
+
+## Preparación
+
+### Cargar paquetes
+
+```{r}
+#| label: setup
+#| message: false
+#| warning: false
+
+# Cargar paquetes necesarios
+library(tidyverse)
+library(here)
+
+# Si usas Python, puedes usar:
+# import pandas as pd
+# import numpy as np
+# import matplotlib.pyplot as plt
+```
+
+### Cargar datos
+
+```{r}
+#| label: load-data
+
+# Ejemplo: cargar dataset
+# datos <- read.csv(here("practicas/data/datos.csv"))
+
+# O usar dataset incluido en R
+# data(mtcars)
+# datos <- mtcars
+```
+
+---
+
+## Ejercicio 1: Título del ejercicio
+
+### Parte a)
+
+**Pregunta:** [Descripción de lo que se debe hacer]
+
+```{r}
+#| label: ejercicio-1a
+
+# Tu código aquí
+
+```
+
+**Respuesta:** [Escribe tu interpretación aquí]
+
+### Parte b)
+
+**Pregunta:** [Descripción de lo que se debe hacer]
+
+```{r}
+#| label: ejercicio-1b
+
+# Tu código aquí
+
+```
+
+**Respuesta:** [Escribe tu interpretación aquí]
+
+---
+
+## Ejercicio 2: Título del ejercicio
+
+### Parte a)
+
+**Pregunta:** [Descripción de lo que se debe hacer]
+
+```{r}
+#| label: ejercicio-2a
+
+# Tu código aquí
+
+```
+
+**Respuesta:** [Escribe tu interpretación aquí]
+
+### Parte b)
+
+**Pregunta:** [Descripción de lo que se debe hacer]
+
+```{r}
+#| label: ejercicio-2b
+
+# Tu código aquí
+
+```
+
+**Respuesta:** [Escribe tu interpretación aquí]
+
+---
+
+## Ejercicio 3: Visualización
+
+**Pregunta:** [Descripción de lo que se debe hacer]
+
+```{r}
+#| label: ejercicio-3
+#| fig-width: 8
+#| fig-height: 6
+
+# Tu código para crear el gráfico aquí
+
+```
+
+**Interpretación:** [Describe qué muestra el gráfico y qué conclusiones obtienes]
+
+---
+
+## Ejercicio 4: Análisis estadístico
+
+**Pregunta:** [Descripción del análisis a realizar]
+
+```{r}
+#| label: ejercicio-4
+
+# Tu código de análisis aquí
+
+```
+
+**Interpretación:** [Interpreta los resultados del análisis estadístico]
+
+---
+
+## Conclusiones
+
+Escribe 2-3 oraciones resumiendo lo que aprendiste en esta práctica:
+
+[Tus conclusiones aquí]
+
+---
+
+## Información de sesión
+
+```{r}
+#| label: session-info
+
+sessionInfo()
+```
+
+---
+
+::: {.callout-note}
+## Nota sobre la entrega
+
+Asegúrate de que tu documento se renderice correctamente antes de entregarlo. Verifica que todos los bloques de código se ejecuten sin errores.
+:::

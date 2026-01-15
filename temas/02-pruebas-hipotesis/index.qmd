@@ -1,0 +1,395 @@
+---
+title: "Tema 2: Pruebas de hipótesis"
+---
+
+## Introducción
+
+Las pruebas de hipótesis son herramientas fundamentales para tomar decisiones basadas en datos. Permiten evaluar afirmaciones sobre parámetros poblacionales utilizando evidencia muestral. Este tema cubre los conceptos básicos de las pruebas de hipótesis y su aplicación a una y dos muestras.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Formular correctamente hipótesis nula y alternativa
+- Comprender los conceptos de errores tipo I y tipo II
+- Interpretar valores p correctamente
+- Realizar pruebas de hipótesis para una muestra (media y proporción)
+- Realizar pruebas de hipótesis para dos muestras (independientes y pareadas)
+- Seleccionar la prueba apropiada según el contexto
+- Implementar pruebas de hipótesis en R/Python
+
+---
+
+## Contenido
+
+### 2.1 Formulación de hipótesis
+
+#### Hipótesis nula y alternativa
+
+**Hipótesis nula (H₀)**
+- Afirmación de "no efecto" o "no diferencia"
+- Asume el status quo
+- Ejemplos
+
+**Hipótesis alternativa (H₁ o Hₐ)**
+- Afirmación que se busca evidenciar
+- Puede ser bilateral o unilateral
+
+**Tipos de hipótesis alternativas**
+- Bilateral (dos colas): H₁: μ ≠ μ₀
+- Unilateral derecha (cola derecha): H₁: μ > μ₀
+- Unilateral izquierda (cola izquierda): H₁: μ < μ₀
+
+#### Errores en pruebas de hipótesis
+
+**Error tipo I (α)**
+- Rechazar H₀ cuando es verdadera
+- "Falso positivo"
+- Nivel de significancia
+
+**Error tipo II (β)**
+- No rechazar H₀ cuando es falsa
+- "Falso negativo"
+- Relación con la potencia
+
+**Potencia de la prueba (1 - β)**
+- Probabilidad de rechazar H₀ cuando es falsa
+- Factores que afectan la potencia
+
+#### Nivel de significancia (α)
+
+- Valores comunes: 0.05, 0.01, 0.10
+- Interpretación
+- Elección del nivel α
+
+#### Valor p
+
+**Definición**
+- Probabilidad de obtener un resultado tan extremo o más extremo que el observado, asumiendo que H₀ es verdadera
+
+**Interpretación**
+- Si p-valor < α: rechazar H₀
+- Si p-valor ≥ α: no rechazar H₀
+- Interpretaciones incorrectas comunes
+
+#### Región crítica y región de aceptación
+
+- Valor crítico
+- Región de rechazo
+- Relación con el valor p
+
+---
+
+### 2.2 Pruebas de hipótesis una muestra
+
+#### Prueba Z para la media (σ conocida)
+
+**Condiciones**
+- σ conocida
+- Muestra aleatoria
+- Normalidad o n ≥ 30
+
+**Estadístico de prueba**
+$$Z = \frac{\bar{x} - \mu_0}{\sigma / \sqrt{n}}$$
+
+**Regla de decisión**
+- Bilateral, cola derecha, cola izquierda
+
+#### Prueba t para la media (σ desconocida)
+
+**Condiciones**
+- σ desconocida
+- Muestra aleatoria
+- Normalidad aproximada (especialmente si n < 30)
+
+**Estadístico de prueba**
+$$t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$$
+
+**Distribución**
+- t con n-1 grados de libertad
+
+#### Prueba para una proporción
+
+**Condiciones**
+- np₀ ≥ 10 y n(1-p₀) ≥ 10
+- Muestra aleatoria
+
+**Estadístico de prueba**
+$$Z = \frac{\hat{p} - p_0}{\sqrt{p_0(1-p_0)/n}}$$
+
+#### Prueba para la varianza (chi-cuadrado)
+
+**Estadístico de prueba**
+$$\chi^2 = \frac{(n-1)s^2}{\sigma_0^2}$$
+
+**Distribución**
+- Chi-cuadrado con n-1 grados de libertad
+
+#### Relación entre IC y pruebas de hipótesis
+
+- IC del (1-α)100% contiene los valores de μ₀ que no se rechazarían con nivel α
+
+---
+
+### 2.3 Pruebas de hipótesis dos muestras
+
+#### Prueba t para dos muestras independientes
+
+**Varianzas poblacionales iguales (pooled t-test)**
+
+Condiciones:
+- Dos muestras independientes
+- Normalidad aproximada
+- Varianzas poblacionales iguales
+
+Estadístico de prueba:
+$$t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)_0}{s_p\sqrt{\frac{1}{n_1} + \frac{1}{n_2}}}$$
+
+donde $s_p$ es la desviación estándar agrupada (pooled).
+
+**Varianzas poblacionales diferentes (Welch's t-test)**
+
+Condiciones:
+- Dos muestras independientes
+- Normalidad aproximada
+- No se asume igualdad de varianzas
+
+Estadístico de prueba:
+$$t = \frac{(\bar{x}_1 - \bar{x}_2) - (\mu_1 - \mu_2)_0}{\sqrt{\frac{s_1^2}{n_1} + \frac{s_2^2}{n_2}}}$$
+
+Grados de libertad: fórmula de Welch-Satterthwaite
+
+**Verificación de igualdad de varianzas**
+- Prueba F
+- Regla práctica: si max(s²)/min(s²) < 2, asumir varianzas iguales
+
+#### Prueba t para muestras pareadas
+
+**Condiciones**
+- Observaciones pareadas (antes-después, gemelos, etc.)
+- Normalidad de las diferencias
+
+**Método**
+- Calcular diferencias: d_i = x₁ᵢ - x₂ᵢ
+- Realizar prueba t de una muestra sobre las diferencias
+
+**Estadístico de prueba**
+$$t = \frac{\bar{d} - 0}{s_d / \sqrt{n}}$$
+
+#### Prueba para dos proporciones
+
+**Condiciones**
+- Dos muestras independientes
+- Condiciones de normalidad satisfechas para ambas proporciones
+
+**Estadístico de prueba**
+$$Z = \frac{(\hat{p}_1 - \hat{p}_2)}{\sqrt{\hat{p}(1-\hat{p})(\frac{1}{n_1} + \frac{1}{n_2})}}$$
+
+donde $\hat{p}$ es la proporción agrupada.
+
+#### Prueba F para comparar varianzas
+
+**Estadístico de prueba**
+$$F = \frac{s_1^2}{s_2^2}$$
+
+**Distribución**
+- F con (n₁-1, n₂-1) grados de libertad
+
+---
+
+## Ejemplos en R
+
+### Prueba t para una muestra
+
+```{r}
+#| eval: false
+
+# Datos: calificaciones de estudiantes
+calificaciones <- c(78, 82, 75, 90, 88, 76, 84, 79, 91, 85)
+
+# H₀: μ = 80 vs H₁: μ ≠ 80 (bilateral)
+t.test(calificaciones, mu = 80, alternative = "two.sided")
+
+# H₁: μ > 80 (unilateral derecha)
+t.test(calificaciones, mu = 80, alternative = "greater")
+
+# H₁: μ < 80 (unilateral izquierda)
+t.test(calificaciones, mu = 80, alternative = "less")
+```
+
+### Prueba de proporción
+
+```{r}
+#| eval: false
+
+# H₀: p = 0.5 vs H₁: p ≠ 0.5
+# 65 éxitos de 100 ensayos
+prop.test(x = 65, n = 100, p = 0.5, alternative = "two.sided")
+```
+
+### Prueba t para dos muestras independientes
+
+```{r}
+#| eval: false
+
+# Datos
+grupo1 <- c(23, 25, 27, 29, 31, 33)
+grupo2 <- c(20, 22, 24, 26, 28)
+
+# Welch t-test (varianzas diferentes)
+t.test(grupo1, grupo2, var.equal = FALSE)
+
+# Pooled t-test (varianzas iguales)
+t.test(grupo1, grupo2, var.equal = TRUE)
+
+# Prueba F para varianzas
+var.test(grupo1, grupo2)
+```
+
+### Prueba t para muestras pareadas
+
+```{r}
+#| eval: false
+
+# Datos: antes y después de un tratamiento
+antes <- c(120, 135, 140, 125, 130, 128)
+despues <- c(115, 130, 138, 122, 125, 125)
+
+# Prueba t pareada
+t.test(antes, despues, paired = TRUE)
+
+# Equivalente a prueba t de una muestra sobre diferencias
+diferencias <- antes - despues
+t.test(diferencias, mu = 0)
+```
+
+---
+
+## Ejemplos en Python
+
+### Prueba t para una muestra
+
+```{python}
+#| eval: false
+
+from scipy import stats
+import numpy as np
+
+# Datos
+calificaciones = np.array([78, 82, 75, 90, 88, 76, 84, 79, 91, 85])
+
+# Prueba t bilateral
+resultado = stats.ttest_1samp(calificaciones, popmean=80)
+print(f"Estadístico t: {resultado.statistic}")
+print(f"Valor p: {resultado.pvalue}")
+
+# Para prueba unilateral, dividir p-valor entre 2 (si corresponde)
+```
+
+### Prueba de proporción
+
+```{python}
+#| eval: false
+
+from statsmodels.stats.proportion import proportions_ztest
+
+# 65 éxitos de 100 ensayos, H₀: p = 0.5
+stat, pval = proportions_ztest(count=65, nobs=100, value=0.5)
+print(f"Estadístico Z: {stat}")
+print(f"Valor p: {pval}")
+```
+
+### Prueba t para dos muestras
+
+```{python}
+#| eval: false
+
+grupo1 = np.array([23, 25, 27, 29, 31, 33])
+grupo2 = np.array([20, 22, 24, 26, 28])
+
+# Welch's t-test (varianzas diferentes)
+resultado = stats.ttest_ind(grupo1, grupo2, equal_var=False)
+print(f"Valor p: {resultado.pvalue}")
+
+# Pooled t-test (varianzas iguales)
+resultado = stats.ttest_ind(grupo1, grupo2, equal_var=True)
+print(f"Valor p: {resultado.pvalue}")
+```
+
+### Prueba t pareada
+
+```{python}
+#| eval: false
+
+antes = np.array([120, 135, 140, 125, 130, 128])
+despues = np.array([115, 130, 138, 122, 125, 125])
+
+# Prueba t pareada
+resultado = stats.ttest_rel(antes, despues)
+print(f"Estadístico t: {resultado.statistic}")
+print(f"Valor p: {resultado.pvalue}")
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Interpretación
+
+Explica la diferencia entre error tipo I y error tipo II. Da un ejemplo concreto de cada uno.
+
+### Ejercicio 2: Prueba t una muestra
+
+Una empresa afirma que sus baterías duran en promedio 500 horas. Una muestra de 20 baterías tiene una duración promedio de 485 horas con s = 40 horas.
+
+a) Plantea las hipótesis
+b) Realiza la prueba con α = 0.05
+c) ¿Hay evidencia suficiente para dudar de la afirmación?
+
+### Ejercicio 3: Dos muestras
+
+Se compara el rendimiento de dos métodos de enseñanza. Los resultados son:
+- Método A: n₁=25, x̄₁=78, s₁=8
+- Método B: n₂=30, x̄₂=82, s₂=10
+
+¿Hay diferencia significativa entre los métodos? (α = 0.05)
+
+### Ejercicio 4: Muestras pareadas
+
+Se mide el peso de 10 personas antes y después de una dieta. ¿Qué tipo de prueba usarías? ¿Por qué?
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+- OpenIntro Statistics - Inference for numerical data
+- Introduction to Modern Statistics - Hypothesis testing
+
+### Videos
+- StatQuest: Hypothesis Testing and p-values
+- Khan Academy: Type I and Type II errors
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Interpretación del valor p
+
+El valor p NO es la probabilidad de que H₀ sea verdadera. Es la probabilidad de observar los datos (o más extremos) asumiendo que H₀ es verdadera.
+:::
+
+::: {.callout-tip}
+## Guía rápida de selección de prueba
+
+- **Una muestra, media:** Prueba t (si σ desconocida)
+- **Una muestra, proporción:** Prueba Z
+- **Dos muestras independientes:** Prueba t de dos muestras (Welch o pooled)
+- **Dos muestras relacionadas:** Prueba t pareada
+- **Dos proporciones:** Prueba Z de dos proporciones
+:::
+
+---
+
+*Última actualización: Enero 2026*

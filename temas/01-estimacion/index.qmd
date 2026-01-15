@@ -1,0 +1,368 @@
+---
+title: "Tema 1: Estimación de parámetros"
+---
+
+## Introducción
+
+La estimación de parámetros es uno de los pilares fundamentales de la inferencia estadística. En la práctica, rara vez conocemos los parámetros poblacionales (como la media μ o la proporción p), por lo que debemos estimarlos a partir de muestras. Este tema cubre los métodos principales para realizar estas estimaciones y cuantificar su incertidumbre.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Distinguir entre parámetros poblacionales y estadísticos muestrales
+- Evaluar las propiedades de los estimadores (insesgadez, eficiencia, consistencia)
+- Construir estimadores puntuales usando diferentes métodos
+- Calcular e interpretar intervalos de confianza para medias y proporciones
+- Determinar el tamaño de muestra necesario para un nivel de precisión deseado
+- Implementar métodos de estimación usando R/Python
+
+---
+
+## Contenido
+
+### 1.1 Estimación puntual
+
+#### Concepto de estimador
+
+- Parámetro vs. estadístico
+- Estimador como función de la muestra
+- Ejemplos de estimadores comunes
+
+#### Propiedades deseables de estimadores
+
+**Insesgadez**
+- Definición: E(θ̂) = θ
+- Ejemplos de estimadores insesgados
+- Error de estimación
+
+**Eficiencia**
+- Varianza del estimador
+- Comparación de estimadores
+- Error estándar
+
+**Consistencia**
+- Convergencia en probabilidad
+- Ley de los grandes números
+
+#### Métodos de estimación
+
+**Método de momentos**
+- Igualar momentos muestrales con poblacionales
+- Ejemplos
+
+**Método de máxima verosimilitud**
+- Función de verosimilitud
+- Estimadores de máxima verosimilitud (MLE)
+- Propiedades de los MLE
+
+#### Estimadores comunes
+
+- Media muestral: x̄
+- Proporción muestral: p̂
+- Varianza muestral: s²
+- Desviación estándar muestral: s
+
+---
+
+### 1.2 Estimación por intervalos: media y proporción
+
+#### Concepto de intervalo de confianza
+
+- Interpretación correcta del intervalo de confianza
+- Nivel de confianza (1-α)
+- Interpretación frecuentista
+- Errores comunes de interpretación
+
+#### Intervalo de confianza para la media (σ conocida)
+
+- Distribución muestral de x̄
+- Teorema del límite central
+- Fórmula: x̄ ± z_{α/2} · (σ/√n)
+- Cálculo del valor crítico z
+
+#### Intervalo de confianza para la media (σ desconocida)
+
+- Distribución t de Student
+- Grados de libertad
+- Fórmula: x̄ ± t_{α/2,n-1} · (s/√n)
+- Comparación con el caso σ conocida
+
+#### Intervalo de confianza para una proporción
+
+- Distribución muestral de p̂
+- Condiciones: np ≥ 10 y n(1-p) ≥ 10
+- Fórmula: p̂ ± z_{α/2} · √[p̂(1-p̂)/n]
+- Corrección de continuidad (opcional)
+
+#### Intervalos para la diferencia de medias
+
+- Muestras independientes (σ conocidas)
+- Muestras independientes (σ desconocidas, varianzas iguales)
+- Muestras independientes (σ desconocidas, varianzas diferentes - Welch)
+- Muestras pareadas
+
+#### Intervalos para la diferencia de proporciones
+
+- Fórmula
+- Condiciones de aplicación
+
+#### Factores que afectan la amplitud del intervalo
+
+- Tamaño de muestra (n)
+- Nivel de confianza (1-α)
+- Variabilidad de los datos (σ o s)
+
+---
+
+### 1.3 Estimación del tamaño de muestra
+
+#### Para estimar una media
+
+- Margen de error deseado (E)
+- Fórmula: n = (z_{α/2} · σ / E)²
+- Estimación de σ cuando es desconocida
+
+#### Para estimar una proporción
+
+- Fórmula: n = (z_{α/2})² · p(1-p) / E²
+- Caso conservador: p = 0.5
+- Uso de estimaciones previas de p
+
+#### Consideraciones prácticas
+
+- Tasa de no respuesta
+- Diseño muestral
+- Costo vs. precisión
+
+---
+
+### 1.4 Aplicaciones con R
+
+*Contenido a desarrollar: ejemplos prácticos de estimación usando R*
+
+---
+
+## Ejemplos en R
+
+### Estimación puntual
+
+```{r}
+#| eval: false
+
+# Simular una muestra
+set.seed(123)
+muestra <- rnorm(n = 50, mean = 100, sd = 15)
+
+# Estimadores puntuales
+media_estimada <- mean(muestra)
+sd_estimada <- sd(muestra)
+var_estimada <- var(muestra)
+
+cat("Media estimada:", media_estimada, "\n")
+cat("Desviación estándar estimada:", sd_estimada, "\n")
+```
+
+### Intervalo de confianza para la media (σ desconocida)
+
+```{r}
+#| eval: false
+
+# Datos
+x_barra <- mean(muestra)
+s <- sd(muestra)
+n <- length(muestra)
+confianza <- 0.95
+alpha <- 1 - confianza
+
+# Valor crítico t
+t_critico <- qt(1 - alpha/2, df = n - 1)
+
+# Error estándar
+se <- s / sqrt(n)
+
+# Intervalo de confianza
+limite_inferior <- x_barra - t_critico * se
+limite_superior <- x_barra + t_critico * se
+
+cat("IC 95% para la media: [", limite_inferior, ",", limite_superior, "]\n")
+
+# Forma más fácil con t.test
+t.test(muestra, conf.level = 0.95)$conf.int
+```
+
+### Intervalo de confianza para una proporción
+
+```{r}
+#| eval: false
+
+# Datos: 45 éxitos de 100 ensayos
+x <- 45
+n <- 100
+p_hat <- x / n
+confianza <- 0.95
+alpha <- 1 - confianza
+
+# Valor crítico z
+z_critico <- qnorm(1 - alpha/2)
+
+# Error estándar
+se <- sqrt(p_hat * (1 - p_hat) / n)
+
+# Intervalo de confianza
+limite_inferior <- p_hat - z_critico * se
+limite_superior <- p_hat + z_critico * se
+
+cat("IC 95% para la proporción: [", limite_inferior, ",", limite_superior, "]\n")
+
+# Usando prop.test
+prop.test(x = 45, n = 100, conf.level = 0.95)$conf.int
+```
+
+### Determinación del tamaño de muestra
+
+```{r}
+#| eval: false
+
+# Para estimar una media con E = 5, σ = 20, confianza 95%
+sigma <- 20
+E <- 5
+z <- qnorm(0.975)
+n <- (z * sigma / E)^2
+ceiling(n)  # Redondear hacia arriba
+
+# Para estimar una proporción con E = 0.05, confianza 95%, caso conservador
+E <- 0.05
+z <- qnorm(0.975)
+p <- 0.5  # Caso conservador
+n <- (z^2 * p * (1-p)) / E^2
+ceiling(n)
+```
+
+---
+
+## Ejemplos en Python
+
+### Estimación puntual
+
+```{python}
+#| eval: false
+
+import numpy as np
+from scipy import stats
+
+# Simular una muestra
+np.random.seed(123)
+muestra = np.random.normal(loc=100, scale=15, size=50)
+
+# Estimadores puntuales
+media_estimada = np.mean(muestra)
+sd_estimada = np.std(muestra, ddof=1)
+var_estimada = np.var(muestra, ddof=1)
+
+print(f"Media estimada: {media_estimada}")
+print(f"Desviación estándar estimada: {sd_estimada}")
+```
+
+### Intervalo de confianza para la media
+
+```{python}
+#| eval: false
+
+# Usando scipy.stats
+confianza = 0.95
+alpha = 1 - confianza
+n = len(muestra)
+media = np.mean(muestra)
+se = stats.sem(muestra)  # Error estándar
+
+# IC usando distribución t
+ic = stats.t.interval(confidence=confianza, df=n-1, loc=media, scale=se)
+print(f"IC 95% para la media: {ic}")
+```
+
+### Intervalo de confianza para proporción
+
+```{python}
+#| eval: false
+
+from statsmodels.stats.proportion import proportion_confint
+
+# Datos
+x = 45
+n = 100
+
+# IC usando método normal (Wilson score)
+ic = proportion_confint(count=x, nobs=n, alpha=0.05, method='normal')
+print(f"IC 95% para la proporción: {ic}")
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Propiedades de estimadores
+
+Demuestra que la media muestral x̄ es un estimador insesgado de la media poblacional μ.
+
+### Ejercicio 2: IC para la media
+
+Una muestra de 25 estudiantes tiene una calificación promedio de 75 con desviación estándar de 10.
+
+a) Construye un IC del 95% para la calificación media de todos los estudiantes
+b) Interpreta el intervalo obtenido
+c) ¿Qué sucede con el intervalo si aumentamos el nivel de confianza a 99%?
+
+### Ejercicio 3: IC para proporción
+
+En una encuesta a 500 votantes, 280 dijeron que apoyarían al candidato A.
+
+a) Estima la proporción de apoyo con un IC del 95%
+b) ¿Puede el candidato estar confiado de tener más del 50% de apoyo?
+
+### Ejercicio 4: Tamaño de muestra
+
+Queremos estimar el ingreso promedio mensual en una ciudad con un margen de error de $500 y 95% de confianza. Estudios previos sugieren que σ = $2000.
+
+a) ¿Qué tamaño de muestra se necesita?
+b) ¿Cómo cambiaría si quisiéramos 99% de confianza?
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+
+- OpenIntro Statistics - Capítulo sobre Inferencia
+- Introduction to Modern Statistics - Foundations for inference
+
+### Videos
+
+- StatQuest: Confidence Intervals
+- Khan Academy: Inferencia estadística
+
+### Datasets
+
+- Ver [recursos/datasets](../../recursos/datasets.qmd)
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Interpretación de intervalos de confianza
+
+Un IC del 95% NO significa que hay 95% de probabilidad de que μ esté en el intervalo. Significa que si repitiéramos el muestreo muchas veces, aproximadamente 95% de los intervalos construidos contendrían μ.
+:::
+
+::: {.callout-tip}
+## Consejo práctico
+
+Siempre verifica las condiciones antes de aplicar un método:
+- Para IC de media con σ desconocida: datos aproximadamente normales o n ≥ 30
+- Para IC de proporción: np ≥ 10 y n(1-p) ≥ 10
+:::
+
+---
+
+*Última actualización: Enero 2026*

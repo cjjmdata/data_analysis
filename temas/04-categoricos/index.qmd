@@ -1,0 +1,476 @@
+---
+title: "Tema 4: Análisis de datos categóricos"
+---
+
+## Introducción
+
+El análisis de datos categóricos se enfoca en variables que toman valores en categorías o clases, en lugar de valores numéricos. Este tema cubre las técnicas principales para analizar este tipo de datos, incluyendo pruebas de bondad de ajuste, independencia y homogeneidad.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Distinguir entre diferentes tipos de datos categóricos
+- Realizar pruebas de bondad de ajuste
+- Construir e interpretar tablas de contingencia
+- Realizar pruebas de independencia chi-cuadrado
+- Realizar pruebas de homogeneidad
+- Calcular e interpretar medidas de asociación
+- Analizar residuos estandarizados
+- Implementar análisis categóricos en R/Python
+
+---
+
+## Contenido
+
+### 4.1 Prueba de bondad de ajuste
+
+#### Datos de frecuencia
+
+**Frecuencias observadas (O)**
+- Conteos observados en cada categoría
+
+**Frecuencias esperadas (E)**
+- Conteos esperados bajo la hipótesis nula
+- Basados en una distribución teórica o probabilidades específicas
+
+#### Distribución chi-cuadrado
+
+**Estadístico chi-cuadrado**
+$$\chi^2 = \sum_{i=1}^{k} \frac{(O_i - E_i)^2}{E_i}$$
+
+donde:
+- O_i = frecuencia observada en categoría i
+- E_i = frecuencia esperada en categoría i
+- k = número de categorías
+
+**Distribución bajo H₀**
+- Chi-cuadrado con (k-1) grados de libertad
+- Donde k es el número de categorías
+
+#### Prueba de bondad de ajuste
+
+**Objetivo**
+- Verificar si los datos observados se ajustan a una distribución específica
+
+**Hipótesis**
+- H₀: Los datos siguen la distribución especificada
+- H₁: Los datos no siguen la distribución especificada
+
+**Condiciones**
+- Todas las frecuencias esperadas E_i ≥ 5
+- Si no se cumple, combinar categorías
+
+**Aplicaciones**
+- Verificar si un dado es justo
+- Verificar si datos siguen distribución uniforme
+- Verificar proporciones específicas
+
+#### Grados de libertad
+
+**Caso general**
+- gl = k - 1 - m
+- k = número de categorías
+- m = número de parámetros estimados de los datos
+
+**Ejemplo**
+- Si probamos uniformidad: gl = k - 1
+- Si estimamos media y varianza: gl = k - 3
+
+---
+
+### 4.2 Prueba ji cuadrada (chi-cuadrado)
+
+#### Tablas de contingencia
+
+**Definición**
+- Tabla de dos vías que muestra frecuencias de dos variables categóricas
+
+**Estructura**
+```
+        Variable B
+        B₁   B₂   ...  Bᵣ  | Total
+    A₁  n₁₁  n₁₂  ...  n₁ᵣ | n₁.
+Var A₂  n₂₁  n₂₂  ...  n₂ᵣ | n₂.
+A   ... ...  ...  ...  ... | ...
+    Aₘ  nₘ₁  nₘ₂  ...  nₘᵣ | nₘ.
+    ----|----|----|----|----|-----
+    Tot n.₁  n.₂  ...  n.ᵣ | n
+```
+
+#### Frecuencias observadas vs. esperadas
+
+**Frecuencias observadas**
+- Conteos reales en la tabla
+
+**Frecuencias esperadas bajo independencia**
+$$E_{ij} = \frac{(total\,fila\,i) \times (total\,columna\,j)}{n}$$
+
+**Ejemplo**
+- Si total fila = 50, total columna = 40, n = 200
+- E = (50 × 40) / 200 = 10
+
+#### Estadístico chi-cuadrado
+
+$$\chi^2 = \sum_{i=1}^{r}\sum_{j=1}^{c} \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$$
+
+**Distribución**
+- Chi-cuadrado con (r-1)(c-1) grados de libertad
+- r = número de filas, c = número de columnas
+
+---
+
+### 4.3 Análisis de contingencia
+
+#### Prueba de independencia
+
+**Objetivo**
+- Determinar si dos variables categóricas son independientes
+
+**Hipótesis**
+- H₀: Las variables son independientes
+- H₁: Las variables están asociadas (no son independientes)
+
+**Interpretación**
+- Si rechazamos H₀: hay asociación entre variables
+- Si no rechazamos H₀: no hay evidencia de asociación
+
+**Ejemplo**
+- ¿Es independiente el género del preferencia de producto?
+
+#### Prueba de homogeneidad
+
+**Objetivo**
+- Comparar distribuciones de una variable categórica entre varios grupos
+
+**Hipótesis**
+- H₀: Las distribuciones son homogéneas (iguales) entre grupos
+- H₁: Las distribuciones difieren entre grupos
+
+**Diferencia con prueba de independencia**
+- Misma fórmula, diferente diseño del estudio
+- Homogeneidad: muestras separadas de cada grupo
+- Independencia: una muestra, clasificada por dos variables
+
+**Ejemplo**
+- ¿La preferencia de marca es la misma en tres ciudades diferentes?
+
+#### Medidas de asociación
+
+**Coeficiente de contingencia (C)**
+$$C = \sqrt{\frac{\chi^2}{\chi^2 + n}}$$
+
+- Rango: 0 a √[(k-1)/k]
+- 0 = no asociación
+
+**V de Cramér**
+$$V = \sqrt{\frac{\chi^2}{n \times \min(r-1, c-1)}}$$
+
+- Rango: 0 a 1
+- 0 = no asociación, 1 = asociación perfecta
+- Preferida sobre C porque su máximo es 1
+
+**Razón de momios (Odds Ratio)**
+
+Para tabla 2×2:
+```
+         Éxito  Fracaso
+Grupo 1    a      b
+Grupo 2    c      d
+```
+
+$$OR = \frac{a \times d}{b \times c}$$
+
+**Interpretación del OR**
+- OR = 1: no asociación
+- OR > 1: odds de éxito mayor en grupo 1
+- OR < 1: odds de éxito menor en grupo 1
+
+#### Residuos estandarizados
+
+**Definición**
+$$r_{ij} = \frac{O_{ij} - E_{ij}}{\sqrt{E_{ij}}}$$
+
+**Interpretación**
+- |r| > 2: celda contribuye significativamente al χ²
+- |r| > 3: contribución muy significativa
+
+**Uso**
+- Identificar qué celdas difieren más de lo esperado
+- Entender la naturaleza de la asociación
+
+#### Visualización
+
+**Gráficos de mosaico (mosaic plots)**
+- Representación visual de tablas de contingencia
+- Tamaño de áreas proporcional a frecuencias
+
+**Gráficos de barras agrupadas**
+- Comparar proporciones entre grupos
+
+---
+
+## Ejemplos en R
+
+### Prueba de bondad de ajuste
+
+```{r}
+#| eval: false
+
+# Ejemplo: ¿Es justo un dado?
+# Observamos: 1:12, 2:15, 3:18, 4:17, 5:14, 6:14
+
+observadas <- c(12, 15, 18, 17, 14, 14)
+esperadas <- rep(15, 6)  # Si es justo, esperamos 15 en cada cara (90/6)
+
+# Prueba chi-cuadrado de bondad de ajuste
+chisq.test(observadas, p = rep(1/6, 6))
+
+# Alternativa
+chisq.test(observadas, p = esperadas/sum(esperadas))
+```
+
+### Prueba de independencia
+
+```{r}
+#| eval: false
+
+# Ejemplo: Género vs Preferencia de producto
+# Crear tabla de contingencia
+tabla <- matrix(c(25, 35, 15, 25), nrow = 2,
+                dimnames = list(Genero = c("M", "F"),
+                               Producto = c("A", "B")))
+tabla
+
+# Prueba de independencia
+resultado <- chisq.test(tabla)
+resultado
+
+# Frecuencias esperadas
+resultado$expected
+
+# Residuos estandarizados
+resultado$residuals
+
+# V de Cramér
+library(DescTools)
+CramerV(tabla)
+
+# Gráfico de mosaico
+mosaicplot(tabla, main = "Género vs Producto", color = TRUE)
+```
+
+### Tabla de contingencia más grande
+
+```{r}
+#| eval: false
+
+# Ejemplo con datos
+library(dplyr)
+
+# Crear datos de ejemplo
+set.seed(123)
+datos <- data.frame(
+  ciudad = sample(c("A", "B", "C"), 300, replace = TRUE),
+  preferencia = sample(c("Marca1", "Marca2", "Marca3"), 300, replace = TRUE)
+)
+
+# Crear tabla de contingencia
+tabla2 <- table(datos$ciudad, datos$preferencia)
+tabla2
+
+# Proporciones
+prop.table(tabla2, margin = 1)  # Por fila
+prop.table(tabla2, margin = 2)  # Por columna
+
+# Prueba chi-cuadrado
+chisq.test(tabla2)
+
+# Visualización con ggplot2
+library(ggplot2)
+ggplot(datos, aes(x = ciudad, fill = preferencia)) +
+  geom_bar(position = "fill") +
+  labs(y = "Proporción", title = "Preferencia por ciudad") +
+  theme_minimal()
+```
+
+### Odds Ratio
+
+```{r}
+#| eval: false
+
+# Tabla 2x2: Tratamiento vs Resultado
+tabla_2x2 <- matrix(c(30, 10, 20, 40), nrow = 2,
+                    dimnames = list(Tratamiento = c("A", "B"),
+                                   Resultado = c("Éxito", "Fracaso")))
+tabla_2x2
+
+# Calcular Odds Ratio manualmente
+OR <- (tabla_2x2[1,1] * tabla_2x2[2,2]) / (tabla_2x2[1,2] * tabla_2x2[2,1])
+cat("Odds Ratio:", OR, "\n")
+
+# Con paquete
+library(epitools)
+oddsratio(tabla_2x2)
+```
+
+---
+
+## Ejemplos en Python
+
+### Prueba de bondad de ajuste
+
+```{python}
+#| eval: false
+
+import numpy as np
+from scipy import stats
+
+# Datos del dado
+observadas = np.array([12, 15, 18, 17, 14, 14])
+esperadas = np.array([15, 15, 15, 15, 15, 15])
+
+# Prueba chi-cuadrado
+chi2, p_valor = stats.chisquare(f_obs=observadas, f_exp=esperadas)
+print(f"Chi-cuadrado: {chi2}")
+print(f"Valor p: {p_valor}")
+```
+
+### Prueba de independencia
+
+```{python}
+#| eval: false
+
+import pandas as pd
+from scipy.stats import chi2_contingency
+
+# Crear tabla de contingencia
+tabla = np.array([[25, 35],
+                  [15, 25]])
+
+# Prueba chi-cuadrado
+chi2, p_valor, gl, esperadas = chi2_contingency(tabla)
+
+print(f"Chi-cuadrado: {chi2}")
+print(f"Valor p: {p_valor}")
+print(f"Grados de libertad: {gl}")
+print("\nFrecuencias esperadas:")
+print(esperadas)
+
+# V de Cramér
+n = tabla.sum()
+min_dim = min(tabla.shape[0], tabla.shape[1])
+cramer_v = np.sqrt(chi2 / (n * (min_dim - 1)))
+print(f"\nV de Cramér: {cramer_v}")
+
+# Residuos estandarizados
+residuos = (tabla - esperadas) / np.sqrt(esperadas)
+print("\nResiduos estandarizados:")
+print(residuos)
+```
+
+### Visualización
+
+```{python}
+#| eval: false
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Datos de ejemplo
+datos = pd.DataFrame({
+    'ciudad': np.random.choice(['A', 'B', 'C'], 300),
+    'preferencia': np.random.choice(['Marca1', 'Marca2', 'Marca3'], 300)
+})
+
+# Tabla de contingencia
+tabla_pd = pd.crosstab(datos['ciudad'], datos['preferencia'])
+print(tabla_pd)
+
+# Heatmap
+plt.figure(figsize=(8, 6))
+sns.heatmap(tabla_pd, annot=True, fmt='d', cmap='Blues')
+plt.title('Tabla de contingencia: Ciudad vs Preferencia')
+plt.show()
+
+# Gráfico de barras apiladas
+tabla_pct = pd.crosstab(datos['ciudad'], datos['preferencia'], normalize='index')
+tabla_pct.plot(kind='bar', stacked=True)
+plt.title('Preferencia por ciudad (proporciones)')
+plt.ylabel('Proporción')
+plt.legend(title='Preferencia')
+plt.show()
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Bondad de ajuste
+
+Un genetista cruza plantas y espera que las descendencia se distribuya según proporciones 9:3:3:1 para cuatro fenotipos. Observa:
+
+- Fenotipo A: 90
+- Fenotipo B: 35
+- Fenotipo C: 28
+- Fenotipo D: 7
+
+¿Hay evidencia para rechazar el modelo genético esperado? (α = 0.05)
+
+### Ejercicio 2: Independencia
+
+Una encuesta pregunta a 200 personas sobre su nivel educativo y si fuman:
+
+```
+          Fuma  No fuma
+Primaria    30      20
+Secundaria  25      45
+Universidad 15      65
+```
+
+¿Es independiente el hábito de fumar del nivel educativo?
+
+### Ejercicio 3: Interpretación
+
+Si el Odds Ratio entre exposición a un factor y una enfermedad es 2.5, ¿qué significa esto en términos prácticos?
+
+### Ejercicio 4: Residuos
+
+¿Para qué sirven los residuos estandarizados en el análisis de tablas de contingencia?
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+- OpenIntro Statistics - Inference for categorical data
+- Introduction to Modern Statistics - Applications: Explore
+
+### Videos
+- StatQuest: Chi-Square tests
+- Khan Academy: Chi-square test
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Condiciones de aplicación
+
+La prueba chi-cuadrado requiere que todas las frecuencias esperadas sean ≥ 5. Si algunas son menores:
+- Combinar categorías (si tiene sentido)
+- Usar prueba exacta de Fisher (para tablas 2×2)
+- Aumentar el tamaño de muestra
+:::
+
+::: {.callout-tip}
+## Elección de la prueba
+
+- **Bondad de ajuste:** Una variable categórica vs. distribución teórica
+- **Independencia:** Dos variables categóricas, una muestra
+- **Homogeneidad:** Una variable categórica, múltiples grupos
+:::
+
+---
+
+*Última actualización: Enero 2026*

@@ -1,0 +1,424 @@
+---
+title: "Tema 3: Análisis de varianza (ANOVA)"
+---
+
+## Introducción
+
+El análisis de varianza (ANOVA) es una técnica estadística para comparar las medias de tres o más grupos simultáneamente. Mientras que la prueba t se limita a comparar dos grupos, ANOVA permite analizar múltiples grupos a la vez, controlando el error tipo I.
+
+## Objetivos de aprendizaje
+
+Al finalizar este tema, deberás ser capaz de:
+
+- Explicar cuándo usar ANOVA en lugar de múltiples pruebas t
+- Comprender la lógica de la descomposición de la varianza
+- Verificar los supuestos del ANOVA
+- Realizar e interpretar ANOVA unidireccional
+- Aplicar pruebas post-hoc cuando se rechaza H₀
+- Realizar e interpretar ANOVA bidireccional
+- Entender e interpretar efectos de interacción
+- Implementar ANOVA en R/Python
+
+---
+
+## Contenido
+
+### 3.1 ANOVA unidireccional
+
+#### Motivación
+
+**Problema con múltiples pruebas t**
+- Inflación del error tipo I
+- Ejemplo: 3 grupos requieren 3 comparaciones, 4 grupos requieren 6 comparaciones
+- Probabilidad de al menos un error tipo I aumenta con el número de comparaciones
+
+**Solución: ANOVA**
+- Una sola prueba para comparar k grupos
+- Control del error tipo I al nivel α
+
+#### Hipótesis del ANOVA
+
+**Hipótesis nula**
+$$H_0: \mu_1 = \mu_2 = ... = \mu_k$$
+
+**Hipótesis alternativa**
+$$H_1: \text{Al menos una media es diferente}$$
+
+#### Supuestos del modelo ANOVA
+
+1. **Normalidad**
+   - Los datos en cada grupo provienen de poblaciones normales
+   - Verificación: QQ-plots, prueba de Shapiro-Wilk
+
+2. **Homogeneidad de varianzas (homocedasticidad)**
+   - Las varianzas poblacionales son iguales: σ₁² = σ₂² = ... = σₖ²
+   - Verificación: Prueba de Levene, prueba de Bartlett
+   - Regla práctica: max(sᵢ²)/min(sᵢ²) < 3
+
+3. **Independencia**
+   - Las observaciones son independientes dentro y entre grupos
+   - Garantizado por diseño del estudio
+
+#### Descomposición de la varianza
+
+**Variación total (SST)**
+$$SST = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(y_{ij} - \bar{y})^2$$
+
+**Variación entre grupos (SSB - Between)**
+$$SSB = \sum_{i=1}^{k}n_i(\bar{y}_i - \bar{y})^2$$
+
+**Variación dentro de grupos (SSW - Within)**
+$$SSW = \sum_{i=1}^{k}\sum_{j=1}^{n_i}(y_{ij} - \bar{y}_i)^2$$
+
+**Relación fundamental**
+$$SST = SSB + SSW$$
+
+#### Cuadrados medios
+
+**Cuadrado medio entre grupos (MSB)**
+$$MSB = \frac{SSB}{k-1}$$
+
+**Cuadrado medio dentro de grupos (MSW)**
+$$MSW = \frac{SSW}{N-k}$$
+
+donde N es el total de observaciones.
+
+#### Estadístico F
+
+$$F = \frac{MSB}{MSW}$$
+
+**Distribución bajo H₀**
+- F con (k-1, N-k) grados de libertad
+
+**Interpretación**
+- F grande → evidencia contra H₀
+- F cercano a 1 → no evidencia contra H₀
+
+#### Tabla ANOVA
+
+| Fuente | SS | df | MS | F | p-valor |
+|--------|----|----|----|----|---------|
+| Entre grupos | SSB | k-1 | MSB | F | p |
+| Dentro grupos | SSW | N-k | MSW | - | - |
+| Total | SST | N-1 | - | - | - |
+
+#### Verificación de supuestos
+
+**Normalidad**
+```r
+# QQ-plot de residuos
+# Prueba de Shapiro-Wilk
+```
+
+**Homocedasticidad**
+```r
+# Gráfico de residuos vs. valores ajustados
+# Prueba de Levene
+```
+
+#### Pruebas post-hoc
+
+**Cuándo usar**
+- Después de rechazar H₀ en ANOVA
+- Para identificar qué pares de grupos difieren
+
+**Métodos comunes**
+
+1. **Tukey HSD (Honest Significant Difference)**
+   - Compara todos los pares de medias
+   - Control de error tipo I familywise
+   - Recomendado cuando todos los grupos tienen tamaño similar
+
+2. **Bonferroni**
+   - Ajusta el nivel α dividiendo entre el número de comparaciones
+   - Conservador (menos potencia)
+   - α_ajustado = α / m, donde m es el número de comparaciones
+
+3. **Scheffé**
+   - Más conservador
+   - Útil para comparaciones no planificadas
+
+4. **Dunnett**
+   - Cuando se compara cada grupo con un grupo control
+
+**Interpretación**
+- Intervalos de confianza ajustados
+- Valores p ajustados
+
+---
+
+### 3.2 ANOVA bidireccional
+
+#### Diseño factorial
+
+**Dos factores**
+- Factor A con a niveles
+- Factor B con b niveles
+- Total: a × b combinaciones
+
+**Ejemplo**
+- Factor A: Método de enseñanza (3 niveles)
+- Factor B: Género (2 niveles)
+- 3 × 2 = 6 grupos
+
+#### Efectos principales
+
+**Efecto principal del Factor A**
+- Diferencia entre los niveles del Factor A, promediando sobre el Factor B
+- H₀: No hay efecto del Factor A
+
+**Efecto principal del Factor B**
+- Diferencia entre los niveles del Factor B, promediando sobre el Factor A
+- H₀: No hay efecto del Factor B
+
+#### Efectos de interacción
+
+**Interacción A×B**
+- El efecto de un factor depende del nivel del otro factor
+- H₀: No hay interacción entre A y B
+
+**Interpretación**
+- Interacción significativa: los efectos principales pueden no ser interpretables
+- Gráficos de interacción son esenciales
+
+#### Tabla ANOVA bidireccional
+
+| Fuente | SS | df | MS | F | p-valor |
+|--------|----|----|----|----|---------|
+| Factor A | SSA | a-1 | MSA | F_A | p_A |
+| Factor B | SSB | b-1 | MSB | F_B | p_B |
+| Interacción A×B | SSAB | (a-1)(b-1) | MSAB | F_AB | p_AB |
+| Error | SSE | N-ab | MSE | - | - |
+| Total | SST | N-1 | - | - | - |
+
+#### Gráficos de interacción
+
+**Cómo interpretar**
+- Líneas paralelas → no hay interacción
+- Líneas que se cruzan o no paralelas → posible interacción
+
+**Ejemplo**
+```r
+# Gráfico de interacción
+interaction.plot(factor1, factor2, response)
+```
+
+---
+
+## Ejemplos en R
+
+### ANOVA unidireccional
+
+```{r}
+#| eval: false
+
+# Datos de ejemplo: rendimiento según método de enseñanza
+metodo_a <- c(85, 88, 90, 87, 86)
+metodo_b <- c(78, 82, 80, 79, 81)
+metodo_c <- c(92, 95, 93, 94, 96)
+
+# Crear data frame
+datos <- data.frame(
+  rendimiento = c(metodo_a, metodo_b, metodo_c),
+  metodo = factor(rep(c("A", "B", "C"), each = 5))
+)
+
+# ANOVA
+modelo <- aov(rendimiento ~ metodo, data = datos)
+summary(modelo)
+
+# Verificar supuestos
+# 1. Normalidad de residuos
+shapiro.test(residuals(modelo))
+qqnorm(residuals(modelo))
+qqline(residuals(modelo))
+
+# 2. Homocedasticidad
+library(car)
+leveneTest(rendimiento ~ metodo, data = datos)
+
+# Gráfico de residuos
+plot(modelo, which = 1)
+
+# Prueba post-hoc de Tukey
+TukeyHSD(modelo)
+
+# Visualización
+boxplot(rendimiento ~ metodo, data = datos,
+        main = "Rendimiento por método",
+        xlab = "Método", ylab = "Rendimiento")
+```
+
+### ANOVA bidireccional
+
+```{r}
+#| eval: false
+
+# Ejemplo: rendimiento según método y género
+datos2 <- data.frame(
+  rendimiento = c(85, 88, 78, 82, 92, 95,
+                  87, 90, 80, 79, 93, 94),
+  metodo = factor(rep(c("A", "B", "C"), each = 4)),
+  genero = factor(rep(c("M", "F"), 6))
+)
+
+# ANOVA bidireccional con interacción
+modelo2 <- aov(rendimiento ~ metodo * genero, data = datos2)
+summary(modelo2)
+
+# Gráfico de interacción
+with(datos2, interaction.plot(metodo, genero, rendimiento))
+
+# Medias por grupo
+library(dplyr)
+datos2 %>%
+  group_by(metodo, genero) %>%
+  summarise(media = mean(rendimiento))
+```
+
+---
+
+## Ejemplos en Python
+
+### ANOVA unidireccional
+
+```{python}
+#| eval: false
+
+import numpy as np
+import pandas as pd
+from scipy import stats
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Datos
+metodo_a = np.array([85, 88, 90, 87, 86])
+metodo_b = np.array([78, 82, 80, 79, 81])
+metodo_c = np.array([92, 95, 93, 94, 96])
+
+# ANOVA unidireccional
+f_stat, p_valor = stats.f_oneway(metodo_a, metodo_b, metodo_c)
+print(f"Estadístico F: {f_stat}")
+print(f"Valor p: {p_valor}")
+
+# Crear DataFrame para análisis más detallado
+datos = pd.DataFrame({
+    'rendimiento': np.concatenate([metodo_a, metodo_b, metodo_c]),
+    'metodo': ['A']*5 + ['B']*5 + ['C']*5
+})
+
+# Visualización
+sns.boxplot(data=datos, x='metodo', y='rendimiento')
+plt.title('Rendimiento por método')
+plt.show()
+
+# ANOVA con statsmodels (más completo)
+from statsmodels.formula.api import ols
+from statsmodels.stats.anova import anova_lm
+
+modelo = ols('rendimiento ~ C(metodo)', data=datos).fit()
+tabla_anova = anova_lm(modelo, typ=2)
+print(tabla_anova)
+
+# Prueba post-hoc
+from statsmodels.stats.multicomp import pairwise_tukeyhsd
+
+tukey = pairwise_tukeyhsd(datos['rendimiento'], datos['metodo'])
+print(tukey)
+```
+
+### ANOVA bidireccional
+
+```{python}
+#| eval: false
+
+# Datos para ANOVA bidireccional
+datos2 = pd.DataFrame({
+    'rendimiento': [85, 88, 78, 82, 92, 95, 87, 90, 80, 79, 93, 94],
+    'metodo': ['A', 'A', 'B', 'B', 'C', 'C'] * 2,
+    'genero': ['M', 'F'] * 6
+})
+
+# ANOVA bidireccional
+modelo2 = ols('rendimiento ~ C(metodo) * C(genero)', data=datos2).fit()
+tabla_anova2 = anova_lm(modelo2, typ=2)
+print(tabla_anova2)
+
+# Gráfico de interacción
+datos2.groupby(['metodo', 'genero'])['rendimiento'].mean().unstack().plot()
+plt.title('Gráfico de interacción')
+plt.ylabel('Rendimiento promedio')
+plt.legend(title='Género')
+plt.show()
+```
+
+---
+
+## Ejercicios
+
+### Ejercicio 1: Conceptual
+
+¿Por qué no es apropiado realizar múltiples pruebas t en lugar de un ANOVA cuando se comparan más de dos grupos?
+
+### Ejercicio 2: ANOVA unidireccional
+
+Un investigador compara el tiempo de recuperación (en días) de pacientes bajo tres tratamientos diferentes:
+
+- Tratamiento A: 10, 12, 11, 13, 12
+- Tratamiento B: 14, 16, 15, 17, 15
+- Tratamiento C: 11, 13, 12, 12, 14
+
+a) Realiza un ANOVA para determinar si hay diferencias significativas (α = 0.05)
+b) Verifica los supuestos
+c) Si es apropiado, realiza pruebas post-hoc
+
+### Ejercicio 3: Interacción
+
+Explica qué significa una interacción significativa en ANOVA bidireccional. Proporciona un ejemplo.
+
+### Ejercicio 4: Interpretación
+
+Dada la siguiente tabla ANOVA, interpreta los resultados:
+
+| Fuente | df | SS | MS | F | p-valor |
+|--------|----|----|----|----|---------|
+| Entre grupos | 2 | 450 | 225 | 15.0 | 0.001 |
+| Dentro grupos | 27 | 405 | 15 | - | - |
+| Total | 29 | 855 | - | - | - |
+
+---
+
+## Recursos adicionales
+
+### Lecturas
+- OpenIntro Statistics - ANOVA
+- Introduction to Modern Statistics - Inference for comparing many means
+
+### Videos
+- StatQuest: ANOVA
+- Khan Academy: Analysis of variance
+
+---
+
+## Notas importantes
+
+::: {.callout-warning}
+## Interpretación de F
+
+Un valor F grande indica que la variación entre grupos es grande relativa a la variación dentro de grupos, sugiriendo que las medias no son todas iguales.
+:::
+
+::: {.callout-tip}
+## Verificación de supuestos
+
+ANOVA es razonablemente robusto a violaciones de normalidad si los tamaños de grupo son similares y n es grande. Es más sensible a violaciones de homocedasticidad.
+
+Si se violan los supuestos:
+- Transformar los datos
+- Usar prueba de Kruskal-Wallis (no paramétrica)
+- Usar ANOVA de Welch (para varianzas desiguales)
+:::
+
+---
+
+*Última actualización: Enero 2026*
