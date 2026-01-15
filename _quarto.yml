@@ -3,70 +3,13 @@ project:
   output-dir: _site
 
 website:
-  page-navigation: true
   title: "MAT2409 - Análisis de datos II"
-  description: "Sitio web del curso MAT2409 - Análisis de datos II. Curso de estadística inferencial y análisis de datos."
-
-  favicon: images/logo.png
-
-  open-graph: true
-
-  sidebar:
-    background: "#798b93"
-    logo: "images/logo.png"
-    pinned: true
-    align: center
-    style: docked
-    search: true
-    collapse-level: 2
-
-    contents:
-      - section: "Información del curso"
-        contents:
-          - href: index.qmd
-            text: Inicio
-          - href: programa.qmd
-            text: Programa
-          - href: programa-detallado.qmd
-            text: Programa detallado
-          - href: evaluacion.qmd
-            text: Evaluación
-
-      - section: "Temas"
-        contents:
-          - text: "Tema 0: Repaso"
-            href: temas/00-repaso/index.qmd
-          - text: "Tema 1: Estimación de parámetros"
-            href: temas/01-estimacion/index.qmd
-          - text: "Tema 2: Pruebas de hipótesis"
-            href: temas/02-pruebas-hipotesis/index.qmd
-          - text: "Tema 3: ANOVA"
-            href: temas/03-anova/index.qmd
-          - text: "Tema 4: Datos categóricos"
-            href: temas/04-categoricos/index.qmd
-          - text: "Tema 5: Regresión simple"
-            href: temas/05-regresion-simple/index.qmd
-          - text: "Tema 6: Regresión múltiple"
-            href: temas/06-regresion-multiple/index.qmd
-
-      - section: "Prácticas"
-        contents:
-          - href: practicas/practica-1.qmd
-            text: Práctica 1
-
-      - section: "Tareas"
-        contents:
-          - href: tareas/tarea-1.qmd
-            text: Tarea 1
-
-      - section: "Recursos"
-        contents:
-          - href: recursos/software.qmd
-            text: Software
-          - href: recursos/referencias.qmd
-            text: Referencias
-          - href: recursos/datasets.qmd
-            text: Datasets
+  navbar:
+    left:
+      - text: "Inicio"
+        href: index.qmd
+      - text: "Programa"
+        href: programa.qmd
 
   page-footer:
     right: "Creado con [Quarto](https://quarto.org/)"
